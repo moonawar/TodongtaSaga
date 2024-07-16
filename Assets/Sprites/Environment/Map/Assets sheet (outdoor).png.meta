@@ -1,0 +1,1209 @@
+fileFormatVersion: 2
+guid: 823828ccdf7c8ea4c825cff9455edd20
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 304
+        width: 16
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553e6cd581bb8434db153e90605cdc4b
+      internalID: -1285986194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 304
+        width: 35
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717dc7be64c798b4b8ea7b0ccd59bbe9
+      internalID: -835896378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 304
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7fdecf9a6955e4f9985a3a63a4c4a5
+      internalID: 844788694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 304
+        width: 11
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfb2b27aceea75478aee21191a1c37e
+      internalID: -1982767046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_4
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 306
+        width: 11
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1cf5c54bb8c3544a3b6bbfda9cf312
+      internalID: -2059955262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 306
+        width: 10
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e41f919b52dc04d9418f27dc942f1c
+      internalID: 1077104936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 307
+        width: 12
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3741d9d2a6efe3c469a9454bdddf218d
+      internalID: -806945122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 292
+        width: 17
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478b0ee098169674fa23ba69a106d369
+      internalID: -1700460940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_8
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 290
+        width: 16
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45d73b0b95442b42bbfe448530900e0
+      internalID: -1764663861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_9
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 299
+        width: 11
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75bfcb8b05a46a74ab05f1ee5a66f632
+      internalID: 1480255908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_10
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 298
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11930338}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82f92e8ad8bb4648aeab35576a40700
+      internalID: -618193298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 290
+        width: 29
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13372567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ef263f9ae0f3444978fa35118c7c3b
+      internalID: -2806963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_12
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 294
+        width: 24
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.107129775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd04a4f918abc541aebcf254c82804a
+      internalID: 1575824370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_13
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 272
+        width: 13
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5094cb1b8e2aa4bb6e00240ab18e73
+      internalID: -1299081321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_14
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 293
+        width: 8
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a47009961738140830a19dd8b66b7a
+      internalID: -981419936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_15
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 291
+        width: 6
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477b317ebf31022448b5e0705de5697c
+      internalID: 68729598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 272
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9209fc1c9671a141a1e661ffbfb998a
+      internalID: 1953312177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_17
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 272
+        width: 35
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e5c19d936dbbb419e1a53051fe333a
+      internalID: -2003558821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_18
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 274
+        width: 14
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b579be5316f869458c75ff00f10cae8
+      internalID: 572250503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_19
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 275
+        width: 10
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b1a80ff0f103143996dc94db96a45d
+      internalID: -479441846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_20
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 277
+        width: 10
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bde29ea29c61dc4db07655f80766135
+      internalID: -1785489207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 276
+        width: 10
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eae7622eb6b647479301d09fecbc734
+      internalID: -1634048782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_22
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 274
+        width: 16
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da2d13e32162eb4b9220393e2ded48e
+      internalID: -991937859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_23
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 273
+        width: 10
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b25d1d7b8887e4bbfcac95a5a35fae
+      internalID: 1484315498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_24
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 251
+        width: 31
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5197926, y: 0.13854685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73346a04ee9e64746818b4af63d224e2
+      internalID: 697733517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_25
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 250
+        width: 35
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5058437, y: 0.1481018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0726568680e00e4caf7c25870633b72
+      internalID: -1210693151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 260
+        width: 11
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb575db52fef2104fa2ea50a298f3808
+      internalID: 842262013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_27
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 262
+        width: 8
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aba4464d6a35fa4bb153e7239f89add
+      internalID: 1463356885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_28
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 260
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a72348669e34e47afa9957b068f070
+      internalID: -1236652303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_29
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 266
+        width: 14
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f42282a67ca4d4f9d85138a33c66c5
+      internalID: -662970034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_30
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 258
+        width: 27
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1704339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811978e1e6e7a494e9f49039df34d54a
+      internalID: -744723395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 226
+        width: 30
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203bcb8718293cd498d529725aefa7a5
+      internalID: 1801515643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_32
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 225
+        width: 21
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764b518940d07d14bb81576cbfed7a36
+      internalID: -1493598701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_33
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 245
+        width: 13
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66538cbfa8a7178489a2a631abfe5dcf
+      internalID: 1140626150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_34
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 159
+        width: 78
+        height: 46
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.26849765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5e97a3068d5ec4c9ac96e18336f12d
+      internalID: 1709070393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_35
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 177
+        width: 37
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b7d8acb72b77843bc0a012e371a337
+      internalID: 1399003917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_36
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 187
+        width: 20
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2abf78427aa39488586ee50ac2a274
+      internalID: -152065870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_37
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 190
+        width: 53
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5126187, y: 0.18746324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb38ff252d606714d981c39e7a9aa758
+      internalID: -2024895721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_38
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 181
+        width: 60
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1459173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5e5cba79dc192469d44265d15e13ba
+      internalID: -361995982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_39
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 185
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e045da9acb8a44c44b471c94fb2e26cf
+      internalID: -870299391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_40
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 170
+        width: 9
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45f9fdd631398e46a49e6f71805d147
+      internalID: -1679504293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_41
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 173
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b66ad381f4ea3c4a907af3b8f8600c3
+      internalID: 900932528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 88
+        height: 94
+      alignment: 9
+      pivot: {x: 0.49149382, y: 0.047779124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8205da7901e19842826d3eb3772a798
+      internalID: 1377355406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_43
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 34
+        width: 65
+        height: 77
+      alignment: 9
+      pivot: {x: 0.5172739, y: 0.053466994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b63a1084a235a341bf48e690527ec82
+      internalID: -1553506601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_44
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 24
+        width: 95
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb68bc0f82d02b44e8945fa593e83f87
+      internalID: -1213838495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_45
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 24
+        width: 98
+        height: 120
+      alignment: 9
+      pivot: {x: 0.46944723, y: 0.009356865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48645a96c29c02f4bbdc1e1ab5cac424
+      internalID: 1592478716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_46
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 24
+        width: 134
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5055863, y: 0.045124784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8927ea985e7b85542b2dcac15c255317
+      internalID: 232373578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets sheet (outdoor)_47
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 291
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f105d55a3fb34f42bae1daf7c690d17
+      internalID: -469235747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Assets sheet (outdoor)_0: -1285986194
+      Assets sheet (outdoor)_1: -835896378
+      Assets sheet (outdoor)_10: -618193298
+      Assets sheet (outdoor)_11: -2806963
+      Assets sheet (outdoor)_12: 1575824370
+      Assets sheet (outdoor)_13: -1299081321
+      Assets sheet (outdoor)_14: -981419936
+      Assets sheet (outdoor)_15: 68729598
+      Assets sheet (outdoor)_16: 1953312177
+      Assets sheet (outdoor)_17: -2003558821
+      Assets sheet (outdoor)_18: 572250503
+      Assets sheet (outdoor)_19: -479441846
+      Assets sheet (outdoor)_2: 844788694
+      Assets sheet (outdoor)_20: -1785489207
+      Assets sheet (outdoor)_21: -1634048782
+      Assets sheet (outdoor)_22: -991937859
+      Assets sheet (outdoor)_23: 1484315498
+      Assets sheet (outdoor)_24: 697733517
+      Assets sheet (outdoor)_25: -1210693151
+      Assets sheet (outdoor)_26: 842262013
+      Assets sheet (outdoor)_27: 1463356885
+      Assets sheet (outdoor)_28: -1236652303
+      Assets sheet (outdoor)_29: -662970034
+      Assets sheet (outdoor)_3: -1982767046
+      Assets sheet (outdoor)_30: -744723395
+      Assets sheet (outdoor)_31: 1801515643
+      Assets sheet (outdoor)_32: -1493598701
+      Assets sheet (outdoor)_33: 1140626150
+      Assets sheet (outdoor)_34: 1709070393
+      Assets sheet (outdoor)_35: 1399003917
+      Assets sheet (outdoor)_36: -152065870
+      Assets sheet (outdoor)_37: -2024895721
+      Assets sheet (outdoor)_38: -361995982
+      Assets sheet (outdoor)_39: -870299391
+      Assets sheet (outdoor)_4: -2059955262
+      Assets sheet (outdoor)_40: -1679504293
+      Assets sheet (outdoor)_41: 900932528
+      Assets sheet (outdoor)_42: 1377355406
+      Assets sheet (outdoor)_43: -1553506601
+      Assets sheet (outdoor)_44: -1213838495
+      Assets sheet (outdoor)_45: 1592478716
+      Assets sheet (outdoor)_46: 232373578
+      Assets sheet (outdoor)_47: -469235747
+      Assets sheet (outdoor)_5: 1077104936
+      Assets sheet (outdoor)_6: -806945122
+      Assets sheet (outdoor)_7: -1700460940
+      Assets sheet (outdoor)_8: -1764663861
+      Assets sheet (outdoor)_9: 1480255908
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

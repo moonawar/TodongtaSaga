@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
+  m_Name: 4_Amang Uda
+  m_EditorClassIdentifier: 
+  missionName: Amang Uda
+  description: Temui Paman
+  trigger:
+    type: 2
+    npcName: AmangUda
+    npcLocation: {x: 51.23, y: -24.31}
+    objectName: 
+    location: {x: -23.2, y: -26.71}
+    radius: 1
+    showWaypoint: 1
+  tasks:
+  - type: 1
+    yarnTitle: 6
+    cutscene: {fileID: 11400000, guid: 9809d00cf7dde544f82a5cdd5c2e07c8, type: 2}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: 
+    onTaskComplete: []
+  announce: 1
+  hidden: 0
+  relationshipImpacts: []
+  followUpMissions:
+  - {fileID: 11400000, guid: c57779b445340174a9e9d339ccf9a3b6, type: 2}

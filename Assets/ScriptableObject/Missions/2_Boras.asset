@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
+  m_Name: 2_Boras
+  m_EditorClassIdentifier: 
+  missionName: Boras
+  description: Kelilingi Desa dan Temukan Sawah
+  trigger:
+    type: 2
+    npcName: 
+    npcLocation: {x: 0, y: 0}
+    objectName: 
+    location: {x: 72.25, y: 65.25}
+    radius: 1
+    showWaypoint: 1
+  tasks:
+  - type: 1
+    yarnTitle: 
+    cutscene: {fileID: 11400000, guid: d8f600f5b8afe4c40ab9c1dd26dcb080, type: 2}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: 
+    onTaskComplete:
+    - type: 0
+      npcName: 
+      position: {x: 0, y: 0}
+      dissapearImmediately: 0
+  - type: 0
+    yarnTitle: 5
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: 
+    onTaskComplete: []
+  announce: 1
+  hidden: 0
+  relationshipImpacts: []
+  followUpMissions:
+  - {fileID: 11400000, guid: bcdc3062871ab1b4c9d9d292fa7cfe41, type: 2}

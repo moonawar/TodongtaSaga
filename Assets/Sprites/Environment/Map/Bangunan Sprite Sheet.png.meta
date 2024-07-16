@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: dbc47b2c0a8cbf84ab75d4013f312d54
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 634
+        width: 90
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464d54cac7fe5c249819bc9e5a496532
+      internalID: 1715650536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 626
+        width: 182
+        height: 117
+      alignment: 9
+      pivot: {x: 0.5, y: 0.050495375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dea709b2a93d824cb2da755d05987c0
+      internalID: -1091547469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 628
+        width: 100
+        height: 116
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14576827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ebad8b585b06c40918267dc256c736
+      internalID: 1806316377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 634
+        width: 97
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa99c384c2ad76e439e338362a56bc0a
+      internalID: 1570510403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 650
+        width: 89
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0a2c2bcb5f88849905917512dfa76e
+      internalID: 426554731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 432
+        width: 180
+        height: 179
+      alignment: 9
+      pivot: {x: 0.40786064, y: 0.12361648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d14b87db189c84e9edb8e3ceb8f68f
+      internalID: -743250037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 441
+        width: 112
+        height: 170
+      alignment: 9
+      pivot: {x: 0.48698643, y: 0.14288689}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec77098d6b95e134781234bc38658165
+      internalID: -1189040744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 429
+        width: 131
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5, y: 0.124444544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a9a58ea3f48fc4893493f2dce5adf3
+      internalID: 1271515518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 443
+        width: 118
+        height: 176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9368a6c820c7f4f8afc213cb7ae8ff
+      internalID: -1592634622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 441
+        width: 171
+        height: 164
+      alignment: 9
+      pivot: {x: 0.5205014, y: 0.33544308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb0eb3420f8a7248a06273534a24e42
+      internalID: 600492465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 448
+        width: 84
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.037610706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8db76d5d2fe62449c8b0dba6753198
+      internalID: 1324464191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 453
+        width: 166
+        height: 142
+      alignment: 9
+      pivot: {x: 0.6684208, y: 0.36869168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a6ad138dfae884aaafceb696493744
+      internalID: -732464671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 309
+        width: 147
+        height: 113
+      alignment: 9
+      pivot: {x: 0.5814757, y: 0.27121052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf4f093bebd1de4fa2a365fbfd62692
+      internalID: 1392205584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 309
+        width: 154
+        height: 120
+      alignment: 9
+      pivot: {x: 0.49313772, y: 0.17025986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2429d4bb318b1f4aa6f70e1f84b07d7
+      internalID: 1532641753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 308
+        width: 140
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eebf3443c44e4540b93b72d3b2f40d7
+      internalID: -720413128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 318
+        width: 136
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff31ad37bf44b24cb3c307e7fdcca1b
+      internalID: -242050863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 306
+        width: 183
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5081527, y: 0.18174589}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9c551d505596243a5c0a5e70cc9814
+      internalID: 914521219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 150
+        width: 78
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7fead9d082b9c48b5771386e7d82fc
+      internalID: 225307790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 150
+        width: 76
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f519bc337a2e3c548b291fc8e8b151ab
+      internalID: 1603422370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 121
+        width: 90
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64114a2b25939954790523c9ad654f1e
+      internalID: 1738613797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 123
+        width: 86
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1570503ff3382345a78b412a9d0342d
+      internalID: 1309675366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 122
+        width: 84
+        height: 146
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03303601}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b686aba937d60ea4d97a7eb3dddec748
+      internalID: -645046048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 123
+        width: 88
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2aba4ae4eb0364cab843973f1d9f49
+      internalID: 979828720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 123
+        width: 90
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f564191ec28d70246978f2847a5c64ef
+      internalID: -1562773754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bangunan Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 130
+        width: 88
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172bbbbf48909044cb8d04837c90690b
+      internalID: -1397333566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Bangunan Sprite Sheet_0: 1715650536
+      Bangunan Sprite Sheet_1: -1091547469
+      Bangunan Sprite Sheet_10: -364132400
+      Bangunan Sprite Sheet_11: 600492465
+      Bangunan Sprite Sheet_12: 1324464191
+      Bangunan Sprite Sheet_13: -732464671
+      Bangunan Sprite Sheet_14: 1147604212
+      Bangunan Sprite Sheet_15: 1392205584
+      Bangunan Sprite Sheet_16: 1532641753
+      Bangunan Sprite Sheet_17: -720413128
+      Bangunan Sprite Sheet_18: -242050863
+      Bangunan Sprite Sheet_19: 914521219
+      Bangunan Sprite Sheet_2: 1806316377
+      Bangunan Sprite Sheet_20: 225307790
+      Bangunan Sprite Sheet_21: 1603422370
+      Bangunan Sprite Sheet_22: 1738613797
+      Bangunan Sprite Sheet_23: 1309675366
+      Bangunan Sprite Sheet_24: -645046048
+      Bangunan Sprite Sheet_25: 979828720
+      Bangunan Sprite Sheet_26: -1562773754
+      Bangunan Sprite Sheet_27: -1397333566
+      Bangunan Sprite Sheet_3: 1570510403
+      Bangunan Sprite Sheet_4: 426554731
+      Bangunan Sprite Sheet_5: -743250037
+      Bangunan Sprite Sheet_6: -506140010
+      Bangunan Sprite Sheet_7: -1189040744
+      Bangunan Sprite Sheet_8: 1271515518
+      Bangunan Sprite Sheet_9: -1592634622
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

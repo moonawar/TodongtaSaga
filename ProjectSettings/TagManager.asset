@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Mouse
+  - PlayerCanvas
+  - Core
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - NotWalkable
+  - Water
+  - UI
+  - Boundary
+  - DontCatch
+  - InteractHit
+  - Minimap
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Minimap
+    uniqueID: 583936131
+    locked: 0
+  - name: Background
+    uniqueID: 3909463075
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

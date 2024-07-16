@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
+  m_Name: 3_Meet Amang
+  m_EditorClassIdentifier: 
+  missionName: Meet Amang
+  description: Pergi Kembali ke Rumah dan Temui Keluarga
+  trigger:
+    type: 0
+    npcName: Amang
+    npcLocation: {x: 51.23, y: -24.31}
+    objectName: 
+    location: {x: 72.25, y: 65.25}
+    radius: 1
+    showWaypoint: 1
+  tasks:
+  - type: 0
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: 
+    onTaskComplete:
+    - type: 0
+      npcName: 
+      position: {x: 58.86, y: -28.15}
+      dissapearImmediately: 0
+      orientation: 0
+  - type: 2
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: 58.86, y: -28.15}
+    showWaypoint: 1
+    sceneName: GubukAnggi
+    onTaskComplete: []
+  - type: 3
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: GubukAnggi
+    onTaskComplete:
+    - type: 0
+      npcName: 
+      position: {x: 45.23, y: -23.83}
+      dissapearImmediately: 0
+      orientation: 0
+  - type: 2
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: Gameplay
+    onTaskComplete: []
+  - type: 0
+    yarnTitle: 6_2
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: GubukAnggi
+    onTaskComplete:
+    - type: 0
+      npcName: 
+      position: {x: 45.86, y: -33.72}
+      dissapearImmediately: 0
+      orientation: 0
+  - type: 2
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: 45.86, y: -33.72}
+    showWaypoint: 1
+    sceneName: Gameplay
+    onTaskComplete: []
+  - type: 3
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: 45.86, y: -33.72}
+    showWaypoint: 0
+    sceneName: Gameplay
+    onTaskComplete:
+    - type: 1
+      npcName: 
+      position: {x: 58.86, y: -28.98}
+      dissapearImmediately: 0
+      orientation: 1
+    - type: 4
+      npcName: Amang
+      position: {x: 58.86, y: -28.98}
+      dissapearImmediately: 0
+      orientation: 0
+  announce: 1
+  hidden: 0
+  relationshipImpacts: []
+  followUpMissions:
+  - {fileID: 11400000, guid: 6643edc6f052d954aad5616fe47a4d47, type: 2}
