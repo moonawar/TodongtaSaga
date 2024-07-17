@@ -2,6 +2,7 @@ using UnityEngine;
 using Yarn.Unity;
 using DG.Tweening;
 using System;
+using TMPro;
 
 public class NPC : Interactable
 {
@@ -16,9 +17,11 @@ public class NPC : Interactable
     [SerializeField] private float bounceDuration = 0.5f;
 
     private bool interactable = false;
+    private bool interacted = false;
     private SpriteRenderer hintSpriteRenderer;
     private Vector3 hintInitialPosition;
     private Tweener bounceAnimation;
+    private Tween fadeAnimation;
 
     private Action onInteraction;
     private bool shouldDissapear = false;
@@ -45,7 +48,10 @@ public class NPC : Interactable
     }
 
     public override void OnInteractableEnter()
-    {
+    {   
+        if (interacted) return;
+        fadeAnimation?.Kill();
+
         interactHint.gameObject.SetActive(true);
         interactable = true;
 
@@ -54,22 +60,31 @@ public class NPC : Interactable
         startColor.a = 0f;
         hintSpriteRenderer.color = startColor;
 
-        DOTween.Sequence()
+        fadeAnimation = DOTween.Sequence()
             .Join(hintSpriteRenderer.DOFade(1f, fadeDuration))
             .Join(interactHint.DOLocalMove(hintInitialPosition, slideDuration).SetEase(Ease.OutBack))
-            .OnComplete(StartBounceAnimation);
+            .OnComplete(() => {
+                fadeAnimation = null;
+                StartBounceAnimation();
+            });
     }
 
     public override void OnInteractableExit()
     {
+        if (interacted) return;
+        fadeAnimation?.Kill();
+
         interactable = false;
 
         bounceAnimation?.Kill();
 
-        DOTween.Sequence()
+        fadeAnimation = DOTween.Sequence()
             .Join(hintSpriteRenderer.DOFade(0f, fadeDuration))
             .Join(interactHint.DOLocalMove(hintInitialPosition - new Vector3(0, hintOffset, 0), slideDuration).SetEase(Ease.InBack))
-            .OnComplete(() => interactHint.gameObject.SetActive(false));
+            .OnComplete(() => {
+                interactHint.gameObject.SetActive(false); 
+                fadeAnimation = null;
+            });
     }
 
     private void StartBounceAnimation()
@@ -82,6 +97,7 @@ public class NPC : Interactable
 
     public void AddInteractionListener(Action action)
     {
+        interacted = false;
         onInteraction += action;
     }
 
@@ -92,6 +108,7 @@ public class NPC : Interactable
 
     public void ClearInteractionListeners()
     {
+        interacted = true;
         onInteraction = null;
     }
 

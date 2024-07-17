@@ -21,6 +21,7 @@ public class InteractableObject : Interactable
 
     private Action onInteraction;
     public bool ShouldDissapear = false;
+    private bool interacted = false;
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class InteractableObject : Interactable
 
     public override void OnInteractableEnter()
     {
+        if (interacted) return;
         fadeAnimation?.Kill();
 
         interactHint.gameObject.SetActive(true);
@@ -60,6 +62,7 @@ public class InteractableObject : Interactable
 
     public override void OnInteractableExit()
     {
+        if (interacted) return;
         fadeAnimation?.Kill();
 
         interactable = false;
@@ -85,6 +88,7 @@ public class InteractableObject : Interactable
 
     public void AddInteractionListener(Action action)
     {
+        interacted = false;
         onInteraction += action;
     }
 
@@ -104,6 +108,8 @@ public class InteractableObject : Interactable
         onInteraction?.Invoke();
         OnInteractableExit();
         interactable = false;
+        interacted = true;
+        ClearInteractionListeners();
     }
 
     private void OnBecameInvisible() {
