@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class CoreSingleton : MonoBehaviour
+public class DebugCanvasSingleton : MonoBehaviour
 {
-    public static CoreSingleton Instance;
+    public static DebugCanvasSingleton Instance;
 
     private void Awake() {
         if (Instance != null && Instance != this) {

@@ -89,4 +89,8 @@ public class InMinigameManager : MonoBehaviour
     {
         GameStateManager.Instance.ToMinigamePlaying();
     }
+
+    private void OnDestroy() {
+        DOTween.KillAll();
+    }
 }

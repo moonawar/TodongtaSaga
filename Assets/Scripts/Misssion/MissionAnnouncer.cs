@@ -21,6 +21,9 @@ public class MissionAnnouncer : MonoBehaviour
     private Queue<(string, string)> announcementQueue = new Queue<(string, string)>();
     private bool isDisplaying = false;
 
+    private string lastMissionTitle;
+    private string lastMissionDescription;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -48,6 +51,14 @@ public class MissionAnnouncer : MonoBehaviour
         {
             StartCoroutine(DisplayAnnouncementsCoroutine());
         }
+
+        lastMissionTitle = missionTitle;
+        lastMissionDescription = missionDescription;
+    }
+
+    public void ReannounceMission()
+    {
+        AnnounceMission(lastMissionTitle, lastMissionDescription);
     }
 
     private IEnumerator DisplayAnnouncementsCoroutine()

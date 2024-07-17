@@ -17,7 +17,7 @@ public class GameDebugger : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
-            timeScale = 4.5f;
+            timeScale = 9f;
         } else if (Input.GetKeyUp(KeyCode.LeftShift)) {
             timeScale = 1f;
         }
@@ -28,11 +28,6 @@ public class GameDebugger : MonoBehaviour
             storedTimeScale = timeScale;
             Time.timeScale = timeScale;
         }
-    }
-
-    public void DebugLog(string message)
-    {
-        Debug.Log(message);
     }
 
     public void LoadGame() {

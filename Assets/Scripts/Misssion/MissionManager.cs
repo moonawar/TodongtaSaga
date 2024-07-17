@@ -6,7 +6,6 @@ using System;
 using DG.Tweening;
 using UnityEngine.Events;
 using System.Collections;
-using Cinemachine;
 
 [RequireComponent(typeof(CutsceneManager))]
 [RequireComponent(typeof(DialogueManager))]
@@ -30,6 +29,7 @@ public class MissionManager : MonoBehaviour
     [SerializeField] private CanvasGroup cutsceneCanvasGroup;
 
     private Mission currentMission;
+    public Mission CurrentMission => currentMission;
     private int currentTaskIndex;
 
     void Awake()
@@ -62,28 +62,17 @@ public class MissionManager : MonoBehaviour
     public void StartMission(Mission mission)
     {
         // Code to start the mission
-        Debug.Log("Mission Started: " + mission.missionName);
+        InGameDebug.Instance.Log("Mission Started: " + mission.missionName);
         currentMission = mission;
         currentTaskIndex = 0;
         IsMissionInProgress = true;
         ExecuteNextTask(mission, 0);
     }
 
-    // public List<Mission> GetAvailableMissions(NPC npc)
-    // {
-        // List<Mission> availableMissions = new List<Mission>();
-        // foreach (var mission in missions)
-        // {
-        //     if (!mission.isCompleted && mission.assignedNPC == npc)
-        //     {
-        //         availableMissions.Add(mission);
-        //     }
-        // }
-        // return availableMissions;
-    // }
-
     public void CompleteMission(Mission mission)
     {
+        InGameDebug.Instance.Log("Mission Completed: " + mission.missionName);
+
         missions.Remove(mission);
 
         mission.OnMissionCompleteAction?.Invoke();
@@ -96,14 +85,20 @@ public class MissionManager : MonoBehaviour
 
         foreach (Mission followUpMission in mission.followUpMissions)
         {
+            if (missions.Contains(followUpMission)) continue; // Skip if the mission is already there
             missions.Add(followUpMission);
             HandleNewMission(followUpMission);
         }
 
-        currentMission = null;
-        IsMissionInProgress = false;
+        string missionsString = string.Join(", ", missions.ConvertAll(m => m.missionName).ToArray());
+
+        InGameDebug.Instance.Log($"Missions Available: [{missionsString}]");
+
         SaveManager.Instance.SaveGame();
         GameStateManager.Instance.ToExplore();
+
+        currentMission = null;
+        IsMissionInProgress = false;
 
         if (missions.Count == 0)
         {
@@ -112,6 +107,8 @@ public class MissionManager : MonoBehaviour
     }
 
     public void HandleNewMission(Mission mission) {
+        InGameDebug.Instance.Log("Handling new mission: " + mission.missionName);
+
         if (mission == null) return;
         // Create the trigger for the new mission
         MissionTriggerType triggerType = mission.trigger.type;
@@ -119,6 +116,8 @@ public class MissionManager : MonoBehaviour
         {
             case MissionTriggerType.NPC:
                 // Spawn NPC interaction point
+                InGameDebug.Instance.Log("Assigning mission to NPC: " + mission.trigger.npcName);
+
                 NPCManager.Instance.AssignMissionToNPC(mission, mission.trigger.npcName);
                 NPC npc = NPCManager.Instance.FindNPCWithName(mission.trigger.npcName);
 
@@ -137,6 +136,8 @@ public class MissionManager : MonoBehaviour
 
                 if (mission.trigger.showWaypoint)
                 {
+                    InGameDebug.Instance.Log("Setting destination to mission location: " + mission.trigger.location);
+
                     WaypointManager.Instance.SetDestination(mission.trigger.location);
                     mission.OnMissionCompleteAction += () => WaypointManager.Instance.FinishDestination();
                 }
@@ -157,8 +158,8 @@ public class MissionManager : MonoBehaviour
 
     public void SkipCurrentTask() {
         // Skip current task
-        dialogueManager.OnSkipped();
-        cutsceneManager.OnSkipped();
+        dialogueManager.CleanDialogue();
+        cutsceneManager.CleanCutscene();
         GameStateManager.Instance.ToExplore();
         ExecuteNextTask(currentMission, currentTaskIndex + 1);
     }
@@ -169,8 +170,8 @@ public class MissionManager : MonoBehaviour
             currentMission = missions[0];
         }
 
-        dialogueManager.OnSkipped();
-        cutsceneManager.OnSkipped();
+        dialogueManager.CleanDialogue();
+        cutsceneManager.CleanCutscene();
         CompleteMission(currentMission);
     }
 
@@ -184,6 +185,11 @@ public class MissionManager : MonoBehaviour
 
     private void ExecuteNextTask(Mission mission, int taskIndex)
     {
+        if (!missions.Contains(mission))
+        {
+            InGameDebug.Instance.Log("Mission not found in the list of missions. Skipping task.");
+        }
+
         // Call OnTaskComplete actions
         if (taskIndex > 0)
         {
@@ -252,6 +258,8 @@ public class MissionManager : MonoBehaviour
             return;
         }
 
+        InGameDebug.Instance.Log($"Executing Task {taskIndex} of type {mission.tasks[taskIndex].type} for mission {mission.missionName}");
+
         var task = mission.tasks[taskIndex];
         switch (task.type)
         {
@@ -260,6 +268,8 @@ public class MissionManager : MonoBehaviour
                 GameStateManager.Instance.ToDialogue();
                 dialogueManager.StartDialogue(task.yarnTitle, () =>
                 {
+                    InGameDebug.Instance.Log($"Dialogue Finished for mission {mission.missionName}");
+
                     GameStateManager.Instance.ToExplore();
                     ExecuteNextTask(mission, taskIndex + 1);
                 });
@@ -272,6 +282,9 @@ public class MissionManager : MonoBehaviour
                     cutsceneCanvasGroup.alpha = 1;
                     cutsceneManager.StartCutscene(task.cutscene, () =>
                     {
+                        InGameDebug.Instance.Log($"Cutscene Finished for mission {mission.missionName}");
+                        cutsceneManager.CleanCutscene();
+
                         GameStateManager.Instance.ToExplore();
                         ExecuteNextTask(mission, taskIndex + 1);
                         FadeFromBlack();
@@ -285,25 +298,11 @@ public class MissionManager : MonoBehaviour
                 {
                     WaypointManager.Instance.SetDestination(task.travelLocation);
                 }
-                // Player.Instance.MoveToLocation(task.travelLocation, () =>
-                // {
-                //     ExecuteNextTask(mission, taskIndex + 1);
-                // });
                 break;
             case MissionTaskType.SwitchScene:
                 SceneLoader.Instance.LoadScene(task.sceneName, ExecuteNextTask);
                 break;
         }
-    }
-
-    public void ResetMission(Mission mission) {
-        missions.Remove(mission);
-        missions.Add(mission);
-        HandleNewMission(mission);
-    }
-
-    public void ResetCurrentMission() {
-        ResetMission(currentMission);
     }
 
     private void FadeToBlack(Action onComplete = null)
@@ -317,32 +316,12 @@ public class MissionManager : MonoBehaviour
         blackOverlay.DOFade(0f, fadeDuration).OnComplete(() => onComplete?.Invoke());
     }
 
-    // [YarnCommand("startMission")]
-    // public void StartMissionCommand(string missionName)
-    // {
-    //     var mission = missions.Find(m => m.missionName == missionName);
-    //     if (mission != null)
-    //     {
-    //         StartMission(mission);
-    //     }
-    // }
-
-    // [YarnCommand("executeNextTask")]
-    // public void ExecuteNextTaskCommand(string missionName, int taskIndex)
-    // {
-    //     var mission = missions.Find(m => m.missionName == missionName);
-    //     if (mission != null)
-    //     {
-    //         ExecuteNextTask(mission, taskIndex);
-    //     }
-    // }
-
-
     // API For Cross-Scene Communication
     public static void CreateInteractableObject(Vector2 location, UnityEvent onInteraction)
     {
         InteractableObjectManager.Instance.CreateInteractableObject(location, onInteraction);
     }
+
 }
 
 #if UNITY_EDITOR

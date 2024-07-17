@@ -2,23 +2,22 @@
 title: 1
 ---
 Anggi: Aduh, bosan sekali. Semua orang sibuk, nggak ada yang main sama aku.
-Ibu Anggi: (berteriak dari dapur) Anggi, bantu Mama ambilin kain ulos di kamar ya!
+Ibu Anggi: Anggi, bantu Mama ambilin kain ulos di kamar ya!
 <<prepareImage MissionManager>> // The image will be changed after the next line
-Anggi: Iya, Ma. (goes to her parents' room and finds the ulos)
-Anggi: Ulosnya cantik banget. (menyelimuti diri dengan ulos)Hmm, hangat banget. (membaringkan diri di kasur) Kok jadi ngantuk ya...
+Anggi: Iya, Ma.
+Anggi: Ulosnya cantik banget. Hmm, hangat banget. Kok jadi ngantuk ya...
 <<prepareImage MissionManager>>
-Scene: Anggi falls asleep. The screen fades to black and then brightens up again to reveal a more traditional looking house. 
-Anggi: (terbangun, bingung) Eh, aku di mana? Ini bukan rumahku...
+Anggi: Eh, aku di mana? Ini bukan rumahku...
 <<prepareImage MissionManager>>
 Ayah: Horas Anggi.
 Anggi: Ayah? Ibu?
 Ayah: Bah, tumben kau pake Bahasa Indonesia itu? Panggil aku Amang saja, nggi. 
 Ibu: Aku juga, kau biasa panggil Inang.
 <<prepareImage MissionManager>>
-Anggi: (di dalam hati) bukankah selama ini aku menggunakan panggilan Mama-Papa?
+Anggi: Bukankah selama ini aku menggunakan panggilan Mama-Papa?
 Anggi: Kita lagi di mana?
-Anggi's Mother: (laughing) Anggi lucu deh. Kita di rumah, sayang.  Hari ini kan acara Tardidimu, siap-siap lah nak.
-Anggi: (still confused, but follows her parents) Iya, Ma...
+Anggi's Mother: Anggi lucu deh. Kita di rumah, sayang.  Hari ini kan acara Tardidimu, siap-siap lah nak.
+Anggi: Iya, Ma...
 ===
 
 title: 4

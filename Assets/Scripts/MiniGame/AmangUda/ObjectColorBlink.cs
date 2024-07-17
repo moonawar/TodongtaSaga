@@ -22,12 +22,6 @@ public class ObjectColorBlink : MonoBehaviour
 
     public void StartBlinking()
     {
-        if (spriteRenderer == null)
-        {
-            Debug.LogError("No SpriteRenderer found on this GameObject.");
-            return;
-        }
-
         StopBlinking();
 
         blinkSequence = DOTween.Sequence();

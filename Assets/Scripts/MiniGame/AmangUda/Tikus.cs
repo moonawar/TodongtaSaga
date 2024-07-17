@@ -21,7 +21,6 @@ public class Tikus : MonoBehaviour
 
     private void Awake() {
         if (raycastOrigin == null) {
-            Debug.LogWarning("No raycast origin assigned to TikusMovement script.");
             raycastOrigin = transform;
         }
 

@@ -29,11 +29,7 @@ MonoBehaviour:
     travelLocation: {x: 0, y: 0}
     showWaypoint: 0
     sceneName: 
-    onTaskComplete:
-    - type: 0
-      npcName: 
-      position: {x: 0, y: 0}
-      dissapearImmediately: 0
+    onTaskComplete: []
   - type: 0
     yarnTitle: 5
     cutscene: {fileID: 0}

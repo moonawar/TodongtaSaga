@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
   m_Name: 6_Minigame Tikus
   m_EditorClassIdentifier: 
-  missionName: Amang Uda
-  description: Tikus
+  missionName: Misi Penyelamatan Boras
+  description: Selamatkan Boras dari Genggaman Tikus
   trigger:
     type: 0
     npcName: Amang Uda
@@ -55,14 +55,17 @@ MonoBehaviour:
       npcName: 
       position: {x: -29.16, y: -30.48}
       dissapearImmediately: 0
+      orientation: 1
     - type: 5
       npcName: 
       position: {x: -29.16, y: -30.48}
       dissapearImmediately: 0
+      orientation: 1
     - type: 3
       npcName: Amang Uda
       position: {x: -29.16, y: -29.22}
       dissapearImmediately: 0
+      orientation: 1
   - type: 0
     yarnTitle: 15
     cutscene: {fileID: 0}
@@ -74,7 +77,8 @@ MonoBehaviour:
       npcName: Amang Uda
       position: {x: 0, y: 0}
       dissapearImmediately: 0
-  announce: 0
+      orientation: 1
+  announce: 1
   hidden: 0
   relationshipImpacts: []
   followUpMissions: []

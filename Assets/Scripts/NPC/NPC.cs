@@ -21,13 +21,19 @@ public class NPC : Interactable
     private Tweener bounceAnimation;
 
     private Action onInteraction;
-    public bool ShouldDissapear = false;
+    private bool shouldDissapear = false;
+    public bool ShouldDissapear { get => shouldDissapear; set {
+        shouldDissapear = value;
+        if (shouldDissapear) {
+            interactable = false;
+        }
+    }}
 
     private void Awake()
     {
         if (!interactHint.TryGetComponent(out hintSpriteRenderer))
         {
-            Debug.LogError("SpriteRenderer not found on interactHint. Please add a SpriteRenderer component.");
+            InGameDebug.Instance.LogError("SpriteRenderer not found on interactHint. Please add a SpriteRenderer component.");
         }
 
         hintInitialPosition = interactHint.localPosition;
@@ -100,11 +106,11 @@ public class NPC : Interactable
 
     public void Dissapear() {
         gameObject.SetActive(false);
-        ShouldDissapear = false;
+        shouldDissapear = false;
     }
 
     private void OnBecameInvisible() {
-        if (ShouldDissapear) {
+        if (shouldDissapear) {
             Dissapear();
         }
     }

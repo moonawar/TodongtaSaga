@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
   m_Name: 1_Introduction
   m_EditorClassIdentifier: 
-  missionName: Introduction
+  missionName: Pembukaan
   description: 
   trigger:
     type: 3

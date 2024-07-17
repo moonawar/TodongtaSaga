@@ -46,7 +46,9 @@ public class GameStateManager : MonoBehaviour {
         }
 
         if (debugOn) {
-            OnGameStateChanged += state => Debug.Log($"Game State Changed to {state}");
+            OnGameStateChanged += state => {
+                InGameDebug.Instance.Log($"Game State Changed to {state}");
+            };
         }
     }
 

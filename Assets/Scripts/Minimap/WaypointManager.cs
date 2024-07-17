@@ -34,12 +34,6 @@ public class WaypointManager : MonoBehaviour
 
     private void CalculateWorldRadarRadius()
     {
-        if (uiCamera == null)
-        {
-            Debug.LogError("UI Camera is not assigned in the WaypointManager!");
-            return;
-        }
-
         Vector3 radarCenter = radarRectTransform.position;
         Vector3 radarEdge = radarCenter + new Vector3(radarRadius, 0, 0);
 
@@ -105,41 +99,4 @@ public class WaypointManager : MonoBehaviour
             Gizmos.DrawWireSphere(player.position, worldRadarRadius);
         }
     }
-
-    public void PrintWaypointInfo()
-    {
-        Vector2 directionToTarget = destination - (Vector2)player.position;
-        float distanceToTarget = directionToTarget.magnitude;
-        Vector2 waypointPosition;
-
-        if (distanceToTarget <= worldRadarRadius)
-        {
-            waypointPosition = directionToTarget / worldRadarRadius * radarRadius;
-        }
-        else
-        {
-            waypointPosition = directionToTarget.normalized * radarRadius;
-        }
-
-        Debug.Log("Direction: " + directionToTarget.normalized);
-        Debug.Log("Distance to target: " + distanceToTarget);
-        Debug.Log("Waypoint Pos: " + waypointPosition);
-        Debug.Log("World Radar Radius: " + worldRadarRadius);
-    }
 }
-
-#if UNITY_EDITOR
-[UnityEditor.CustomEditor(typeof(WaypointManager))]
-public class WaypointManagerEditor : UnityEditor.Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-        WaypointManager waypointManager = (WaypointManager)target;
-        if (GUILayout.Button("Print Waypoint Info"))
-        {
-            waypointManager.PrintWaypointInfo();
-        }
-    }
-}
-#endif

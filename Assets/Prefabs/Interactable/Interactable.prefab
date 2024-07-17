@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1613398720, guid: bd958f79c5d0efb44bc704abcd304600, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 108b09ba5f469814aad171694f44e753, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,11 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d362fe9a09570498edc51f6baf0a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Data: {fileID: 0}
   interactHint: {fileID: 5964567685702247384}
-  hintInitOffset: 1
+  hintOffset: 1
   fadeDuration: 0.5
   slideDuration: 0.5
-  dialogueRunner: {fileID: 0}
+  bounceAmplitude: 0.1
+  bounceDuration: 0.5
 --- !u!1 &2428306451974784045
 GameObject:
   m_ObjectHideFlags: 0

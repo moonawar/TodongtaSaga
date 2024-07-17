@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
   m_Name: 4_Amang Uda
   m_EditorClassIdentifier: 
-  missionName: Amang Uda
-  description: Temui Paman
+  missionName: Meet Amang Uda
+  description: Temui Pamanmu untuk mencari informasi lebih lanjut
   trigger:
     type: 2
     npcName: AmangUda

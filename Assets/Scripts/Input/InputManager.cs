@@ -15,14 +15,13 @@ public class InputManager : MonoBehaviour
                 if (touch.phase == TouchPhase.Began)
                 {
                     Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-                    RaycastHit2D[] hit = Physics2D.RaycastAll(touchPosition, Vector2.zero, Mathf.Infinity, interactableLayer);
+                    Collider2D[] colliders = Physics2D.OverlapPointAll(touchPosition, interactableLayer);
 
-                    foreach (var h in hit)
+                    foreach (var c in colliders)
                     {
-                        Interactable interactable = h.collider.GetComponent<Interactable>();
-                        if (interactable == null)
+                        if (!c.TryGetComponent<Interactable>(out var interactable))
                         {
-                            interactable = h.collider.GetComponentInParent<Interactable>();
+                            interactable = c.GetComponentInParent<Interactable>();
                         }
                         
                         if (interactable != null)

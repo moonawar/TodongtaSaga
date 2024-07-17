@@ -20,7 +20,7 @@ public class CutsceneManager : MonoBehaviour
     {
         if (dialogueRunner == null)
         {
-            Debug.LogWarning("DialogueRunner not found. Searching for one in the scene.");
+            InGameDebug.Instance.LogError("DialogueRunner not found. Searching for one in the scene.");
             dialogueRunner = FindObjectOfType<DialogueRunner>();
         }
     }
@@ -37,8 +37,10 @@ public class CutsceneManager : MonoBehaviour
         });
         currentCutscene = cutscene;
         currentImageIndex = 0;
-
         cutsceneImage.sprite = cutscene.images[0].image;
+
+        InGameDebug.Instance.Log("Starting cutscene: " + cutscene.yarnTitle);
+
         dialogueRunner.StartDialogue(cutscene.yarnTitle);
         FadeFromBlack();
     }
@@ -81,7 +83,7 @@ public class CutsceneManager : MonoBehaviour
         return currentFadeTween;
     }
 
-    public void OnSkipped()
+    public void CleanCutscene()
     {
         // Remove the onComplete callback from the current fade tween
         if (currentFadeTween != null)
@@ -98,13 +100,11 @@ public class CutsceneManager : MonoBehaviour
 
         // Reset the continue button
         continueBtn.onClick.RemoveAllListeners();
+        continueBtn.onClick.AddListener(lineView.UserRequestedViewAdvancement);
         continueBtn.enabled = true;
 
         // Clear any remaining dialogue complete listeners
         dialogueRunner.onDialogueComplete.RemoveAllListeners();
-
-        // Stop the dialogue
-        dialogueRunner.Stop();
 
         // Reset the current image index
         currentImageIndex = 0;

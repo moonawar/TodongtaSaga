@@ -56,4 +56,8 @@ public class CatchStatusSpawner : MonoBehaviour
         // Deactivate the text object after the animation is complete
         sequence.OnComplete(() => statusText.gameObject.SetActive(false));
     }
+
+    private void OnDestroy() {
+        DOTween.KillAll();
+    }
 }

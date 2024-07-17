@@ -2,10 +2,12 @@ using System.IO;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour {
-    public static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    public static string SAVE_FOLDER;
     public static SaveManager Instance;
     public GameSave CurrentGameSave;
     private void Awake() {
+        SAVE_FOLDER = Application.persistentDataPath + "/Saves";
+
         if (Instance != null && Instance != this) {
             Destroy(gameObject);
         } else {
@@ -30,7 +32,7 @@ public class SaveManager : MonoBehaviour {
         File.WriteAllText(SAVE_FOLDER + "/save.json", json);
 
         CurrentGameSave = gameSave;
-        Debug.Log("Game Saved");
+        InGameDebug.Instance.Log("Game Saved");
     }
 
     public void LoadGame() {
@@ -51,7 +53,7 @@ public class SaveManager : MonoBehaviour {
                 MissionManager.Instance.missions = gameSave.Missions;
                 MissionManager.Instance.IsMissionLoaded = true;
             });
-            Debug.Log("Game Loaded");
+            InGameDebug.Instance.Log("Game Loaded");
         } else {
             SceneLoader.Instance.LoadScene("Gameplay", () => {
                 MissionManager.Instance.IsMissionLoaded = true;
@@ -62,7 +64,9 @@ public class SaveManager : MonoBehaviour {
     public void DeleteSave() {
         if (File.Exists(SAVE_FOLDER + "/save.json")) {
             File.Delete(SAVE_FOLDER + "/save.json");
-            Debug.Log("Save Deleted");
+            InGameDebug.Instance.Log("Save Deleted");
+        } else {
+            InGameDebug.Instance.Log("No Save Found. Skipping Delete.");
         }
     }
 }

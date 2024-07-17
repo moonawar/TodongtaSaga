@@ -13,11 +13,11 @@ public class InteractableObject : Interactable
     [SerializeField] private float bounceAmplitude = 0.1f;
     [SerializeField] private float bounceDuration = 0.5f;
 
-
     private bool interactable = false;
     private SpriteRenderer hintSpriteRenderer;
     private Vector3 hintInitialPosition;
     private Tweener bounceAnimation;
+    private Tween fadeAnimation;
 
     private Action onInteraction;
     public bool ShouldDissapear = false;
@@ -26,7 +26,7 @@ public class InteractableObject : Interactable
     {
         if (!interactHint.TryGetComponent(out hintSpriteRenderer))
         {
-            Debug.LogError("SpriteRenderer not found on interactHint. Please add a SpriteRenderer component.");
+            InGameDebug.Instance.LogError("SpriteRenderer not found on interactHint. Please add a SpriteRenderer component.");
         }
 
         hintInitialPosition = interactHint.localPosition;
@@ -39,6 +39,8 @@ public class InteractableObject : Interactable
 
     public override void OnInteractableEnter()
     {
+        fadeAnimation?.Kill();
+
         interactHint.gameObject.SetActive(true);
         interactable = true;
 
@@ -47,22 +49,30 @@ public class InteractableObject : Interactable
         startColor.a = 0f;
         hintSpriteRenderer.color = startColor;
 
-        DOTween.Sequence()
+        fadeAnimation = DOTween.Sequence()
             .Join(hintSpriteRenderer.DOFade(1f, fadeDuration))
             .Join(interactHint.DOLocalMove(hintInitialPosition, slideDuration).SetEase(Ease.OutBack))
-            .OnComplete(StartBounceAnimation);
+            .OnComplete(() => {
+                fadeAnimation = null;
+                StartBounceAnimation();
+            });
     }
 
     public override void OnInteractableExit()
     {
+        fadeAnimation?.Kill();
+
         interactable = false;
 
         bounceAnimation?.Kill();
 
-        DOTween.Sequence()
+        fadeAnimation = DOTween.Sequence()
             .Join(hintSpriteRenderer.DOFade(0f, fadeDuration))
             .Join(interactHint.DOLocalMove(hintInitialPosition - new Vector3(0, hintOffset, 0), slideDuration).SetEase(Ease.InBack))
-            .OnComplete(() => interactHint.gameObject.SetActive(false));
+            .OnComplete(() => {
+                interactHint.gameObject.SetActive(false); 
+                fadeAnimation = null;
+            });
     }
 
     private void StartBounceAnimation()

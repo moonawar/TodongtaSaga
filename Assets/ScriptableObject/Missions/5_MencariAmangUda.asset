@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
   m_Name: 5_MencariAmangUda
   m_EditorClassIdentifier: 
-  missionName: Amang Uda
+  missionName: Nama Amang Uda
   description: Mencari Nama Amang Uda
   trigger:
     type: 0
