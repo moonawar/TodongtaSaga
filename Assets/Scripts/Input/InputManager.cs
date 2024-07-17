@@ -27,6 +27,7 @@ public class InputManager : MonoBehaviour
                         if (interactable != null)
                         {
                             interactable.Interact();
+                            break;
                         }
                     }
                 }
