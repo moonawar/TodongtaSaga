@@ -35,7 +35,7 @@ MonoBehaviour:
     cutscene: {fileID: 0}
     travelLocation: {x: -29.16, y: -29.22}
     showWaypoint: 1
-    sceneName: AmangUdaMainGame
+    sceneName: PenyelamatanBoras
     onTaskComplete: []
   - type: 2
     yarnTitle: 15

@@ -47,7 +47,7 @@ public class InMinigameManager : MonoBehaviour
             .OnComplete(() => {
                 // After zoom and slow-mo, fade in the end screen and end the game
                 FadeInScreen(endScreen);
-                GameStateManager.Instance.ToMinigameEnd();
+                GameStateManager.Instance.ToOpenUIOverride(); // Tell GameStateManager to open UI on top
                 // Reset time scale
                 Time.timeScale = 1f;
             });
@@ -87,7 +87,7 @@ public class InMinigameManager : MonoBehaviour
     
     public void ToMinigamePlaying()
     {
-        GameStateManager.Instance.ToMinigamePlaying();
+        GameStateManager.Instance.ToGameplayOverride();
     }
 
     private void OnDestroy() {

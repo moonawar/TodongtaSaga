@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnGameStateChanged(GameState state)
     {
-        if (state != GameState.Explore && state != GameState.MinigamePlaying)
+        if (state != GameState.Gameplay)
         {
             currentVelocity = Vector2.zero;
             animator.SetFloat("Speed", 0f);
@@ -92,9 +92,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 prevPosition = transform.position;
 #endif
 
-        if (GameStateManager.Instance.CurrentState != GameState.Explore &&
-            GameStateManager.Instance.CurrentState != GameState.MinigamePlaying
-        ) return;
+        if (GameStateManager.Instance.CurrentState != GameState.Gameplay) return;
         // Get input
         movement = Vector2.ClampMagnitude(ReadInput(), 1f);
 

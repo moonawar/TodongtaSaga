@@ -1,5 +1,4 @@
 using UnityEngine;
-using Yarn.Unity;
 using DG.Tweening;
 using System;
 

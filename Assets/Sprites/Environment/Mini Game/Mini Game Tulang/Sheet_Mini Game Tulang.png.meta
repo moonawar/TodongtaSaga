@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,1414 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 325
+        width: 291
+        height: 180
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962b96fd2c691b546808fda195f0babc
+      internalID: -1648666224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 401
+        width: 64
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f3c67c58ec0fd4c9724ec0fda5e923
+      internalID: 319165846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_2
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 473
+        width: 75
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc306cbf60ec3a48a1542be4525db8a
+      internalID: 483744725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 421
+        width: 193
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae69cdbaf9e18ea43bcbc5d2b6ed9892
+      internalID: -1957169911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_4
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9435aeb5a36254ba1e8e2004d9523c
+      internalID: -715688719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ff1d6646f2ced41b2572b2e259066e
+      internalID: 1224573758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_6
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6cebc6ecae1534f87b2dda5dde10de
+      internalID: 540686804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_7
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463c6de7cc1f4db458b1986a31a81dbe
+      internalID: -779129398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_8
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a29483ede72634980c7797c44b1528
+      internalID: -68484495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_9
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c6a7465f7df3042afa1891c1de99c7
+      internalID: -2029382681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_10
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a68e959150a0244fa759d748c0e021d
+      internalID: -1049848607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_11
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b8255341185924f87fe919999de663
+      internalID: 629649914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_12
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925c55829b3dd9f4c953961aa807ebb2
+      internalID: -1512284502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_13
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f329bbb2c9d7e44bc389085581846c
+      internalID: 940815248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_14
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2256a33da57a4cc43afa7902ca23ef66
+      internalID: -1709178165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_15
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794599e7536dce54ab05c17544839ac3
+      internalID: 1278853960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_16
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80783a6d6119b7740a553bf8cd65b64f
+      internalID: -642424366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_17
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c657a61fe409d41a5458b8419962e0
+      internalID: -277431199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_18
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4aebeb3a40097479b5a2098a373399
+      internalID: 1067218843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_19
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 349
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742328988969f7a4e826bdca39a5859f
+      internalID: -1878657146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 269
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e466698f241b8b49b329cfaf70f24af
+      internalID: 197997414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 269
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930ba8107d612d141b585d51707ee515
+      internalID: 71865336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_22
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 269
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325cb4e548c0cbc4aa415ed8335ad568
+      internalID: -876214310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_23
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 269
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da4878043ade0c4da3acc6b0eec0be2
+      internalID: -732094311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_24
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 269
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6446c266de3d4d44487568f44486529b
+      internalID: -1866090525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_25
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 269
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a315992f840004ea0f04b7d3a618bd
+      internalID: 1543125135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_26
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 269
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b9b598ece29cd49babe43068f7df29
+      internalID: 129520753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 274
+        width: 9
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c2c6764136a5d41bcd5c7c5f514866
+      internalID: -1874071548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_28
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 265
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867998bcbb440a34fa036bbdfc63a2ff
+      internalID: 487849175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_29
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 274
+        width: 38
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a753ae48d242c4ebb8d836721974e9
+      internalID: -1758197886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_30
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 276
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd4e552f1c3be44ea86b20dc7911f7e
+      internalID: -1621371618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_31
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 276
+        width: 13
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330d37a1d3a442544a0562002d8eba42
+      internalID: 1280966940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_32
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 274
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775720d6037f7424b8c30fb22f8299ee
+      internalID: 417921558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_33
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 244
+        width: 10
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ea5a9cb9f5c6040938aee6a9e94f70
+      internalID: -1235047814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_34
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 244
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9bfdd0bdfe1424fb7a075c2cc1c407
+      internalID: 1878134050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_35
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 243
+        width: 14
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599a10ec1effce84998eb6dd237292f4
+      internalID: 2009791015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_36
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 244
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471b3a041bc02984e910d0738542ef5e
+      internalID: 247108827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_37
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 244
+        width: 10
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de365679069a2e84a9331f3ce9ce35a5
+      internalID: 150268061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_38
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 242
+        width: 9
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952941fe2e8cd534086c164941ee3ed3
+      internalID: 1623698411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 242
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d761a3ba9a8974a4b910ef3c53aa3195
+      internalID: 1522883994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_40
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 211
+        width: 15
+        height: 45
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457f6fc05f69a934bb081d50bf4b5eb4
+      internalID: -1246640907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_41
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 223
+        width: 13
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712769435260edd44b3d234af96ca7ea
+      internalID: -1126873339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_42
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 221
+        width: 10
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133e968bafa47c54c9d17424e0c022ce
+      internalID: 683265301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_43
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 221
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87abd9f6a3c94b04895395381ee260d4
+      internalID: 491175771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_44
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 220
+        width: 14
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8ce85980817d44d8e52da842fda0a6
+      internalID: -970777067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_45
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 221
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e390482e6445d7449ffb341e4001779
+      internalID: 1535900705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_46
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 221
+        width: 10
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a71063958c097419b6c36f0eb63410
+      internalID: 589388617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_47
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 219
+        width: 9
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a31d7c26488b54f80ae8fa12669b75
+      internalID: -706232756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_48
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 219
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198628ef1aba3ae45ba83d7f535cde99
+      internalID: 1690193424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_49
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 220
+        width: 48
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ab97f45749a674f861d5b58b4128b8
+      internalID: 802167309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_50
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 163
+        width: 142
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf29c57e45816b49be0342aa1ab3890
+      internalID: 1838305229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_51
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 135
+        width: 46
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa7294f5d6efe94e98ea69999095a96
+      internalID: 215481502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_52
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 135
+        width: 31
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd4b109eb3cf7545aae88630d647b46
+      internalID: -966209619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_53
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 124
+        width: 33
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936754ba16424b244b4a2a2ef6d37347
+      internalID: -1292003345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_54
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 127
+        width: 34
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d83a13517b0e3a44bf7a81869bdd856
+      internalID: -1252842695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_55
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 125
+        width: 25
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a587e28c5caec344c8ee9430fc588445
+      internalID: -2058291852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_56
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 86
+        width: 22
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d18a96e89cd744b98c76d25cfad997
+      internalID: -1575669661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_57
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 96
+        width: 13
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ec01ad98e633346babc764f46d3859
+      internalID: 1756363272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_58
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 96
+        width: 13
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a3d6c6e9afe0342aefd18be2786408
+      internalID: 300292108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_59
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 96
+        width: 13
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8045bb3d7219ec44f85be2c66c0a3fd2
+      internalID: -758940582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_60
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 96
+        width: 13
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f86386aec3046428ac60a4e3d49667
+      internalID: 1848143200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_61
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 13
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76741a3d7d4802a449eec8a001324a42
+      internalID: 1951043032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_62
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 96
+        width: 13
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85e8f65f8f71224fac756c302da744a
+      internalID: 2135697219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_63
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 71
+        width: 47
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4815354ebd5ef5a4bb064e9de679a5b9
+      internalID: 478340310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_64
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 71
+        width: 66
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442184d4612cfb54693a1040d5e4d933
+      internalID: 895900705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_65
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 43
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6df1b46637e663429b7f7a743e382b5
+      internalID: -2010046146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_66
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 43
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e700127904c0042b5102fda3b7eed8
+      internalID: -242452393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +1552,74 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sheet_Mini Game Tulang_0: -1648666224
+      Sheet_Mini Game Tulang_1: 319165846
+      Sheet_Mini Game Tulang_10: -1049848607
+      Sheet_Mini Game Tulang_11: 629649914
+      Sheet_Mini Game Tulang_12: -1512284502
+      Sheet_Mini Game Tulang_13: 940815248
+      Sheet_Mini Game Tulang_14: -1709178165
+      Sheet_Mini Game Tulang_15: 1278853960
+      Sheet_Mini Game Tulang_16: -642424366
+      Sheet_Mini Game Tulang_17: -277431199
+      Sheet_Mini Game Tulang_18: 1067218843
+      Sheet_Mini Game Tulang_19: -1878657146
+      Sheet_Mini Game Tulang_2: 483744725
+      Sheet_Mini Game Tulang_20: 197997414
+      Sheet_Mini Game Tulang_21: 71865336
+      Sheet_Mini Game Tulang_22: -876214310
+      Sheet_Mini Game Tulang_23: -732094311
+      Sheet_Mini Game Tulang_24: -1866090525
+      Sheet_Mini Game Tulang_25: 1543125135
+      Sheet_Mini Game Tulang_26: 129520753
+      Sheet_Mini Game Tulang_27: -1874071548
+      Sheet_Mini Game Tulang_28: 487849175
+      Sheet_Mini Game Tulang_29: -1758197886
+      Sheet_Mini Game Tulang_3: -1957169911
+      Sheet_Mini Game Tulang_30: -1621371618
+      Sheet_Mini Game Tulang_31: 1280966940
+      Sheet_Mini Game Tulang_32: 417921558
+      Sheet_Mini Game Tulang_33: -1235047814
+      Sheet_Mini Game Tulang_34: 1878134050
+      Sheet_Mini Game Tulang_35: 2009791015
+      Sheet_Mini Game Tulang_36: 247108827
+      Sheet_Mini Game Tulang_37: 150268061
+      Sheet_Mini Game Tulang_38: 1623698411
+      Sheet_Mini Game Tulang_39: 1522883994
+      Sheet_Mini Game Tulang_4: -715688719
+      Sheet_Mini Game Tulang_40: -1246640907
+      Sheet_Mini Game Tulang_41: -1126873339
+      Sheet_Mini Game Tulang_42: 683265301
+      Sheet_Mini Game Tulang_43: 491175771
+      Sheet_Mini Game Tulang_44: -970777067
+      Sheet_Mini Game Tulang_45: 1535900705
+      Sheet_Mini Game Tulang_46: 589388617
+      Sheet_Mini Game Tulang_47: -706232756
+      Sheet_Mini Game Tulang_48: 1690193424
+      Sheet_Mini Game Tulang_49: 802167309
+      Sheet_Mini Game Tulang_5: 1224573758
+      Sheet_Mini Game Tulang_50: 1838305229
+      Sheet_Mini Game Tulang_51: 215481502
+      Sheet_Mini Game Tulang_52: -966209619
+      Sheet_Mini Game Tulang_53: -1292003345
+      Sheet_Mini Game Tulang_54: -1252842695
+      Sheet_Mini Game Tulang_55: -2058291852
+      Sheet_Mini Game Tulang_56: -1575669661
+      Sheet_Mini Game Tulang_57: 1756363272
+      Sheet_Mini Game Tulang_58: 300292108
+      Sheet_Mini Game Tulang_59: -758940582
+      Sheet_Mini Game Tulang_6: 540686804
+      Sheet_Mini Game Tulang_60: 1848143200
+      Sheet_Mini Game Tulang_61: 1951043032
+      Sheet_Mini Game Tulang_62: 2135697219
+      Sheet_Mini Game Tulang_63: 478340310
+      Sheet_Mini Game Tulang_64: 895900705
+      Sheet_Mini Game Tulang_65: -2010046146
+      Sheet_Mini Game Tulang_66: -242452393
+      Sheet_Mini Game Tulang_7: -779129398
+      Sheet_Mini Game Tulang_8: -68484495
+      Sheet_Mini Game Tulang_9: -2029382681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

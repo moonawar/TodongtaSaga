@@ -12,14 +12,13 @@ public class GameStateManager : MonoBehaviour {
     }}
     private static GameStateManager instance;
 
-    public GameState CurrentState { get; private set; } = GameState.Explore;
+    public GameState CurrentState { get; private set; } = GameState.Gameplay;
 
     [Header("General UI")]
     [SerializeField] private RectTransform dialogueUI;
     [SerializeField] private RectTransform cutsceneUI;
     [SerializeField] private RectTransform gameplayUI;
     [SerializeField] private RectTransform pauseUI;
-    [SerializeField] private RectTransform demoEndUI;
 
 
     [Header("Game Specific UI")]
@@ -95,13 +94,13 @@ public class GameStateManager : MonoBehaviour {
         SetState(GameState.Cutscene);
     }
 
-    public void ToExplore(bool immediate = false) {
+    public void ToGameplay(bool immediate = false) {
         dialogueUI.gameObject.SetActive(false);
         cutsceneUI.gameObject.SetActive(false);
 
         EnableGameplayUI();
 
-        SetState(GameState.Explore);
+        SetState(GameState.Gameplay);
     }
 
     public void Pause() {
@@ -115,21 +114,6 @@ public class GameStateManager : MonoBehaviour {
         pauseUI.gameObject.SetActive(false);
         Time.timeScale = 1f;
         SetState(previousState);
-    }
-
-    public void ToDemoEnd() {
-        demoEndUI.gameObject.SetActive(true);
-        Time.timeScale = 0f;
-        previousState = CurrentState;
-        SetState(GameState.DemoEnd);
-    }
-
-    public void ContinueDemo() {
-        demoEndUI.gameObject.SetActive(false);
-        Time.timeScale = 1f;
-        SetState(previousState);
-
-        MissionAnnouncer.Instance.AnnounceMission("Demo Berakhir", "Selamat, kamu telah menyelesaikan demo ini. Terima kasih telah bermain!");
     }
 
     public void MainMenu() {
@@ -160,7 +144,7 @@ public class GameStateManager : MonoBehaviour {
         bookUI.gameObject.SetActive(false);
         EnableGameplayUI();
 
-        SetState(GameState.Explore);
+        SetState(GameState.Gameplay);
     }
 
     public void OpenMission() {
@@ -178,7 +162,7 @@ public class GameStateManager : MonoBehaviour {
         missionUI.gameObject.SetActive(false);
         EnableGameplayUI();
 
-        SetState(GameState.Explore);
+        SetState(GameState.Gameplay);
     }
 
     public void OpenInventory() {
@@ -196,22 +180,22 @@ public class GameStateManager : MonoBehaviour {
         inventoryUI.gameObject.SetActive(false);
         EnableGameplayUI();
 
-        SetState(GameState.Explore);
+        SetState(GameState.Gameplay);
     }
 
-    public void ToMinigameTutorial() {
+    public void ToOpenUI() {
         gameplayUI.gameObject.SetActive(false);
         dialogueUI.gameObject.SetActive(false);
         cutsceneUI.gameObject.SetActive(false);
 
-        SetState(GameState.MinigameTutorial);
+        SetState(GameState.OpeningUI);
     }
 
-    public void ToMinigamePlaying() {
-        SetState(GameState.MinigamePlaying);
+    public void ToOpenUIOverride() {
+        SetState(GameState.OpeningUI);
     }
 
-    public void ToMinigameEnd() {
-        SetState(GameState.MinigameEnd);
+    public void ToGameplayOverride() {
+        SetState(GameState.Gameplay);
     }
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9cd120c7d0c9642b8fc7b6b6a7a1b1, type: 3}
+  m_Name: Es Teh Manis
+  m_EditorClassIdentifier: 
+  recipe:
+  - {fileID: 11400000, guid: f5068c1fa10766e488f873faace02071, type: 2}
+  - {fileID: 11400000, guid: 6913dbb3634a9a941aebb9b7c9b8d05f, type: 2}
+  - {fileID: 11400000, guid: 5ddd33ca54234f94d95d0ff484baca12, type: 2}
+  resultName: Es Teh Manis
+  resultSprite: {fileID: 975360753, guid: 515f27e4985639d429484d0cdbb05059, type: 3}

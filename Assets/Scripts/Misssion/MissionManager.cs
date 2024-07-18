@@ -95,7 +95,7 @@ public class MissionManager : MonoBehaviour
         InGameDebug.Instance.Log($"Missions Available: [{missionsString}]");
 
         SaveManager.Instance.SaveGame();
-        GameStateManager.Instance.ToExplore();
+        GameStateManager.Instance.ToGameplay();
 
         currentMission = null;
         IsMissionInProgress = false;
@@ -160,7 +160,7 @@ public class MissionManager : MonoBehaviour
         // Skip current task
         dialogueManager.CleanDialogue();
         cutsceneManager.CleanCutscene();
-        GameStateManager.Instance.ToExplore();
+        GameStateManager.Instance.ToGameplay();
         ExecuteNextTask(currentMission, currentTaskIndex + 1);
     }
 
@@ -245,7 +245,7 @@ public class MissionManager : MonoBehaviour
                         NPCManager.Instance.SetDissapearNPC(action.npcName, action.dissapearImmediately);
                         break;
                     case MissionAction.Type.ToExplore:
-                        GameStateManager.Instance.ToExplore();
+                        GameStateManager.Instance.ToGameplay();
                         break;
                 }
             }
@@ -270,7 +270,7 @@ public class MissionManager : MonoBehaviour
                 {
                     InGameDebug.Instance.Log($"Dialogue Finished for mission {mission.missionName}");
 
-                    GameStateManager.Instance.ToExplore();
+                    GameStateManager.Instance.ToGameplay();
                     ExecuteNextTask(mission, taskIndex + 1);
                 });
                 break;
@@ -285,7 +285,7 @@ public class MissionManager : MonoBehaviour
                         InGameDebug.Instance.Log($"Cutscene Finished for mission {mission.missionName}");
                         cutsceneManager.CleanCutscene();
 
-                        GameStateManager.Instance.ToExplore();
+                        GameStateManager.Instance.ToGameplay();
                         ExecuteNextTask(mission, taskIndex + 1);
                         FadeFromBlack();
                     });

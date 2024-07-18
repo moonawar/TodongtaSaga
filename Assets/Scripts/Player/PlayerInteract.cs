@@ -35,7 +35,7 @@ public class PlayerInteract : MonoBehaviour {
     }
 
     private void Update() {
-        if (GameStateManager.Instance.CurrentState != GameState.Explore) return;
+        if (GameStateManager.Instance.CurrentState != GameState.Gameplay) return;
         DetectInteractable();
 
         if (Input.GetKeyDown(KeyCode.E) && active != null) {

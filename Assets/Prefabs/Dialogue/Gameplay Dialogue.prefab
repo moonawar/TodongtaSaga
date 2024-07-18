@@ -639,7 +639,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   typewriterEffectSpeed: 60
-  continueButton: {fileID: 6244386492932953675}
+  continueButton: {fileID: 0}
   holdTime: 1
   autoAdvance: 0
   palette: {fileID: 0}

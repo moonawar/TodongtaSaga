@@ -1,12 +1,7 @@
 public enum GameState {
-    SceneLoad,
-    Explore,
+    Gameplay,
     OpeningUI,
     Dialogue,
     Cutscene,
     Paused,
-    MinigameTutorial,
-    MinigamePlaying,
-    MinigameEnd,
-    DemoEnd
 }
