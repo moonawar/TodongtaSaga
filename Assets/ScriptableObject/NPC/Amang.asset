@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Amang
   relationshipLevel: 0
+  tungku: 1
+  hiImage: {fileID: 21300000, guid: 845a02df7cbc00342be71561db97f1b6, type: 3}
+  loImage: {fileID: 21300000, guid: afc25b952dd82f645b111d8bf092f011, type: 3}
+  description: Ayah dari Anggi.

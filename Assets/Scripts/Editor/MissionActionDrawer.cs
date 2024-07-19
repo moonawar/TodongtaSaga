@@ -34,7 +34,7 @@ public class MissionActionDrawer : PropertyDrawer
         switch (actionType)
         {
             case MissionAction.Type.PositionNPC:
-                totalHeight += (baseHeight + spacing) * 3;
+                totalHeight += (baseHeight + spacing) * 4;
                 break;
             case MissionAction.Type.CreateInteractableObject:
                 totalHeight += (baseHeight + spacing) * 2;
@@ -63,6 +63,7 @@ public class MissionActionDrawer : PropertyDrawer
 
         SerializedProperty typeProperty = property.FindPropertyRelative("type");
         SerializedProperty npcNameProperty = property.FindPropertyRelative("npcName");
+        SerializedProperty assignNextTaskProperty = property.FindPropertyRelative("assignNextTask");
         SerializedProperty positionProperty = property.FindPropertyRelative("position");
         SerializedProperty dissapearProperty = property.FindPropertyRelative("dissapearImmediately");
         SerializedProperty orientationProperty = property.FindPropertyRelative("orientation");
@@ -96,6 +97,8 @@ public class MissionActionDrawer : PropertyDrawer
                 EditorGUI.PropertyField(positionRect, npcNameProperty);
                 positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
                 EditorGUI.PropertyField(positionRect, positionProperty);
+                positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+                EditorGUI.PropertyField(positionRect, assignNextTaskProperty);
                 break;
             case MissionAction.Type.CreateInteractableObject:
                 EditorGUI.PropertyField(positionRect, positionProperty);

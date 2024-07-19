@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
+  m_Name: AmangUda_3
+  m_EditorClassIdentifier: 
+  missionName: Misi Penyelamatan Boras
+  description: Selamatkan Boras dari Genggaman Tikus
+  trigger:
+    type: 0
+    npcName: Amang Uda
+    npcLocation: {x: -29.16, y: -29.22}
+    objectName: 
+    location: {x: -23.2, y: -26.71}
+    radius: 1
+    showWaypoint: 1
+  onMissionHandled: []
+  onMissionStart: []
+  tasks:
+  - type: 0
+    yarnTitle: 13_2
+    cutscene: {fileID: 11400000, guid: 9809d00cf7dde544f82a5cdd5c2e07c8, type: 2}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: 
+    onTaskComplete: []
+  - type: 3
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: -29.16, y: -29.22}
+    showWaypoint: 1
+    sceneName: PenyelamatanBoras
+    onTaskComplete: []
+  - type: 2
+    yarnTitle: 15
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: Gameplay
+    onTaskComplete: []
+  - type: 3
+    yarnTitle: 6
+    cutscene: {fileID: 0}
+    travelLocation: {x: -29.16, y: -29.22}
+    showWaypoint: 1
+    sceneName: Gameplay
+    onTaskComplete:
+    - type: 1
+      npcName: 
+      assignNextTask: 0
+      position: {x: -29.16, y: -30.48}
+      dissapearImmediately: 0
+      orientation: 0
+    - type: 5
+      npcName: 
+      assignNextTask: 0
+      position: {x: -29.16, y: -30.48}
+      dissapearImmediately: 0
+      orientation: 1
+    - type: 3
+      npcName: Amang Uda
+      assignNextTask: 1
+      position: {x: -29.16, y: -29.22}
+      dissapearImmediately: 0
+      orientation: 1
+  - type: 0
+    yarnTitle: 15
+    cutscene: {fileID: 0}
+    travelLocation: {x: -29.16, y: -29.22}
+    showWaypoint: 1
+    sceneName: Gameplay
+    onTaskComplete:
+    - type: 4
+      npcName: Amang Uda
+      assignNextTask: 0
+      position: {x: 0, y: 0}
+      dissapearImmediately: 0
+      orientation: 1
+  announce: 1
+  hidden: 0
+  relationshipImpacts: []
+  followUpMissions:
+  - {fileID: 11400000, guid: 65e4fa89dc85e714b958301815a755bf, type: 2}

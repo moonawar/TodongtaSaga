@@ -66,6 +66,7 @@ public class MissionManager : MonoBehaviour
         currentMission = mission;
         currentTaskIndex = 0;
         IsMissionInProgress = true;
+        ExecuteMissionAction(mission.onMissionStart);
         ExecuteNextTask(mission, 0);
     }
 
@@ -121,6 +122,14 @@ public class MissionManager : MonoBehaviour
                 NPCManager.Instance.AssignMissionToNPC(mission, mission.trigger.npcName);
                 NPC npc = NPCManager.Instance.FindNPCWithName(mission.trigger.npcName);
 
+                if (mission.trigger.showWaypoint)
+                {
+                    Debug.Log("Setting destination to NPC: " + mission.trigger.npcName);
+
+                    WaypointManager.Instance.SetDestination(npc.transform.position);
+                    mission.OnMissionCompleteAction += () => WaypointManager.Instance.FinishDestination();
+                }
+
                 break;
             case MissionTriggerType.Object:
                 // Spawn object interaction point
@@ -154,6 +163,8 @@ public class MissionManager : MonoBehaviour
         {
             MissionAnnouncer.Instance.AnnounceMission("Misi Baru", mission.description);
         }
+
+        ExecuteMissionAction(mission.onMissionHandled);
     }
 
     public void SkipCurrentTask() {
@@ -175,6 +186,67 @@ public class MissionManager : MonoBehaviour
         CompleteMission(currentMission);
     }
 
+    private void ExecuteMissionAction(List<MissionAction> actions) {
+        foreach (var action in actions)
+        {
+            MissionAction.Type actionType = action.type;
+            switch (actionType)
+            {
+                case MissionAction.Type.CreateInteractableObject:
+                    InteractableObjectManager.Instance.CreateInteractableObject(action.position, ExecuteNextTask);
+                    break;
+                case MissionAction.Type.PositionPlayer:
+                    Transform player = GameObject.FindWithTag("Player").transform;
+                    GameObject followPlayer = Camera.main.transform.GetChild(0).gameObject;
+                    followPlayer.SetActive(false);
+                    player.position = action.position;
+                    
+                    Vector2 playerOrientation;
+                    switch (action.orientation)
+                    {
+                        case PosOrientationType.Up:
+                            playerOrientation = Vector2.up;
+                            break;
+                        case PosOrientationType.Down:
+                            playerOrientation = Vector2.down;
+                            break;
+                        case PosOrientationType.Left:
+                            playerOrientation = Vector2.left;
+                            break;
+                        case PosOrientationType.Right:
+                            playerOrientation = Vector2.right;
+                            break;
+                        default:
+                            playerOrientation = Vector2.up;
+                            break;
+                    }
+
+                    Animator playerAnimator = player.GetComponent<Animator>();
+                    playerAnimator.SetFloat("Horizontal", playerOrientation.x);
+                    playerAnimator.SetFloat("Vertical", playerOrientation.y);
+
+                    Camera.main.transform.position = new Vector3(action.position.x, action.position.y, Camera.main.transform.position.z);
+                    followPlayer.SetActive(true);
+                    break;
+                case MissionAction.Type.ExecuteNextTask:
+                    ExecuteNextTask();
+                    break;
+                case MissionAction.Type.PositionNPC:
+                    if (action.assignNextTask)
+                        NPCManager.Instance.AssignNextTaskToNPC(action.npcName, action.position);
+                    else
+                        NPCManager.Instance.PositionNPC(action.npcName, action.position);
+                    break;
+                case MissionAction.Type.SetDissapearNPC:
+                    NPCManager.Instance.SetDissapearNPC(action.npcName, action.dissapearImmediately);
+                    break;
+                case MissionAction.Type.ToExplore:
+                    GameStateManager.Instance.ToGameplay();
+                    break;
+            }
+        }
+    }
+
     public void ExecuteNextTask() {
         ExecuteNextTask(currentMission);
     }
@@ -194,61 +266,7 @@ public class MissionManager : MonoBehaviour
         if (taskIndex > 0)
         {
             var previousTask = mission.tasks[taskIndex - 1];
-            foreach (var action in previousTask.onTaskComplete)
-            {
-                MissionAction.Type actionType = action.type;
-                switch (actionType)
-                {
-                    case MissionAction.Type.CreateInteractableObject:
-                        InteractableObjectManager.Instance.CreateInteractableObject(action.position, ExecuteNextTask);
-                        break;
-                    case MissionAction.Type.PositionPlayer:
-                        Transform player = GameObject.FindWithTag("Player").transform;
-                        GameObject followPlayer = Camera.main.transform.GetChild(0).gameObject;
-                        followPlayer.SetActive(false);
-                        player.position = action.position;
-                        
-                        Vector2 playerOrientation;
-                        switch (action.orientation)
-                        {
-                            case PosOrientationType.Up:
-                                playerOrientation = Vector2.up;
-                                break;
-                            case PosOrientationType.Down:
-                                playerOrientation = Vector2.down;
-                                break;
-                            case PosOrientationType.Left:
-                                playerOrientation = Vector2.left;
-                                break;
-                            case PosOrientationType.Right:
-                                playerOrientation = Vector2.right;
-                                break;
-                            default:
-                                playerOrientation = Vector2.up;
-                                break;
-                        }
-
-                        Animator playerAnimator = player.GetComponent<Animator>();
-                        playerAnimator.SetFloat("Horizontal", playerOrientation.x);
-                        playerAnimator.SetFloat("Vertical", playerOrientation.y);
-
-                        Camera.main.transform.position = new Vector3(action.position.x, action.position.y, Camera.main.transform.position.z);
-                        followPlayer.SetActive(true);
-                        break;
-                    case MissionAction.Type.ExecuteNextTask:
-                        ExecuteNextTask();
-                        break;
-                    case MissionAction.Type.PositionNPC:
-                        NPCManager.Instance.AssignNextTaskToNPC(action.npcName, action.position);
-                        break;
-                    case MissionAction.Type.SetDissapearNPC:
-                        NPCManager.Instance.SetDissapearNPC(action.npcName, action.dissapearImmediately);
-                        break;
-                    case MissionAction.Type.ToExplore:
-                        GameStateManager.Instance.ToGameplay();
-                        break;
-                }
-            }
+            ExecuteMissionAction(previousTask.onTaskComplete);
         }
 
         currentTaskIndex = taskIndex;
@@ -305,6 +323,11 @@ public class MissionManager : MonoBehaviour
         }
     }
 
+    public List<Mission> FindMissionForNPC(string npcName)
+    {
+        return missions.FindAll(m => m.relationshipImpacts.Exists(impact => impact.npcName == npcName));
+    }
+
     private void FadeToBlack(Action onComplete = null)
     {
         blackOverlay.color = new Color(0, 0, 0, 0);
@@ -315,13 +338,6 @@ public class MissionManager : MonoBehaviour
         blackOverlay.color = new Color(0, 0, 0, 1);
         blackOverlay.DOFade(0f, fadeDuration).OnComplete(() => onComplete?.Invoke());
     }
-
-    // API For Cross-Scene Communication
-    public static void CreateInteractableObject(Vector2 location, UnityEvent onInteraction)
-    {
-        InteractableObjectManager.Instance.CreateInteractableObject(location, onInteraction);
-    }
-
 }
 
 #if UNITY_EDITOR

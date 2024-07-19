@@ -10,74 +10,80 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
-  m_Name: 6_Minigame Tikus
+  m_Name: Tulang_2
   m_EditorClassIdentifier: 
-  missionName: Misi Penyelamatan Boras
-  description: Selamatkan Boras dari Genggaman Tikus
+  missionName: Perintah Tulang
+  description: Bantu Tulang membuat hidangan
   trigger:
     type: 0
-    npcName: Amang Uda
-    npcLocation: {x: -29.16, y: -29.22}
+    npcName: Tulang
+    npcLocation: {x: 91.45, y: -72}
     objectName: 
-    location: {x: -23.2, y: -26.71}
+    location: {x: 0, y: 0}
     radius: 1
     showWaypoint: 1
+  onMissionHandled: []
+  onMissionStart: []
   tasks:
   - type: 0
-    yarnTitle: 13_2
-    cutscene: {fileID: 11400000, guid: 9809d00cf7dde544f82a5cdd5c2e07c8, type: 2}
+    yarnTitle: 18
+    cutscene: {fileID: 0}
     travelLocation: {x: 0, y: 0}
     showWaypoint: 0
     sceneName: 
     onTaskComplete: []
   - type: 3
-    yarnTitle: 6
+    yarnTitle: 18
     cutscene: {fileID: 0}
-    travelLocation: {x: -29.16, y: -29.22}
-    showWaypoint: 1
-    sceneName: PenyelamatanBoras
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: PerintahTulang
     onTaskComplete: []
   - type: 2
-    yarnTitle: 15
+    yarnTitle: 18
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: PerintahTulang
+    onTaskComplete: []
+  - type: 3
+    yarnTitle: 18
     cutscene: {fileID: 0}
     travelLocation: {x: 0, y: 0}
     showWaypoint: 0
     sceneName: Gameplay
-    onTaskComplete: []
-  - type: 3
-    yarnTitle: 6
+    onTaskComplete:
+    - type: 1
+      npcName: 
+      assignNextTask: 0
+      position: {x: 91.37, y: -73.8}
+      dissapearImmediately: 0
+      orientation: 0
+    - type: 3
+      npcName: Tulang
+      assignNextTask: 0
+      position: {x: 91.45, y: -72}
+      dissapearImmediately: 0
+      orientation: 0
+  - type: 0
+    yarnTitle: 18_2
     cutscene: {fileID: 0}
-    travelLocation: {x: -29.16, y: -29.22}
-    showWaypoint: 1
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
     sceneName: Gameplay
     onTaskComplete:
     - type: 1
       npcName: 
-      position: {x: -29.16, y: -30.48}
+      assignNextTask: 0
+      position: {x: 91.37, y: -73.8}
       dissapearImmediately: 0
-      orientation: 1
-    - type: 5
-      npcName: 
-      position: {x: -29.16, y: -30.48}
-      dissapearImmediately: 0
-      orientation: 1
+      orientation: 0
     - type: 3
-      npcName: Amang Uda
-      position: {x: -29.16, y: -29.22}
+      npcName: Tulang
+      assignNextTask: 0
+      position: {x: 91.45, y: -71.49}
       dissapearImmediately: 0
-      orientation: 1
-  - type: 0
-    yarnTitle: 15
-    cutscene: {fileID: 0}
-    travelLocation: {x: -29.16, y: -29.22}
-    showWaypoint: 1
-    sceneName: Gameplay
-    onTaskComplete:
-    - type: 4
-      npcName: Amang Uda
-      position: {x: 0, y: 0}
-      dissapearImmediately: 0
-      orientation: 1
+      orientation: 0
   announce: 1
   hidden: 0
   relationshipImpacts: []

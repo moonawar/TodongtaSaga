@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Tulang
   relationshipLevel: 0
+  tungku: 0
+  hiImage: {fileID: 21300000, guid: 66e19ff99410b9240845653d4bd776fd, type: 3}
+  loImage: {fileID: 21300000, guid: 805f85744edd56748ba9af7ba404504f, type: 3}
+  description: Tulang adalah...

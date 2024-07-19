@@ -16,8 +16,8 @@ public class NPC : Interactable
     [SerializeField] private float bounceAmplitude = 0.1f;
     [SerializeField] private float bounceDuration = 0.5f;
 
-    private bool interactable = false;
-    private bool interacted = false;
+    private bool inInteractRange = false;
+    private bool canInteract = false;
     private SpriteRenderer hintSpriteRenderer;
     private Vector3 hintInitialPosition;
     private Tweener bounceAnimation;
@@ -28,7 +28,7 @@ public class NPC : Interactable
     public bool ShouldDissapear { get => shouldDissapear; set {
         shouldDissapear = value;
         if (shouldDissapear) {
-            interactable = false;
+            inInteractRange = false;
         }
     }}
 
@@ -49,11 +49,11 @@ public class NPC : Interactable
 
     public override void OnInteractableEnter()
     {   
-        if (interacted) return;
+        if (canInteract) return;
         fadeAnimation?.Kill();
 
         interactHint.gameObject.SetActive(true);
-        interactable = true;
+        inInteractRange = true;
 
         interactHint.localPosition = hintInitialPosition - new Vector3(0, hintOffset, 0);
         Color startColor = hintSpriteRenderer.color;
@@ -71,10 +71,10 @@ public class NPC : Interactable
 
     public override void OnInteractableExit()
     {
-        if (interacted) return;
+        if (canInteract) return;
         fadeAnimation?.Kill();
 
-        interactable = false;
+        inInteractRange = false;
 
         bounceAnimation?.Kill();
 
@@ -97,7 +97,7 @@ public class NPC : Interactable
 
     public void AddInteractionListener(Action action)
     {
-        interacted = false;
+        canInteract = false;
         onInteraction += action;
     }
 
@@ -108,16 +108,16 @@ public class NPC : Interactable
 
     public void ClearInteractionListeners()
     {
-        interacted = true;
+        canInteract = true;
         onInteraction = null;
     }
 
     public override void Interact()
     {
-        if (!interactable) return;
+        if (!inInteractRange) return;
         onInteraction?.Invoke();
         OnInteractableExit();
-        interactable = false;
+        inInteractRange = false;
         ClearInteractionListeners();
     }
 

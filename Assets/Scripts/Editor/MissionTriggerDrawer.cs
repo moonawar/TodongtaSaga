@@ -17,7 +17,7 @@ public class MissionTriggerDrawer : PropertyDrawer
         switch (triggerType)
         {
             case MissionTriggerType.NPC:
-                totalHeight += (baseHeight + spacing) * 3; // Two additional fields
+                totalHeight += (baseHeight + spacing) * 4; // Two additional fields
                 break;
             case MissionTriggerType.Object:
                 totalHeight += baseHeight + spacing; // One additional field
@@ -61,6 +61,12 @@ public class MissionTriggerDrawer : PropertyDrawer
 
                 Rect npcLocationRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
                 EditorGUI.PropertyField(npcLocationRect, npcLocationProperty);
+
+                position.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+
+                Rect showWaypointRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+                EditorGUI.PropertyField(showWaypointRect, showWaypointProperty);
+
                 break;
             case MissionTriggerType.Object:
                 Rect objectNameRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
@@ -77,8 +83,8 @@ public class MissionTriggerDrawer : PropertyDrawer
 
                 position.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
 
-                Rect showWaypointRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
-                EditorGUI.PropertyField(showWaypointRect, showWaypointProperty);
+                Rect showLocWaypointRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+                EditorGUI.PropertyField(showLocWaypointRect, showWaypointProperty);
                 break;
         }
 

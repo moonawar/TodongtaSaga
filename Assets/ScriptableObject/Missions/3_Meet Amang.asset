@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
   m_Name: 3_Meet Amang
   m_EditorClassIdentifier: 
-  missionName: Meet Amang
+  missionName: Amang
   description: Pergi Kembali ke Rumah dan Temui Keluarga
   trigger:
     type: 0
@@ -22,6 +22,7 @@ MonoBehaviour:
     location: {x: 72.25, y: 65.25}
     radius: 1
     showWaypoint: 1
+  onMissionStart: []
   tasks:
   - type: 0
     yarnTitle: 6

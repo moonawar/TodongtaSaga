@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGame/PenyelamatanBoras.unity
     guid: 5fcaeec0e4112b94ea426bdd4d7a9387
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PerintahTulang.unity
+    guid: 30584304528407840800ea935eddddc8
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/NamaPaman.unity
+    guid: 6ab9eb9406da4ce4a9d37279fe145a73
   m_configObjects: {}

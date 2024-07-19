@@ -62,15 +62,56 @@ public class NPCManager : MonoBehaviour
         npc.gameObject.SetActive(true);
     }
 
+    public void PositionNPC(string npcName, Vector2 location)
+    {
+        NPC npc = FindNPCWithName(npcName);
+        npc.ShouldDissapear = false;
+        npc.transform.position = location;
+        npc.ClearInteractionListeners();
+        npc.gameObject.SetActive(true);
+    }
+
     public void SetDissapearNPC(string npcName, bool dissapearImmediately)
     {
         NPC npc = FindNPCWithName(npcName);
+        npc.ClearInteractionListeners();
         if (dissapearImmediately)
         {
             npc.Dissapear();
         } else {
             npc.ShouldDissapear = true;
         }
+    }
 
+    public List<NPCData> GetNPCDatas()
+    {
+        List<NPCData> npcsData = new();
+        foreach (var npc in npcs)
+        {
+            npcsData.Add(npc.Data);
+        }
+
+        return npcsData;
+    }
+
+    public NPCData GetNPCData(string npcName)
+    {
+        foreach (var npc in npcs)
+        {
+            if (npc.Data.name == npcName)
+            {
+                return npc.Data;
+            }
+        }
+
+        return null;
+    }
+
+    public void LoadNPCDatas(List<NPCData> datas) {
+        foreach (var data in datas)
+        {
+            NPC npc = FindNPCWithName(data.name);
+            npc.Data.relationshipLevel = data.relationshipLevel;
+        }
     }
 }

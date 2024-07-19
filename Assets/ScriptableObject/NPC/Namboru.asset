@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Namboru
   relationshipLevel: 0
+  tungku: 2
+  hiImage: {fileID: 21300000, guid: 86196d164dcaefc439062fd65252aa1c, type: 3}
+  loImage: {fileID: 21300000, guid: 731fc52cf58e47d49ba7407220587d5d, type: 3}
+  description: Namboru adalah ...

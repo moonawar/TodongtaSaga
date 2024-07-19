@@ -44,6 +44,8 @@ public class Mission : ScriptableObject
     public string missionName;
     public string description;
     public MissionTrigger trigger;
+    public List<MissionAction> onMissionHandled;
+    public List<MissionAction> onMissionStart;
     public List<MissionTask> tasks;
     public bool announce = true;
     public bool hidden;

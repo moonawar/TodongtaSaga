@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
-  m_Name: 5_MencariAmangUda
+  m_Name: AmangUda_2
   m_EditorClassIdentifier: 
-  missionName: Nama Amang Uda
+  missionName: Panggilan Paman?
   description: Mencari Nama Amang Uda
   trigger:
     type: 0
@@ -22,6 +22,7 @@ MonoBehaviour:
     location: {x: -23.2, y: -26.71}
     radius: 1
     showWaypoint: 1
+  onMissionStart: []
   tasks:
   - type: 0
     yarnTitle: 13

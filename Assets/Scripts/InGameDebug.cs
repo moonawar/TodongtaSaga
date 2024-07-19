@@ -50,10 +50,12 @@ public class InGameDebug : MonoBehaviour
     }
 
     public void SkipTask() {
+        if (MissionManager.Instance == null) return;
         MissionManager.Instance.SkipCurrentTask();
     }
 
     public void SkipMission() {
+        if (MissionManager.Instance == null) return;
         MissionManager.Instance.SkipCurrentMission();
     }
 }

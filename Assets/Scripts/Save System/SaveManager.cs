@@ -27,6 +27,7 @@ public class SaveManager : MonoBehaviour {
         gameSave.CurrentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         gameSave.SceneObjects = SceneData.Instance.sceneObjects;
         gameSave.Missions = MissionManager.Instance.missions;
+        gameSave.npcsData = NPCManager.Instance.GetNPCDatas();
 
         string json = JsonUtility.ToJson(gameSave);
         File.WriteAllText(SAVE_FOLDER + "/save.json", json);
@@ -52,6 +53,7 @@ public class SaveManager : MonoBehaviour {
                 SceneData.Instance.sceneObjects = gameSave.SceneObjects;
                 MissionManager.Instance.missions = gameSave.Missions;
                 MissionManager.Instance.IsMissionLoaded = true;
+                NPCManager.Instance.LoadNPCDatas(gameSave.npcsData);
             });
             Debug.Log("Game Loaded");
         } else {
