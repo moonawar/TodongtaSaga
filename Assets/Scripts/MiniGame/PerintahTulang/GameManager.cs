@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
+using TodongtoaSaga.Minigames.PenyelamatanBoras;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -14,10 +15,17 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
         Main
     }
 
+    [Serializable]
+    public class Level
+    {
+        public ResultItem[] items;
+        public int timeLimit;
+    }
+
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
-        [SerializeField] private ResultItem[] resultItems;
+        [SerializeField] private Level[] levels;
         private int currentIdx;
         [SerializeField] private PlayerItemGrabber playerItemGrabber;
         [SerializeField] private CountdownTimer countdownTimer;
@@ -30,6 +38,7 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
         [SerializeField] private RectTransform perintahItemContainer;
         [SerializeField] private GameObject perintahItemPrefab;
         [SerializeField] private RectTransform grabbedItemContainer;
+        [SerializeField] private RectTransform grabPanel;
 
         [Header("Result")]
         [SerializeField] private RectTransform resultUI;
@@ -37,11 +46,16 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
         [SerializeField] private Image resultStatusImage;
         [SerializeField] private Sprite statusCorrect;
         [SerializeField] private Sprite statusIncorrect;
+        [SerializeField] private StatusSpawner statusTextSpawner;
 
         [Header("Events")]
         [SerializeField] private UnityEvent OnEnd;
         [SerializeField] private UnityEvent OnLose;
         [SerializeField] private UnityEvent OnWin;
+
+        private ResultItem currentTarget;
+        private Vector2 grabPanelOriginalPos;
+        private GameObject resultPrefab;
 
         private void Awake() {
             if (Instance != null && Instance != this) {
@@ -51,6 +65,7 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             }
 
             GameStateManager.Instance.ToOpenUI(); // Tell GameStateManager to open UI exclusively
+            grabPanelOriginalPos = grabPanel.anchoredPosition;
         }
 
         public void DisplayPerintah() 
@@ -60,7 +75,7 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             gameplayUI.gameObject.SetActive(false);
             perintahUI.gameObject.SetActive(true);
 
-            perintahText.text = $"Perintah {currentIdx + 1}/{resultItems.Length}";
+            perintahText.text = $"Perintah {currentIdx + 1}/{levels.Length}";
             
             // Clear the container
             foreach (Transform child in perintahItemContainer) {
@@ -68,11 +83,15 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             }
 
             // Add the items
-            foreach (var item in resultItems[currentIdx].recipe) {
+            Level currentLevel = levels[currentIdx];
+            currentTarget = currentLevel.items[UnityEngine.Random.Range(0, currentLevel.items.Length)];
+        
+            foreach (var item in currentTarget.recipe) {
                 var itemObj = Instantiate(perintahItemPrefab, perintahItemContainer);
                 itemObj.GetComponent<Image>().sprite = item.itemSprite;
             }
 
+            countdownTimer.SetDuration(currentLevel.timeLimit);
             radialClock.StartClock();
         }
 
@@ -87,14 +106,15 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
         }
 
         private bool CompareResult() {
-            if (playerItemGrabber.GrabbedItems.Count != resultItems.Length) {
+            if (playerItemGrabber.GrabbedItems.Count != currentTarget.recipe.Length) {
+                Debug.Log("Incorrect because grabbed items count " + playerItemGrabber.GrabbedItems.Count + " != " + levels.Length);
                 return false;
             }
 
             for (int i = 0; i < playerItemGrabber.GrabbedItems.Count; i++) {
-                if (playerItemGrabber.GrabbedItems[i].name != resultItems[currentIdx].name) {
-                    InGameDebug.Instance.Log("Incorrect because " + playerItemGrabber.GrabbedItems[i].name + " != " 
-                        + resultItems[currentIdx].name + " at index " + i);
+                if (playerItemGrabber.GrabbedItems[i].name != currentTarget.recipe[i].name) {
+                    Debug.Log("Incorrect because " + playerItemGrabber.GrabbedItems[i].name + " != " 
+                        + currentTarget.name + " at index " + i);
                     return false;
                 }
             }
@@ -103,14 +123,19 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
         }
 
         private void OnCorrect() {
+            Destroy(resultPrefab);
+            grabPanel.anchoredPosition = grabPanelOriginalPos;
             playerItemGrabber.GrabbedItems.Clear();
             // Destroy all items
             foreach (Transform child in grabbedItemContainer) {
                 Destroy(child.gameObject);
-            }
+            }                            
+
+            grabbedItemContainer.gameObject.SetActive(true);
+            resultUI.gameObject.SetActive(false);
 
             // if succesful
-            if (currentIdx == resultItems.Length - 1) {
+            if (currentIdx == levels.Length - 1) {
                 OnWin?.Invoke();
             } else {
                 currentIdx++;
@@ -119,23 +144,34 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             }
         }
 
-        private void OnIncorrect() {
-            playerItemGrabber.GrabbedItems.Clear();
-            // Destroy all items
-            foreach (Transform child in grabbedItemContainer) {
-                Destroy(child.gameObject);
+        private bool[] PointOutMistakes() {
+            int minLength = Mathf.Min(playerItemGrabber.GrabbedItems.Count, currentTarget.recipe.Length);
+
+            bool[] mistakes = new bool[minLength];
+            for (int i = 0; i < minLength; i++) {
+                if (playerItemGrabber.GrabbedItems[i].name != currentTarget.recipe[i].name) {
+                    mistakes[i] = true;
+                } else {
+                    mistakes[i] = false;
+                }
             }
 
-            DisplayPerintah();
+            return mistakes;
+        }
+
+        private void OnIncorrect() {
+            playerItemGrabber.GrabbedItems.Clear();
+            Lose();
         }
 
         public void MergeAndSpawn(bool isCorrect, Action onComplete)
         {
             int completedMerges = 0;
-            float fadeDuration = 0.5f;
-            float mergeDuration = 1f;
+            float fadeDuration = 0.8f;
+            float mergeDuration = 0.85f;
+            float panelMoveDuration = 1f;
 
-            List<RectTransform> uiElementsToMerge = new List<RectTransform>();
+            List<RectTransform> uiElementsToMerge = new();
             foreach (Transform child in grabbedItemContainer)
             {
                 uiElementsToMerge.Add(child.GetComponent<RectTransform>());
@@ -145,49 +181,60 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             HorizontalLayoutGroup layoutGroup = grabbedItemContainer.GetComponent<HorizontalLayoutGroup>();
             layoutGroup.enabled = false;
 
-            foreach (var element in uiElementsToMerge)
+
+            // Move grabPanel to the center first
+            grabPanel.DOAnchorPosY(0, panelMoveDuration).SetEase(Ease.OutSine).OnComplete(() =>
             {
-                // Fade out
-                element.GetComponentInChildren<Image>().DOFade(0, fadeDuration);
-
-                // Move to merge point
-                element.DOMove(mergePoint.position, mergeDuration).OnComplete(() =>
+                foreach (var element in uiElementsToMerge)
                 {
-                    completedMerges++;
+                    // Fade out
+                    element.GetComponent<CanvasGroup>().DOFade(0f, fadeDuration);
 
-                    // Check if all elements have merged
-                    if (completedMerges == uiElementsToMerge.Count)
+                    // Move to merge point
+                    element.DOMove(mergePoint.position, mergeDuration).OnComplete(() =>
                     {
-                        grabbedItemContainer.gameObject.SetActive(false);
-                        resultUI.gameObject.SetActive(true);
+                        completedMerges++;
 
-                        // Spawn new object
-                        var resultPrefab = Instantiate(resultUIPrefab, resultUI);
-                        resultPrefab.GetComponent<ResultItemUI>().Set(
-                            resultItems[currentIdx].resultSprite, 
-                            resultItems[currentIdx].resultName
-                        );
-
-                        // Set status image
-                        resultStatusImage.sprite = isCorrect ? statusCorrect : statusIncorrect;
-
-                        // Add delay before onComplete
-                        DOTween.Sequence().AppendInterval(1f).OnComplete(() =>
+                        // Check if all elements have merged
+                        if (completedMerges == uiElementsToMerge.Count)
                         {
-                            onComplete?.Invoke();
-                            layoutGroup.enabled = true;
+                            grabbedItemContainer.gameObject.SetActive(false);
+                            resultUI.gameObject.SetActive(true);
 
-                            grabbedItemContainer.gameObject.SetActive(true);
-                            resultUI.gameObject.SetActive(false);
-                        });
-                    }
-                });
-            }
+                            // Spawn new object
+                            resultPrefab = Instantiate(resultUIPrefab, resultUI);
+                            resultPrefab.GetComponent<ResultItemUI>().Set(
+                                currentTarget.foodSprite, 
+                                currentTarget.foodName,
+                                currentTarget.drinkSprite,
+                                currentTarget.drinkName
+                            );
+
+                            // Set status image
+                            resultStatusImage.sprite = isCorrect ? statusCorrect : statusIncorrect;
+
+                            // Add delay before onComplete
+                            DOTween.Sequence().AppendInterval(3f).OnComplete(() =>
+                            {
+                                layoutGroup.enabled = true;
+                                onComplete?.Invoke();
+                            });
+                        }
+                    });
+                }
+            });
         }
 
         public void TryMerge() {
+            if (playerItemGrabber.GrabbedItems.Count == 0) {
+                statusTextSpawner.SpawnStatusText("Nampan Kosong!");
+                return;
+            }
+
+            countdownTimer.PauseTimer();
+
             bool isCorrect = CompareResult();
-            InGameDebug.Instance.Log("Is correct: " + isCorrect);
+            Debug.Log("Is correct: " + isCorrect);
 
             if (isCorrect) {
                 MergeAndSpawn(true, OnCorrect);
@@ -196,7 +243,7 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             }
         }
 
-        public void OnTimesUp()
+        public void Lose()
         {
             OnEnd?.Invoke();
             OnLose?.Invoke();

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Pisang Goreng
   itemSprite: {fileID: 150268061, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
+  itemIncorrectSprite: {fileID: 589388617, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
   hintSprite: {fileID: 71865336, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}

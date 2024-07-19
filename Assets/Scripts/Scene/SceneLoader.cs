@@ -30,7 +30,7 @@ public class SceneLoader : MonoBehaviour {
     }
 
     public void LoadScene(string sceneName, Action onSceneLoaded = null) {
-        InGameDebug.Instance.Log("Loading scene: " + sceneName);
+        Debug.Log("Loading scene: " + sceneName);
         DOTween.KillAll();
         onSceneLoadedCallback = onSceneLoaded;
         onLoaderCallback = () => {

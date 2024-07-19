@@ -8,7 +8,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
         [SerializeField] private float catchRadius = 2f;
         [SerializeField] private float catchAngle = 30f;
         [SerializeField] private LayerMask catchableLayers; // Set this in the inspector to include Mouse and "Dont Catch" layers
-        [SerializeField] private CatchStatusSpawner catchStatusSpawner;
+        [SerializeField] private StatusSpawner catchStatusSpawner;
         public float CatchRadius { get => catchRadius; }
         public float CatchAngle { get => catchAngle; }
 
@@ -22,7 +22,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
         private void Awake() {
             movement = GetComponent<PlayerMovement>();
             if (catchStatusSpawner == null) {
-                GetComponentInChildren<CatchStatusSpawner>();
+                GetComponentInChildren<StatusSpawner>();
             }
 
             boxCollider = GetComponent<BoxCollider2D>();

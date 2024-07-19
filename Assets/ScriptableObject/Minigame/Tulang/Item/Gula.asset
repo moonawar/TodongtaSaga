@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Gula
   itemSprite: {fileID: 1522883994, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
+  itemIncorrectSprite: {fileID: 1690193424, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
   hintSprite: {fileID: 1543125135, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}

@@ -16,7 +16,9 @@ public class InGameDebug : MonoBehaviour
         }
 
         ToggleDebugUI(false);
+    #if !UNITY_EDITOR
         Debug.unityLogger.logHandler = new InGameLogHandler();
+    #endif
     }
 
     public void Log(string message) {

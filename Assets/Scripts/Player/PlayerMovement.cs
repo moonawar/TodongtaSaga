@@ -35,12 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        if (stayInside == null)
-        {
-            // Condition is still OK
-            InGameDebug.Instance.Log("No Stay Inside Collider assigned to PlayerMovement script.");
-        }
-
         animator = GetComponent<Animator>();
 
 // #if DEBUG

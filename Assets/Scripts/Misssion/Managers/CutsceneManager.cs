@@ -20,7 +20,7 @@ public class CutsceneManager : MonoBehaviour
     {
         if (dialogueRunner == null)
         {
-            InGameDebug.Instance.LogError("DialogueRunner not found. Searching for one in the scene.");
+            Debug.LogError("DialogueRunner not found. Searching for one in the scene.");
             dialogueRunner = FindObjectOfType<DialogueRunner>();
         }
     }
@@ -39,7 +39,7 @@ public class CutsceneManager : MonoBehaviour
         currentImageIndex = 0;
         cutsceneImage.sprite = cutscene.images[0].image;
 
-        InGameDebug.Instance.Log("Starting cutscene: " + cutscene.yarnTitle);
+        Debug.Log("Starting cutscene: " + cutscene.yarnTitle);
 
         dialogueRunner.StartDialogue(cutscene.yarnTitle);
         FadeFromBlack();

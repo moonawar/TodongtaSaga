@@ -32,7 +32,7 @@ public class SaveManager : MonoBehaviour {
         File.WriteAllText(SAVE_FOLDER + "/save.json", json);
 
         CurrentGameSave = gameSave;
-        InGameDebug.Instance.Log("Game Saved");
+        Debug.Log("Game Saved");
     }
 
     public void LoadGame() {
@@ -53,7 +53,7 @@ public class SaveManager : MonoBehaviour {
                 MissionManager.Instance.missions = gameSave.Missions;
                 MissionManager.Instance.IsMissionLoaded = true;
             });
-            InGameDebug.Instance.Log("Game Loaded");
+            Debug.Log("Game Loaded");
         } else {
             SceneLoader.Instance.LoadScene("Gameplay", () => {
                 MissionManager.Instance.IsMissionLoaded = true;
@@ -64,9 +64,9 @@ public class SaveManager : MonoBehaviour {
     public void DeleteSave() {
         if (File.Exists(SAVE_FOLDER + "/save.json")) {
             File.Delete(SAVE_FOLDER + "/save.json");
-            InGameDebug.Instance.Log("Save Deleted");
+            Debug.Log("Save Deleted");
         } else {
-            InGameDebug.Instance.Log("No Save Found. Skipping Delete.");
+            Debug.Log("No Save Found. Skipping Delete.");
         }
     }
 }

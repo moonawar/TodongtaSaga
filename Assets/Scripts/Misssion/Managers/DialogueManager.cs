@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour {
 
     private void Awake() {
         if (dialogueRunner == null) {
-            InGameDebug.Instance.LogError("DialogueRunner not found. Searching for one in the scene.");
+            Debug.LogError("DialogueRunner not found. Searching for one in the scene.");
         }
     }
 
@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour {
             dialogueRunner.onDialogueComplete.RemoveAllListeners();
         });
 
-        InGameDebug.Instance.Log("Starting dialogue: " + dialogueName);
+        Debug.Log("Starting dialogue: " + dialogueName);
 
         dialogueRunner.StartDialogue(dialogueName);
     }

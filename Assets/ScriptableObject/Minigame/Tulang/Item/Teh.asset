@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Teh
   itemSprite: {fileID: 2009791015, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
+  itemIncorrectSprite: {fileID: -970777067, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
   hintSprite: {fileID: -732094311, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}

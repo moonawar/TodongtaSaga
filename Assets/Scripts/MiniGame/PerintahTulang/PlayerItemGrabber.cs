@@ -7,9 +7,12 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
         public List<PerintahItem> GrabbedItems {get; private set;} = new();
         [SerializeField] private RectTransform grabbedItemsContainer;
         [SerializeField] private GameObject grabbedItemPrefab;
+        [SerializeField] private int maxCapacity = 7;
 
         public void GrabItem(PerintahItem item)
         {
+            if (GrabbedItems.Count >= maxCapacity) return;
+
             GrabbedItems.Add(item);
 
             var itemObj = Instantiate(grabbedItemPrefab, grabbedItemsContainer);

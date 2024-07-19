@@ -26,7 +26,7 @@ public class InteractableObject : Interactable
     {
         if (!interactHint.TryGetComponent(out hintSpriteRenderer))
         {
-            InGameDebug.Instance.LogError("SpriteRenderer not found on interactHint. Please add a SpriteRenderer component.");
+            Debug.LogError("SpriteRenderer not found on interactHint. Please add a SpriteRenderer component.");
         }
 
         hintInitialPosition = interactHint.localPosition;

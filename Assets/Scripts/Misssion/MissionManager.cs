@@ -62,7 +62,7 @@ public class MissionManager : MonoBehaviour
     public void StartMission(Mission mission)
     {
         // Code to start the mission
-        InGameDebug.Instance.Log("Mission Started: " + mission.missionName);
+        Debug.Log("Mission Started: " + mission.missionName);
         currentMission = mission;
         currentTaskIndex = 0;
         IsMissionInProgress = true;
@@ -71,7 +71,7 @@ public class MissionManager : MonoBehaviour
 
     public void CompleteMission(Mission mission)
     {
-        InGameDebug.Instance.Log("Mission Completed: " + mission.missionName);
+        Debug.Log("Mission Completed: " + mission.missionName);
 
         missions.Remove(mission);
 
@@ -92,7 +92,7 @@ public class MissionManager : MonoBehaviour
 
         string missionsString = string.Join(", ", missions.ConvertAll(m => m.missionName).ToArray());
 
-        InGameDebug.Instance.Log($"Missions Available: [{missionsString}]");
+        Debug.Log($"Missions Available: [{missionsString}]");
 
         SaveManager.Instance.SaveGame();
         GameStateManager.Instance.ToGameplay();
@@ -107,7 +107,7 @@ public class MissionManager : MonoBehaviour
     }
 
     public void HandleNewMission(Mission mission) {
-        InGameDebug.Instance.Log("Handling new mission: " + mission.missionName);
+        Debug.Log("Handling new mission: " + mission.missionName);
 
         if (mission == null) return;
         // Create the trigger for the new mission
@@ -116,7 +116,7 @@ public class MissionManager : MonoBehaviour
         {
             case MissionTriggerType.NPC:
                 // Spawn NPC interaction point
-                InGameDebug.Instance.Log("Assigning mission to NPC: " + mission.trigger.npcName);
+                Debug.Log("Assigning mission to NPC: " + mission.trigger.npcName);
 
                 NPCManager.Instance.AssignMissionToNPC(mission, mission.trigger.npcName);
                 NPC npc = NPCManager.Instance.FindNPCWithName(mission.trigger.npcName);
@@ -136,7 +136,7 @@ public class MissionManager : MonoBehaviour
 
                 if (mission.trigger.showWaypoint)
                 {
-                    InGameDebug.Instance.Log("Setting destination to mission location: " + mission.trigger.location);
+                    Debug.Log("Setting destination to mission location: " + mission.trigger.location);
 
                     WaypointManager.Instance.SetDestination(mission.trigger.location);
                     mission.OnMissionCompleteAction += () => WaypointManager.Instance.FinishDestination();
@@ -187,7 +187,7 @@ public class MissionManager : MonoBehaviour
     {
         if (!missions.Contains(mission))
         {
-            InGameDebug.Instance.Log("Mission not found in the list of missions. Skipping task.");
+            Debug.Log("Mission not found in the list of missions. Skipping task.");
         }
 
         // Call OnTaskComplete actions
@@ -258,7 +258,7 @@ public class MissionManager : MonoBehaviour
             return;
         }
 
-        InGameDebug.Instance.Log($"Executing Task {taskIndex} of type {mission.tasks[taskIndex].type} for mission {mission.missionName}");
+        Debug.Log($"Executing Task {taskIndex} of type {mission.tasks[taskIndex].type} for mission {mission.missionName}");
 
         var task = mission.tasks[taskIndex];
         switch (task.type)
@@ -268,7 +268,7 @@ public class MissionManager : MonoBehaviour
                 GameStateManager.Instance.ToDialogue();
                 dialogueManager.StartDialogue(task.yarnTitle, () =>
                 {
-                    InGameDebug.Instance.Log($"Dialogue Finished for mission {mission.missionName}");
+                    Debug.Log($"Dialogue Finished for mission {mission.missionName}");
 
                     GameStateManager.Instance.ToGameplay();
                     ExecuteNextTask(mission, taskIndex + 1);
@@ -282,7 +282,7 @@ public class MissionManager : MonoBehaviour
                     cutsceneCanvasGroup.alpha = 1;
                     cutsceneManager.StartCutscene(task.cutscene, () =>
                     {
-                        InGameDebug.Instance.Log($"Cutscene Finished for mission {mission.missionName}");
+                        Debug.Log($"Cutscene Finished for mission {mission.missionName}");
                         cutsceneManager.CleanCutscene();
 
                         GameStateManager.Instance.ToGameplay();

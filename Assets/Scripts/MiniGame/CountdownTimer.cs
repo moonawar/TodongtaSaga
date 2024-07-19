@@ -51,6 +51,12 @@ namespace TodongtoaSaga.Minigames
             UpdateTimerDisplay();
         }
 
+        public void SetDuration(float newDuration)
+        {
+            duration = newDuration;
+            ResetTimer();
+        }
+
         private void EndTimer()
         {
             isRunning = false;

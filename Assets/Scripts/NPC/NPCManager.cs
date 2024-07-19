@@ -28,7 +28,7 @@ public class NPCManager : MonoBehaviour
             }
         }
 
-        InGameDebug.Instance.LogError("NPC with name " + name + " not found.");
+        Debug.LogError("NPC with name " + name + " not found.");
         return null;
     }
 

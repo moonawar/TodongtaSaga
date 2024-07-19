@@ -6,6 +6,7 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
     public class PerintahItem : ScriptableObject {
         public string itemName;
         public Sprite itemSprite;
+        public Sprite itemIncorrectSprite;
         public Sprite hintSprite;
     }
 }

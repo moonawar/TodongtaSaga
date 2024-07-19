@@ -4,7 +4,7 @@ using DG.Tweening;
 
 namespace TodongtoaSaga.Minigames.PenyelamatanBoras
 {
-    public class CatchStatusSpawner : MonoBehaviour
+    public class StatusSpawner : MonoBehaviour
     {
         [SerializeField] private TextMeshPro statusText; // Changed to TextMeshProUGUI for UI elements
         [SerializeField] private float duration = 2f;
