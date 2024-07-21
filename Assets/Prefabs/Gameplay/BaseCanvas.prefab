@@ -5530,6 +5530,7 @@ MonoBehaviour:
   donganTobuFrame: {fileID: 21300000, guid: ee27291cf32b25a4cb3232c3ae907b20, type: 3}
   boruFrame: {fileID: 21300000, guid: 18356d2675431584493af8be168583c5, type: 3}
   profilePic: {fileID: 2802232807077038003}
+  frame: {fileID: 0}
   nameText: {fileID: 2892371473284070311}
   descriptionText: {fileID: 3580209761775655096}
   missionPanel: {fileID: 5713334278452418343}
@@ -8747,11 +8748,11 @@ RectTransform:
   m_Children:
   - {fileID: 5055989772470052359}
   - {fileID: 4038540899781944496}
-  - {fileID: 1461846574502357045}
   - {fileID: 7156723180992330818}
   - {fileID: 5392986642324187849}
   - {fileID: 5645443520060377365}
   - {fileID: 6234406009011563355}
+  - {fileID: 1461846574502357045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10147,7 +10148,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8265313022367637999}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

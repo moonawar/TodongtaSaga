@@ -15,9 +15,7 @@ MonoBehaviour:
   recipe:
   - {fileID: 11400000, guid: 5ddd33ca54234f94d95d0ff484baca12, type: 2}
   - {fileID: 11400000, guid: d6229b9e39f2dcc4abb2771e1403f661, type: 2}
-  - {fileID: 11400000, guid: eaf2b952d557f4d46b21f664991e4ff4, type: 2}
   - {fileID: 11400000, guid: 302d0c9db126bea469d8a6b187515a9d, type: 2}
-  - {fileID: 11400000, guid: eaf2b952d557f4d46b21f664991e4ff4, type: 2}
   - {fileID: 11400000, guid: 5ddd33ca54234f94d95d0ff484baca12, type: 2}
   - {fileID: 11400000, guid: eaf2b952d557f4d46b21f664991e4ff4, type: 2}
   foodName: Pisang Goreng

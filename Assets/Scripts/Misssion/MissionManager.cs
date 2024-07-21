@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 using DG.Tweening;
-using UnityEngine.Events;
 using System.Collections;
 
 [RequireComponent(typeof(CutsceneManager))]
@@ -12,7 +11,7 @@ using System.Collections;
 public class MissionManager : MonoBehaviour
 {
     public static MissionManager Instance;
-    public List<Mission> missions = new List<Mission>();
+    public List<Mission> missions = new();
 
     private CutsceneManager cutsceneManager;
     private DialogueManager dialogueManager;
@@ -53,6 +52,12 @@ public class MissionManager : MonoBehaviour
     
     private IEnumerator DelayedStart() {
         yield return new WaitUntil(() => IsMissionLoaded);
+        if (missions.Count == 0)
+        {
+            MissionAnnouncer.Instance.AnnounceMission("Demo Berakhir", "Selamat, kamu telah menyelesaikan demo ini. Gunakan tombol reset game di dev tools. Thanks for playing!");
+        }
+
+        AudioManager.Instance.PlayBGMOverwrite("Game");
         foreach (var mission in missions)
         {
             HandleNewMission(mission);
@@ -62,6 +67,7 @@ public class MissionManager : MonoBehaviour
     public void StartMission(Mission mission)
     {
         // Code to start the mission
+        AudioManager.Instance.StopBGMCrossfade();
         Debug.Log("Mission Started: " + mission.missionName);
         currentMission = mission;
         currentTaskIndex = 0;
@@ -72,6 +78,7 @@ public class MissionManager : MonoBehaviour
 
     public void CompleteMission(Mission mission)
     {
+        AudioManager.Instance.PlayBGMOverwrite("Game");
         Debug.Log("Mission Completed: " + mission.missionName);
 
         missions.Remove(mission);

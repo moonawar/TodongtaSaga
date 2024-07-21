@@ -28,6 +28,10 @@ public class InMinigameManager : MonoBehaviour
         mainCamera = Camera.main;
     }
 
+    private void Start() {
+        AudioManager.Instance.PlayBGMOverwrite("Minigame");
+    }
+
     public void WinMinigame()
     {
         StartEndSequence(winningScreen);
@@ -47,6 +51,7 @@ public class InMinigameManager : MonoBehaviour
             .OnComplete(() => {
                 // After zoom and slow-mo, fade in the end screen and end the game
                 FadeInScreen(endScreen);
+                AudioManager.Instance.StopBGMCrossfade();
                 GameStateManager.Instance.ToOpenUIOverride(); // Tell GameStateManager to open UI on top
                 // Reset time scale
                 Time.timeScale = 1f;

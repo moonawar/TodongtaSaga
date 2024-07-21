@@ -24,6 +24,7 @@ public class SceneLoader : MonoBehaviour {
         while (!op.isDone) {
             yield return null;
         }
+
         // Scene is fully loaded, call the callback if it exists
         onSceneLoadedCallback?.Invoke();
         onSceneLoadedCallback = null;
@@ -32,6 +33,7 @@ public class SceneLoader : MonoBehaviour {
     public void LoadScene(string sceneName, Action onSceneLoaded = null) {
         Debug.Log("Loading scene: " + sceneName);
         DOTween.KillAll();
+        AudioManager.Instance.StopBGM();
         onSceneLoadedCallback = onSceneLoaded;
         onLoaderCallback = () => {
             StartCoroutine(LoadSceneAsync(sceneName));

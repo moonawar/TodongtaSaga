@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuButtonAPI : MonoBehaviour
 {
+    [SerializeField] private Slider volumeSlider;
     public void ToMainMenu() {
         if (SceneLoader.Instance != null) {
             SceneLoader.Instance.ToMainMenu();
@@ -29,6 +31,19 @@ public class MenuButtonAPI : MonoBehaviour
     public void SkipMission() {
         if (MissionManager.Instance != null) {
             MissionManager.Instance.SkipCurrentMission();
+        }
+    }
+
+    public void DeleteSave() {
+        if (SaveManager.Instance != null) {
+            SaveManager.Instance.DeleteSave();
+        }
+    }
+
+    public void SetMasterVolume() {
+        if (AudioManager.Instance != null) {
+            float volume = volumeSlider.value;
+            AudioManager.Instance.UpdateMasterVolume(volume);
         }
     }
 }

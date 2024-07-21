@@ -62,6 +62,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
                         if (mouseHit) continue;
                         bool success = HandleMouseCatch(collider);
                         mouseHit = success;
+                        break;
                     }
                 }
                 else if (collider.gameObject.layer == LayerMask.NameToLayer("DontCatch"))
@@ -71,6 +72,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
                         if (somethingHit != null) continue;
                         HandleDontCatchObject(collider);
                         somethingHit = collider;
+                        break;
                     }
                 }
             }

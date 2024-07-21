@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Kopi
   m_EditorClassIdentifier: 
   itemName: Kopi
-  itemSprite: {fileID: -1235047814, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
+  itemSprite: {fileID: -669959231, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
   itemIncorrectSprite: {fileID: 683265301, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
   hintSprite: {fileID: -1866090525, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}

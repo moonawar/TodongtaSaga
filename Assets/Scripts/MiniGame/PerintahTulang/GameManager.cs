@@ -89,6 +89,7 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             foreach (var item in currentTarget.recipe) {
                 var itemObj = Instantiate(perintahItemPrefab, perintahItemContainer);
                 itemObj.GetComponent<Image>().sprite = item.itemSprite;
+                itemObj.GetComponentInChildren<TextMeshProUGUI>().text = item.name;
             }
 
             countdownTimer.SetDuration(currentLevel.timeLimit);

@@ -83,31 +83,31 @@ public class NPCManager : MonoBehaviour
         }
     }
 
-    public List<NPCData> GetNPCDatas()
+    public List<NPCData> GetNPCBookDatas()
     {
         List<NPCData> npcsData = new();
         foreach (var npc in npcs)
         {
-            npcsData.Add(npc.Data);
+            if (!npc.Data.ignoreFromBook) npcsData.Add(npc.Data);
         }
 
         return npcsData;
     }
 
-    public NPCData GetNPCData(string npcName)
+    public NPCData GetNPCBookData(string npcName)
     {
         foreach (var npc in npcs)
         {
             if (npc.Data.name == npcName)
             {
-                return npc.Data;
+                if (!npc.Data.ignoreFromBook) return npc.Data;
             }
         }
 
         return null;
     }
 
-    public void LoadNPCDatas(List<NPCData> datas) {
+    public void LoadNPCBookDatas(List<NPCData> datas) {
         foreach (var data in datas)
         {
             NPC npc = FindNPCWithName(data.name);

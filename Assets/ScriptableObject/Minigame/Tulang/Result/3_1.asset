@@ -16,7 +16,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 302d0c9db126bea469d8a6b187515a9d, type: 2}
   - {fileID: 11400000, guid: d6229b9e39f2dcc4abb2771e1403f661, type: 2}
   - {fileID: 11400000, guid: eaf2b952d557f4d46b21f664991e4ff4, type: 2}
-  - {fileID: 11400000, guid: eaf2b952d557f4d46b21f664991e4ff4, type: 2}
   - {fileID: 11400000, guid: f5068c1fa10766e488f873faace02071, type: 2}
   foodName: Pisang Goreng
   foodSprite: {fileID: -1732111381, guid: a10c5de4a40a6e54ba42082fb69fc323, type: 3}

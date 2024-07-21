@@ -559,10 +559,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_20
       rect:
         serializedVersion: 2
-        x: 48
-        y: 269
-        width: 15
-        height: 14
+        x: 47
+        y: 268
+        width: 17
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_21
       rect:
         serializedVersion: 2
-        x: 68
-        y: 269
-        width: 15
-        height: 14
+        x: 67
+        y: 268
+        width: 17
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_22
       rect:
         serializedVersion: 2
-        x: 88
-        y: 269
-        width: 15
-        height: 14
+        x: 87
+        y: 268
+        width: 17
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +622,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_23
       rect:
         serializedVersion: 2
-        x: 108
-        y: 269
-        width: 15
-        height: 14
+        x: 107
+        y: 268
+        width: 17
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_24
       rect:
         serializedVersion: 2
-        x: 129
-        y: 269
-        width: 15
-        height: 14
+        x: 128
+        y: 268
+        width: 17
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +664,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_25
       rect:
         serializedVersion: 2
-        x: 154
-        y: 269
-        width: 15
-        height: 14
+        x: 153
+        y: 268
+        width: 17
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,55 +829,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet_Mini Game Tulang_33
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 244
-        width: 10
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79ea5a9cb9f5c6040938aee6a9e94f70
-      internalID: -1235047814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sheet_Mini Game Tulang_34
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 244
-        width: 12
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c9bfdd0bdfe1424fb7a075c2cc1c407
-      internalID: 1878134050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sheet_Mini Game Tulang_35
       rect:
         serializedVersion: 2
         x: 83
-        y: 243
+        y: 242
         width: 14
-        height: 10
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +853,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_36
       rect:
         serializedVersion: 2
-        x: 100
-        y: 244
-        width: 12
-        height: 9
+        x: 99
+        y: 242
+        width: 14
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,10 +874,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_37
       rect:
         serializedVersion: 2
-        x: 116
-        y: 244
-        width: 10
-        height: 9
+        x: 114
+        y: 242
+        width: 14
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -937,10 +895,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_38
       rect:
         serializedVersion: 2
-        x: 129
-        y: 242
-        width: 9
-        height: 11
+        x: 127
+        y: 241
+        width: 13
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -958,10 +916,10 @@ TextureImporter:
       name: Sheet_Mini Game Tulang_39
       rect:
         serializedVersion: 2
-        x: 144
-        y: 242
-        width: 11
-        height: 11
+        x: 142
+        y: 241
+        width: 14
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1542,6 +1500,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_67
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 242
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6469817cdef617e48acb5e8122d29633
+      internalID: -669959231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Mini Game Tulang_68
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 242
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59c639ebfc6de64c94de81fa5b4e907
+      internalID: 1791361179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1617,6 +1617,8 @@ TextureImporter:
       Sheet_Mini Game Tulang_64: 895900705
       Sheet_Mini Game Tulang_65: -2010046146
       Sheet_Mini Game Tulang_66: -242452393
+      Sheet_Mini Game Tulang_67: -669959231
+      Sheet_Mini Game Tulang_68: 1791361179
       Sheet_Mini Game Tulang_7: -779129398
       Sheet_Mini Game Tulang_8: -68484495
       Sheet_Mini Game Tulang_9: -2029382681

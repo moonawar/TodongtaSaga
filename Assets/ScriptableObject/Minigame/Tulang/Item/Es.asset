@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Es
   m_EditorClassIdentifier: 
   itemName: Es
-  itemSprite: {fileID: 1878134050, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
+  itemSprite: {fileID: 1791361179, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
   itemIncorrectSprite: {fileID: 491175771, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}
   hintSprite: {fileID: 197997414, guid: 9b5c3bea47da65347b0791f9200e3ce4, type: 3}

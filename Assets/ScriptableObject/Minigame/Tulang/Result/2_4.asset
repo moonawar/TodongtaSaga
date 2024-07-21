@@ -15,7 +15,6 @@ MonoBehaviour:
   recipe:
   - {fileID: 11400000, guid: 854995db6d89ab04f8f92cd246b62ebe, type: 2}
   - {fileID: 11400000, guid: 6913dbb3634a9a941aebb9b7c9b8d05f, type: 2}
-  - {fileID: 11400000, guid: 854995db6d89ab04f8f92cd246b62ebe, type: 2}
   - {fileID: 11400000, guid: 6913dbb3634a9a941aebb9b7c9b8d05f, type: 2}
   foodName: Lapet
   foodSprite: {fileID: 1766856196, guid: a10c5de4a40a6e54ba42082fb69fc323, type: 3}

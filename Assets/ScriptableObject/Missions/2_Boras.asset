@@ -22,6 +22,8 @@ MonoBehaviour:
     location: {x: 72.25, y: 65.25}
     radius: 1
     showWaypoint: 1
+  onMissionHandled: []
+  onMissionStart: []
   tasks:
   - type: 1
     yarnTitle: 
@@ -29,14 +31,32 @@ MonoBehaviour:
     travelLocation: {x: 0, y: 0}
     showWaypoint: 0
     sceneName: 
-    onTaskComplete: []
+    onTaskComplete:
+    - type: 3
+      npcName: Boras
+      assignNextTask: 0
+      position: {x: 75.44, y: 65.78}
+      dissapearImmediately: 0
+      orientation: 0
+    - type: 1
+      npcName: Boras
+      assignNextTask: 0
+      position: {x: 72.19, y: 65.78}
+      dissapearImmediately: 0
+      orientation: 3
   - type: 0
     yarnTitle: 5
     cutscene: {fileID: 0}
     travelLocation: {x: 0, y: 0}
     showWaypoint: 0
     sceneName: 
-    onTaskComplete: []
+    onTaskComplete:
+    - type: 4
+      npcName: Boras
+      assignNextTask: 0
+      position: {x: 0, y: 0}
+      dissapearImmediately: 0
+      orientation: 0
   announce: 1
   hidden: 0
   relationshipImpacts: []

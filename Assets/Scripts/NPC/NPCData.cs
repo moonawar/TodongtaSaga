@@ -11,4 +11,5 @@ public class NPCData : ScriptableObject
     public Sprite hiImage;
     public Sprite loImage;
     public string description;
+    public bool ignoreFromBook = false;
 }

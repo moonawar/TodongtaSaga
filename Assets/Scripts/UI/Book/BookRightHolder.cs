@@ -9,7 +9,7 @@ public class BookRightHolder : MonoBehaviour
     [SerializeField] private BookLeftHolder leftHolder;
 
     private void OnEnable() {
-        List<NPCData> datas = NPCManager.Instance.GetNPCDatas();
+        List<NPCData> datas = NPCManager.Instance.GetNPCBookDatas();
         foreach (var data in datas) {
             GameObject card = Instantiate(cardPrefab, charactersContainer.transform);
             card.GetComponent<CharacterCard>().Set(data);

@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipe:
   - {fileID: 11400000, guid: 854995db6d89ab04f8f92cd246b62ebe, type: 2}
-  - {fileID: 11400000, guid: 6913dbb3634a9a941aebb9b7c9b8d05f, type: 2}
-  - {fileID: 11400000, guid: 6913dbb3634a9a941aebb9b7c9b8d05f, type: 2}
-  - {fileID: 11400000, guid: 854995db6d89ab04f8f92cd246b62ebe, type: 2}
+  - {fileID: 11400000, guid: eaf2b952d557f4d46b21f664991e4ff4, type: 2}
   foodName: Lapet
   foodSprite: {fileID: 1766856196, guid: a10c5de4a40a6e54ba42082fb69fc323, type: 3}
-  drinkName: Teh Tawar
-  drinkSprite: {fileID: -744897541, guid: 515f27e4985639d429484d0cdbb05059, type: 3}
+  drinkName: Kopi
+  drinkSprite: {fileID: -1940073450, guid: 515f27e4985639d429484d0cdbb05059, type: 3}
