@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff31afff88134bb1e202265ed07ef, type: 3}
+  m_Name: AmangUda_4
+  m_EditorClassIdentifier: 
+  missionName: Hubungan dengan Amang Uda
+  description: Bangun relasi dengan Amang Uda (Penuhi syarat poin kekeluargaan)
+  announce: 1
+  hidden: 0
+  isCompleted: 0
+  trigger:
+    type: 0
+    npcName: Amang Uda
+    objectName: 
+    location: {x: -29.2, y: -28.97}
+    radius: 1
+    showWaypoint: 1
+  onMissionHandled: []
+  onMissionStart: []
+  tasks: []
+  relationshipImpacts: []
+  followUpMissions: []
+  isKeyMission: 1
+  keyMissionFor: Amang Uda
+  bookMissionDescription: Bangun relasi dengan Amang Uda (Penuhi syarat poin kekeluargaan)

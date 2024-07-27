@@ -1,6 +1,6 @@
 public enum NPCTungku 
 {
     HulaHula,
-    DonganTobu,
+    DonganTubu,
     Boru
 }

@@ -80,6 +80,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  winningCutscene: {fileID: 11400000, guid: a57af39fb3e685347aaaec46ee11bcee, type: 2}
+  losingCutscene: {fileID: 11400000, guid: 933e412361ff3eb4c909a2b73c15245e, type: 2}
 --- !u!1 &4484966845772188976
 GameObject:
   m_ObjectHideFlags: 0

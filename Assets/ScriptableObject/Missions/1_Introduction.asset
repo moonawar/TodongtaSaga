@@ -14,14 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Pembukaan
   description: 
+  announce: 0
+  hidden: 1
+  isCompleted: 0
   trigger:
     type: 3
     npcName: 
-    npcLocation: {x: 0, y: 0}
     objectName: 
-    location: {x: 0, y: 0}
+    location: {x: 91.45, y: -72}
     radius: 1
     showWaypoint: 0
+  onMissionHandled: []
+  onMissionStart: []
   tasks:
   - type: 1
     yarnTitle: 
@@ -37,8 +41,9 @@ MonoBehaviour:
     showWaypoint: 0
     sceneName: 
     onTaskComplete: []
-  announce: 0
-  hidden: 1
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: ab36c6463e524554c8a08a94470c566f, type: 2}
+  isKeyMission: 0
+  keyMissionFor: 
+  bookMissionDescription: 

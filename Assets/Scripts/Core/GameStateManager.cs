@@ -65,19 +65,30 @@ public class GameStateManager : MonoBehaviour {
     private void DisableGameplayUI() {
         gameplayUI.gameObject.SetActive(false);
         if (playerUI == null) {
-            playerUI = GameObject.FindWithTag("PlayerCanvas").transform as RectTransform;
+            GameObject playerCanvas = GameObject.FindWithTag("PlayerCanvas");
+            if (playerCanvas != null) {
+                playerUI = playerCanvas.transform as RectTransform;
+            }
         }
 
-        playerUI.gameObject.SetActive(false);
+        if (playerUI != null) {
+            playerUI.gameObject.SetActive(false);
+        }
     }
     
     private void EnableGameplayUI() {
         gameplayUI.gameObject.SetActive(true);
 
         if (playerUI == null) {
-            playerUI = GameObject.FindWithTag("PlayerCanvas").transform as RectTransform;
+            GameObject playerCanvas = GameObject.FindWithTag("PlayerCanvas");
+            if (playerCanvas != null) {
+                playerUI = playerCanvas.transform as RectTransform;
+            }
         }
-        playerUI.gameObject.SetActive(true);
+
+        if (playerUI != null) {
+            playerUI.gameObject.SetActive(true);
+        }
     }
 
     public void ToDialogue() {
@@ -94,7 +105,7 @@ public class GameStateManager : MonoBehaviour {
         SetState(GameState.Cutscene);
     }
 
-    public void ToGameplay(bool immediate = false) {
+    public void ToGameplay() {
         dialogueUI.gameObject.SetActive(false);
         cutsceneUI.gameObject.SetActive(false);
 

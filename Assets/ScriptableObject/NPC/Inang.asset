@@ -15,6 +15,7 @@ MonoBehaviour:
   npcName: Inang
   relationshipLevel: 0
   tungku: 0
-  hiImage: {fileID: 21300000, guid: 86196d164dcaefc439062fd65252aa1c, type: 3}
+  hiImage: {fileID: -1044492388, guid: 033982c847779a54b97497f925b39e2f, type: 3}
   loImage: {fileID: 21300000, guid: 731fc52cf58e47d49ba7407220587d5d, type: 3}
   description: Ibu dari Anggi.
+  ignoreFromBook: 0

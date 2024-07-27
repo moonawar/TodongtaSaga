@@ -79,18 +79,28 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             
             // Clear the container
             foreach (Transform child in perintahItemContainer) {
-                Destroy(child.gameObject);
+                child.gameObject.SetActive(false);
             }
 
             // Add the items
             Level currentLevel = levels[currentIdx];
             currentTarget = currentLevel.items[UnityEngine.Random.Range(0, currentLevel.items.Length)];
-        
-            foreach (var item in currentTarget.recipe) {
-                var itemObj = Instantiate(perintahItemPrefab, perintahItemContainer);
-                itemObj.GetComponent<Image>().sprite = item.itemSprite;
-                itemObj.GetComponentInChildren<TextMeshProUGUI>().text = item.name;
+
+            for (int i = 0; i < currentTarget.recipe.Length; i++) {
+                var itemObj = i < perintahItemContainer.childCount ? 
+                    perintahItemContainer.GetChild(i).gameObject : 
+                    Instantiate(perintahItemPrefab, perintahItemContainer);
+
+                itemObj.GetComponent<Image>().sprite = currentTarget.recipe[i].itemSprite;
+                itemObj.GetComponentInChildren<TextMeshProUGUI>().text = currentTarget.recipe[i].name;
+                itemObj.SetActive(true);
             }
+        
+            // foreach (var item in currentTarget.recipe) {
+            //     var itemObj = Instantiate(perintahItemPrefab, perintahItemContainer);
+            //     itemObj.GetComponent<Image>().sprite = item.itemSprite;
+            //     itemObj.GetComponentInChildren<TextMeshProUGUI>().text = item.name;
+            // }
 
             countdownTimer.SetDuration(currentLevel.timeLimit);
             radialClock.StartClock();
@@ -145,20 +155,20 @@ namespace TodongtoaSaga.Minigames.PerintahTulang
             }
         }
 
-        private bool[] PointOutMistakes() {
-            int minLength = Mathf.Min(playerItemGrabber.GrabbedItems.Count, currentTarget.recipe.Length);
+        // private bool[] PointOutMistakes() {
+        //     int minLength = Mathf.Min(playerItemGrabber.GrabbedItems.Count, currentTarget.recipe.Length);
 
-            bool[] mistakes = new bool[minLength];
-            for (int i = 0; i < minLength; i++) {
-                if (playerItemGrabber.GrabbedItems[i].name != currentTarget.recipe[i].name) {
-                    mistakes[i] = true;
-                } else {
-                    mistakes[i] = false;
-                }
-            }
+        //     bool[] mistakes = new bool[minLength];
+        //     for (int i = 0; i < minLength; i++) {
+        //         if (playerItemGrabber.GrabbedItems[i].name != currentTarget.recipe[i].name) {
+        //             mistakes[i] = true;
+        //         } else {
+        //             mistakes[i] = false;
+        //         }
+        //     }
 
-            return mistakes;
-        }
+        //     return mistakes;
+        // }
 
         private void OnIncorrect() {
             playerItemGrabber.GrabbedItems.Clear();

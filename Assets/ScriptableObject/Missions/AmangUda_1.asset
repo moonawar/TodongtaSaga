@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Mencari Lebih Lanjut
   description: Temui Pamanmu untuk mencari informasi lebih lanjut
+  announce: 1
+  hidden: 0
+  isCompleted: 0
   trigger:
     type: 2
     npcName: AmangUda
-    npcLocation: {x: 51.23, y: -24.31}
     objectName: 
-    location: {x: -23.2, y: -26.71}
-    radius: 1
+    location: {x: -23.15, y: -26.78}
+    radius: 2.6
     showWaypoint: 1
+  onMissionHandled: []
   onMissionStart: []
   tasks:
   - type: 1
@@ -31,8 +34,9 @@ MonoBehaviour:
     showWaypoint: 0
     sceneName: 
     onTaskComplete: []
-  announce: 1
-  hidden: 0
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: c57779b445340174a9e9d339ccf9a3b6, type: 2}
+  isKeyMission: 0
+  keyMissionFor: 
+  bookMissionDescription: 

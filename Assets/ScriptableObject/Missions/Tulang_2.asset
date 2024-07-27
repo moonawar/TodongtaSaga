@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Perintah Tulang
   description: Bantu Tulang membuat hidangan
+  announce: 1
+  hidden: 0
+  isCompleted: 0
   trigger:
     type: 0
     npcName: Tulang
-    npcLocation: {x: 91.45, y: -72}
     objectName: 
-    location: {x: 0, y: 0}
+    location: {x: 91.45, y: -72}
     radius: 1
     showWaypoint: 1
   onMissionHandled: []
@@ -84,7 +86,15 @@ MonoBehaviour:
       position: {x: 91.45, y: -71.49}
       dissapearImmediately: 0
       orientation: 0
-  announce: 1
-  hidden: 0
+  onMissionComplete:
+  - type: 4
+    npcName: Tulang
+    assignNextTask: 0
+    position: {x: 0, y: 0}
+    dissapearImmediately: 0
+    orientation: 0
   relationshipImpacts: []
   followUpMissions: []
+  isKeyMission: 0
+  keyMissionFor: 
+  bookMissionDescription: 

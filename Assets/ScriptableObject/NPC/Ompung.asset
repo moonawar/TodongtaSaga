@@ -15,6 +15,7 @@ MonoBehaviour:
   npcName: Ompung
   relationshipLevel: 0
   tungku: 1
-  hiImage: {fileID: 21300000, guid: 6c0acedd6b57a034eac2939ddc5a4cac, type: 3}
+  hiImage: {fileID: 1802898138, guid: 033982c847779a54b97497f925b39e2f, type: 3}
   loImage: {fileID: 21300000, guid: 14c295e05be76df4bb739386efb44b5b, type: 3}
   description: Kakek dari Anggi
+  ignoreFromBook: 0

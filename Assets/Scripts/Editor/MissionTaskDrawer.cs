@@ -36,7 +36,7 @@ public class MissionTaskDrawer : PropertyDrawer
             totalHeight += baseHeight; // Just the foldout arrow
         }
 
-        totalHeight += baseHeight; // Spacing above and below the scene actions list
+        totalHeight += baseHeight + spacing; // Spacing after the property
         return totalHeight;
     }
 
@@ -84,8 +84,8 @@ public class MissionTaskDrawer : PropertyDrawer
                 additionalFieldRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
                 break;
             case MissionTaskType.Travel:
-                EditorGUI.PropertyField(additionalFieldRect, travelLocationProperty);
-                additionalFieldRect.y += 2 * (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing);
+                TodongtoaEditorUtility.DrawVector2Field(ref additionalFieldRect, travelLocationProperty, "Travel Location");
+
                 EditorGUI.PropertyField(additionalFieldRect, showWaypointProperty);
                 additionalFieldRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
                 break;
@@ -98,9 +98,17 @@ public class MissionTaskDrawer : PropertyDrawer
         Rect actionsRect = new Rect(position.x + 20, additionalFieldRect.y, position.width - 20, EditorGUIUtility.singleLineHeight);
         EditorGUI.PropertyField(actionsRect, sceneActionsProperty, true);
 
-        // Draw divider line
-        Rect dividerRect = new Rect(position.x, position.y + position.height - 1, position.width, 1);
-        EditorGUI.DrawRect(dividerRect, new Color(0.5f, 0.5f, 0.5f, 1));
+        Rect dividerRect = new Rect(position.x, additionalFieldRect.y, position.width, additionalFieldRect.height);
+
+        if (sceneActionsProperty.isExpanded)
+        {
+            dividerRect.y += EditorGUI.GetPropertyHeight(sceneActionsProperty);
+        } else {
+            dividerRect.y += EditorGUIUtility.singleLineHeight;
+        }
+
+        dividerRect.y += EditorGUIUtility.standardVerticalSpacing * 5;
+        TodongtoaEditorUtility.DrawDividerLine(ref dividerRect);
 
         // Set indent back to what it was
         EditorGUI.indentLevel = indent;

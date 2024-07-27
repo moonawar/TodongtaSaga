@@ -26,7 +26,8 @@ public class SaveManager : MonoBehaviour {
         gameSave.PlayerPosition = player.position;
         gameSave.CurrentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         gameSave.SceneObjects = SceneData.Instance.sceneObjects;
-        gameSave.Missions = MissionManager.Instance.missions;
+        gameSave.AllMissions = MissionManager.Instance.allMissions;
+        gameSave.AvailableMissions = MissionManager.Instance.availableMissions;
         gameSave.npcsData = NPCManager.Instance.GetNPCBookDatas();
 
         string json = JsonUtility.ToJson(gameSave);
@@ -51,7 +52,8 @@ public class SaveManager : MonoBehaviour {
                 Camera.main.transform.position = new Vector3(player.position.x, player.position.y, Camera.main.transform.position.z);
                 followPlayer.SetActive(true);
                 SceneData.Instance.sceneObjects = gameSave.SceneObjects;
-                MissionManager.Instance.missions = gameSave.Missions;
+                MissionManager.Instance.allMissions = gameSave.AllMissions;
+                MissionManager.Instance.availableMissions = gameSave.AvailableMissions;
                 MissionManager.Instance.IsMissionLoaded = true;
                 NPCManager.Instance.LoadNPCBookDatas(gameSave.npcsData);
             });
@@ -67,8 +69,14 @@ public class SaveManager : MonoBehaviour {
         if (File.Exists(SAVE_FOLDER + "/save.json")) {
             File.Delete(SAVE_FOLDER + "/save.json");
             Debug.Log("Save Deleted");
+            if (UITextPopup.Instance != null) {
+                UITextPopup.Instance.Show("Save Telah Dihapus");
+            }
         } else {
             Debug.Log("No Save Found. Skipping Delete.");
+            if (UITextPopup.Instance != null) {
+                UITextPopup.Instance.Show("Tidak Ada Save Yang Ditemukan");
+            }
         }
     }
 }

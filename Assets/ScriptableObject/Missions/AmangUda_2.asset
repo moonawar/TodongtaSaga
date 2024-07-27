@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Panggilan Paman?
   description: Mencari Nama Amang Uda
+  announce: 0
+  hidden: 0
+  isCompleted: 0
   trigger:
     type: 0
     npcName: Amang Uda
-    npcLocation: {x: -29.16, y: -29.22}
     objectName: 
-    location: {x: -23.2, y: -26.71}
+    location: {x: -29.2, y: -28.97}
     radius: 1
     showWaypoint: 1
+  onMissionHandled: []
   onMissionStart: []
   tasks:
   - type: 0
@@ -38,8 +41,9 @@ MonoBehaviour:
     showWaypoint: 1
     sceneName: AmangUdaNameGame
     onTaskComplete: []
-  announce: 0
-  hidden: 0
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: c57779b445340174a9e9d339ccf9a3b6, type: 2}
+  isKeyMission: 1
+  keyMissionFor: Amang Uda
+  bookMissionDescription: Mencari huruf dari Partuturan

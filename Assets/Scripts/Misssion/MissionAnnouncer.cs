@@ -46,6 +46,12 @@ public class MissionAnnouncer : MonoBehaviour
 
     public void AnnounceMission(string missionTitle, string missionDescription)
     {
+        // omit this.
+        if (missionTitle == null || missionTitle.Length == 0 || missionDescription == null || missionDescription.Length == 0)
+        {
+            return;
+        }
+
         announcementQueue.Enqueue((missionTitle, missionDescription));
         if (!isDisplaying)
         {

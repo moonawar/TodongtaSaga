@@ -42,7 +42,7 @@ public class NPCManager : MonoBehaviour
     {
         NPC npc = FindNPCWithName(npcName);
         npc.ShouldDissapear = false;
-        npc.transform.position = mission.trigger.npcLocation;
+        npc.transform.position = mission.trigger.location;
         npc.AddInteractionListener(() => {
             MissionManager.Instance.StartMission(mission);
         });

@@ -5,13 +5,15 @@ using UnityEngine.UI;
 using System;
 using DG.Tweening;
 using System.Collections;
+using NaughtyAttributes;
 
 [RequireComponent(typeof(CutsceneManager))]
 [RequireComponent(typeof(DialogueManager))]
 public class MissionManager : MonoBehaviour
 {
     public static MissionManager Instance;
-    public List<Mission> missions = new();
+    public List<Mission> allMissions;
+    public List<Mission> availableMissions = new();
 
     private CutsceneManager cutsceneManager;
     private DialogueManager dialogueManager;
@@ -52,13 +54,13 @@ public class MissionManager : MonoBehaviour
     
     private IEnumerator DelayedStart() {
         yield return new WaitUntil(() => IsMissionLoaded);
-        if (missions.Count == 0)
+        if (availableMissions.Count == 0)
         {
             MissionAnnouncer.Instance.AnnounceMission("Demo Berakhir", "Selamat, kamu telah menyelesaikan demo ini. Gunakan tombol reset game di dev tools. Thanks for playing!");
         }
 
         AudioManager.Instance.PlayBGMOverwrite("Game");
-        foreach (var mission in missions)
+        foreach (var mission in availableMissions)
         {
             HandleNewMission(mission);
         }
@@ -81,7 +83,9 @@ public class MissionManager : MonoBehaviour
         AudioManager.Instance.PlayBGMOverwrite("Game");
         Debug.Log("Mission Completed: " + mission.missionName);
 
-        missions.Remove(mission);
+        availableMissions.Remove(mission);
+
+        ExecuteMissionAction(mission.onMissionComplete);
 
         mission.OnMissionCompleteAction?.Invoke();
         mission.OnMissionCompleteAction = null;
@@ -93,12 +97,12 @@ public class MissionManager : MonoBehaviour
 
         foreach (Mission followUpMission in mission.followUpMissions)
         {
-            if (missions.Contains(followUpMission)) continue; // Skip if the mission is already there
-            missions.Add(followUpMission);
+            if (availableMissions.Contains(followUpMission)) continue; // Skip if the mission is already there
+            availableMissions.Add(followUpMission);
             HandleNewMission(followUpMission);
         }
 
-        string missionsString = string.Join(", ", missions.ConvertAll(m => m.missionName).ToArray());
+        string missionsString = string.Join(", ", availableMissions.ConvertAll(m => m.missionName).ToArray());
 
         Debug.Log($"Missions Available: [{missionsString}]");
 
@@ -108,7 +112,7 @@ public class MissionManager : MonoBehaviour
         currentMission = null;
         IsMissionInProgress = false;
 
-        if (missions.Count == 0)
+        if (availableMissions.Count == 0)
         {
             MissionAnnouncer.Instance.AnnounceMission("Demo Berakhir", "Selamat, kamu telah menyelesaikan demo ini. Terima kasih telah bermain!");
         }
@@ -174,6 +178,7 @@ public class MissionManager : MonoBehaviour
         ExecuteMissionAction(mission.onMissionHandled);
     }
 
+    [Button("Skip Task")]
     public void SkipCurrentTask() {
         // Skip current task
         dialogueManager.CleanDialogue();
@@ -182,10 +187,11 @@ public class MissionManager : MonoBehaviour
         ExecuteNextTask(currentMission, currentTaskIndex + 1);
     }
 
+    [Button("Skip Mission")]
     public void SkipCurrentMission() {
         // Skip entire mission
         if (currentMission == null) {
-            currentMission = missions[0];
+            currentMission = availableMissions[0];
         }
 
         dialogueManager.CleanDialogue();
@@ -264,7 +270,7 @@ public class MissionManager : MonoBehaviour
 
     private void ExecuteNextTask(Mission mission, int taskIndex)
     {
-        if (!missions.Contains(mission))
+        if (!availableMissions.Contains(mission))
         {
             Debug.Log("Mission not found in the list of missions. Skipping task.");
         }
@@ -302,13 +308,11 @@ public class MissionManager : MonoBehaviour
             case MissionTaskType.Cutscene:
                 // Trigger cutscene
                 cutsceneCanvasGroup.alpha = 0;
-                GameStateManager.Instance.ToCutscene();
                 FadeToBlack(() => {
                     cutsceneCanvasGroup.alpha = 1;
                     cutsceneManager.StartCutscene(task.cutscene, () =>
                     {
                         Debug.Log($"Cutscene Finished for mission {mission.missionName}");
-                        cutsceneManager.CleanCutscene();
 
                         GameStateManager.Instance.ToGameplay();
                         ExecuteNextTask(mission, taskIndex + 1);
@@ -330,10 +334,25 @@ public class MissionManager : MonoBehaviour
         }
     }
 
+
     public List<Mission> FindMissionForNPC(string npcName)
     {
-        return missions.FindAll(m => m.relationshipImpacts.Exists(impact => impact.npcName == npcName));
+        return allMissions.FindAll((Mission mission) => { return mission.isKeyMission && mission.keyMissionFor == npcName; });
     }
+
+    #if UNITY_EDITOR
+    [Button]
+    public void RefreshMissionsFromAssets() {
+        allMissions = new List<Mission>();
+        string[] guids = AssetDatabase.FindAssets("t:Mission");
+        foreach (string guid in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            Mission mission = AssetDatabase.LoadAssetAtPath<Mission>(path);
+            allMissions.Add(mission);
+        }
+    }
+    #endif
 
     private void FadeToBlack(Action onComplete = null)
     {
@@ -346,24 +365,3 @@ public class MissionManager : MonoBehaviour
         blackOverlay.DOFade(0f, fadeDuration).OnComplete(() => onComplete?.Invoke());
     }
 }
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(MissionManager))]
-public class MissionManagerEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-
-        MissionManager missionManager = (MissionManager)target;
-        if (GUILayout.Button("Skip Task"))
-        {
-            missionManager.SkipCurrentTask();
-        }
-        if (GUILayout.Button("Skip Mission"))
-        {
-            missionManager.SkipCurrentMission();
-        }
-    }
-}
-#endif

@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Siapakah Tulang
   description: Ibu ingin berbicara denganmu
+  announce: 1
+  hidden: 0
+  isCompleted: 0
   trigger:
     type: 0
     npcName: Inang
-    npcLocation: {x: 86.05, y: -72.25}
     objectName: 
-    location: {x: 0, y: 0}
+    location: {x: 85.87, y: -72.25}
     radius: 1
     showWaypoint: 1
   onMissionHandled:
@@ -56,8 +58,9 @@ MonoBehaviour:
       position: {x: 0, y: 0}
       dissapearImmediately: 0
       orientation: 0
-  announce: 1
-  hidden: 0
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: 0aa03512ffed0d9479d4090abe4e0d7e, type: 2}
+  isKeyMission: 0
+  keyMissionFor: 
+  bookMissionDescription: 

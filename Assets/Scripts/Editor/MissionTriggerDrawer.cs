@@ -17,13 +17,13 @@ public class MissionTriggerDrawer : PropertyDrawer
         switch (triggerType)
         {
             case MissionTriggerType.NPC:
-                totalHeight += (baseHeight + spacing) * 4; // Two additional fields
+                totalHeight += (baseHeight + spacing) * 3;
                 break;
             case MissionTriggerType.Object:
-                totalHeight += baseHeight + spacing; // One additional field
+                totalHeight += baseHeight + spacing;
                 break;
             case MissionTriggerType.Location:
-                totalHeight += (baseHeight + spacing) * 4; // One additional field
+                totalHeight += (baseHeight + spacing) * 3;
                 break;
         }
 
@@ -34,7 +34,6 @@ public class MissionTriggerDrawer : PropertyDrawer
     {
         SerializedProperty triggerTypeProperty = property.FindPropertyRelative("type");
         SerializedProperty npcNameProperty = property.FindPropertyRelative("npcName");
-        SerializedProperty npcLocationProperty = property.FindPropertyRelative("npcLocation");
         SerializedProperty objectNameProperty = property.FindPropertyRelative("objectName");
         SerializedProperty locationProperty = property.FindPropertyRelative("location");
         SerializedProperty radiusProperty = property.FindPropertyRelative("radius");
@@ -59,10 +58,7 @@ public class MissionTriggerDrawer : PropertyDrawer
 
                 position.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
 
-                Rect npcLocationRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
-                EditorGUI.PropertyField(npcLocationRect, npcLocationProperty);
-
-                position.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+                TodongtoaEditorUtility.DrawVector2Field(ref position, locationProperty, "Location");
 
                 Rect showWaypointRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
                 EditorGUI.PropertyField(showWaypointRect, showWaypointProperty);
@@ -73,10 +69,7 @@ public class MissionTriggerDrawer : PropertyDrawer
                 EditorGUI.PropertyField(objectNameRect, objectNameProperty);
                 break;
             case MissionTriggerType.Location:
-                Rect locationRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
-                EditorGUI.PropertyField(locationRect, locationProperty);
-
-                position.y += (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 2;
+                TodongtoaEditorUtility.DrawVector2Field(ref position, locationProperty, "Location");    
 
                 Rect radiusRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
                 EditorGUI.PropertyField(radiusRect, radiusProperty);

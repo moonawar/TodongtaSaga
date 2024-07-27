@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class InMinigameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class InMinigameManager : MonoBehaviour
     [SerializeField] private float endSlowMoTimeScale = 0.1f; // Final time scale (0.1 = 10% speed)
 
     private Camera mainCamera;
+    public bool GameEnded { get; private set; } = false;
 
     private void Awake()
     {
@@ -32,23 +34,30 @@ public class InMinigameManager : MonoBehaviour
         AudioManager.Instance.PlayBGMOverwrite("Minigame");
     }
 
-    public void WinMinigame()
+    public void WinMinigame(Action onZoomEndedOverride = null)
     {
-        StartEndSequence(winningScreen);
+        GameEnded = true;
+        StartEndSequence(winningScreen, onZoomEndedOverride);
     }
 
-    public void LoseMinigame()
+    public void LoseMinigame(Action onZoomEndedOverride = null)
     {
-        StartEndSequence(losingScreen);
+        GameEnded = true;
+        StartEndSequence(losingScreen, onZoomEndedOverride);
     }
 
-    private void StartEndSequence(RectTransform endScreen)
+    private void StartEndSequence(RectTransform endScreen, Action onZoomEndedOverride = null)
     {
         // Start zoom and slow-mo
         AnimateCameraZoomOut();
         DOTween.To(() => Time.timeScale, x => Time.timeScale = x, endSlowMoTimeScale, slowMoDuration)
             .SetEase(Ease.InOutSine)
             .OnComplete(() => {
+                if (onZoomEndedOverride != null) {
+                    onZoomEndedOverride();
+                    return;
+                }
+
                 // After zoom and slow-mo, fade in the end screen and end the game
                 FadeInScreen(endScreen);
                 AudioManager.Instance.StopBGMCrossfade();

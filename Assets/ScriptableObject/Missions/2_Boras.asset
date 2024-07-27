@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Boras
   description: Kelilingi Desa dan Temukan Sawah
+  announce: 1
+  hidden: 0
+  isCompleted: 0
   trigger:
     type: 2
     npcName: 
-    npcLocation: {x: 0, y: 0}
     objectName: 
-    location: {x: 72.25, y: 65.25}
-    radius: 1
+    location: {x: 72.19, y: 65.75}
+    radius: 2.56
     showWaypoint: 1
   onMissionHandled: []
   onMissionStart: []
@@ -57,8 +59,9 @@ MonoBehaviour:
       position: {x: 0, y: 0}
       dissapearImmediately: 0
       orientation: 0
-  announce: 1
-  hidden: 0
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: bcdc3062871ab1b4c9d9d292fa7cfe41, type: 2}
+  isKeyMission: 0
+  keyMissionFor: 
+  bookMissionDescription: 

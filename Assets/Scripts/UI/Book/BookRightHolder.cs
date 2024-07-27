@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,18 +11,23 @@ public class BookRightHolder : MonoBehaviour
 
     private void OnEnable() {
         List<NPCData> datas = NPCManager.Instance.GetNPCBookDatas();
-        foreach (var data in datas) {
-            GameObject card = Instantiate(cardPrefab, charactersContainer.transform);
-            card.GetComponent<CharacterCard>().Set(data);
-            card.GetComponent<Button>().onClick.AddListener(() => leftHolder.Set(data));
-        }
+        for (int i = 0; i < datas.Count; i++) {
+            GameObject cardObj = i < charactersContainer.transform.childCount ? 
+                charactersContainer.transform.GetChild(i).gameObject : 
+                Instantiate(cardPrefab, charactersContainer.transform);
 
-        leftHolder.Set(datas[0]);
-    }
+            CharacterCard card = cardObj.GetComponent<CharacterCard>();
+            card.Set(datas[i]);
+            NPCData data = datas[i];
+            cardObj.GetComponent<Button>().onClick.AddListener(() => {
+                leftHolder.Set(data);
+                card.BorderOn();
+            });
 
-    private void OnDisable() {
-        foreach (Transform child in charactersContainer.transform) {
-            Destroy(child.gameObject);
+            if (i == 0) {
+                card.BorderOn();
+                leftHolder.Set(data);
+            }
         }
     }
 }

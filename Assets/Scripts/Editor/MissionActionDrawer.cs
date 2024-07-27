@@ -13,24 +13,6 @@ public class MissionActionDrawer : PropertyDrawer
         SerializedProperty typeProperty = property.FindPropertyRelative("type");
         MissionAction.Type actionType = (MissionAction.Type)typeProperty.enumValueIndex;
 
-        // Add height for position field if needed
-        // if (actionType == MissionAction.Type.PositionNPC)
-        // {
-        //     totalHeight += baseHeight + spacing;
-        // }
-
-        // if (actionType == MissionAction.Type.CreateInteractableObject ||
-        //     actionType == MissionAction.Type.PositionPlayer ||
-        //     actionType == MissionAction.Type.PositionNPC)
-        // {
-        //     totalHeight += (baseHeight + spacing) * 2;
-        // }
-
-        // if (actionType == MissionAction.Type.SetDissapearNPC)
-        // {
-        //     totalHeight += baseHeight + spacing;
-        // }
-
         switch (actionType)
         {
             case MissionAction.Type.PositionNPC:
@@ -70,7 +52,7 @@ public class MissionActionDrawer : PropertyDrawer
 
         // Calculate rects
         Rect typeRect = new Rect(contentPosition.x, contentPosition.y, contentPosition.width, EditorGUIUtility.singleLineHeight);
-        Rect positionRect = new Rect(contentPosition.x, typeRect.y + EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing, 
+        Rect positionRect = new Rect(position.x + 40, typeRect.y + EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing, 
                                      contentPosition.width, EditorGUIUtility.singleLineHeight);
 
         // Draw type field
@@ -79,33 +61,24 @@ public class MissionActionDrawer : PropertyDrawer
         // Draw position field if needed
         MissionAction.Type actionType = (MissionAction.Type)typeProperty.enumValueIndex;
 
-        // if (actionType == MissionAction.Type.PositionNPC)
-        // {
-        //     EditorGUI.PropertyField(positionRect, npcNameProperty);
-        //     positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-        // }
-        // if (actionType == MissionAction.Type.CreateInteractableObject ||
-        //     actionType == MissionAction.Type.PositionPlayer ||
-        //     actionType == MissionAction.Type.PositionNPC)
-        // {
-        //     EditorGUI.PropertyField(positionRect, positionProperty);
-        // }
-
         switch (actionType)
         {
             case MissionAction.Type.PositionNPC:
                 EditorGUI.PropertyField(positionRect, npcNameProperty);
                 positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                EditorGUI.PropertyField(positionRect, positionProperty);
-                positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+                // EditorGUI.PropertyField(positionRect, positionProperty);
+                // positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+                TodongtoaEditorUtility.DrawVector2Field(ref positionRect, positionProperty, "Position");
                 EditorGUI.PropertyField(positionRect, assignNextTaskProperty);
                 break;
             case MissionAction.Type.CreateInteractableObject:
-                EditorGUI.PropertyField(positionRect, positionProperty);
+                // EditorGUI.PropertyField(positionRect, positionProperty);
+                TodongtoaEditorUtility.DrawVector2Field(ref positionRect, positionProperty, "Position");
                 break;
             case MissionAction.Type.PositionPlayer:
-                EditorGUI.PropertyField(positionRect, positionProperty);
-                positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+                // EditorGUI.PropertyField(positionRect, positionProperty);
+                // positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+                TodongtoaEditorUtility.DrawVector2Field(ref positionRect, positionProperty, "Position");
                 EditorGUI.PropertyField(positionRect, orientationProperty);
                 break;
             case MissionAction.Type.SetDissapearNPC:

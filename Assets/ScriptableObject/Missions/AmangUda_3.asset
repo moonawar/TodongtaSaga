@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Misi Penyelamatan Boras
   description: Selamatkan Boras dari Genggaman Tikus
+  announce: 1
+  hidden: 0
+  isCompleted: 0
   trigger:
     type: 0
     npcName: Amang Uda
-    npcLocation: {x: -29.16, y: -29.22}
     objectName: 
-    location: {x: -23.2, y: -26.71}
+    location: {x: -29.2, y: -28.97}
     radius: 1
     showWaypoint: 1
   onMissionHandled: []
@@ -84,8 +86,9 @@ MonoBehaviour:
       position: {x: 0, y: 0}
       dissapearImmediately: 0
       orientation: 1
-  announce: 1
-  hidden: 0
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: 65e4fa89dc85e714b958301815a755bf, type: 2}
+  isKeyMission: 1
+  keyMissionFor: 'Selamatkan Boras dari '
+  bookMissionDescription: 
