@@ -13,6 +13,7 @@ public class MissionTask
     public Cutscene cutscene;  // Only used if taskType is Cutscene
     public Vector2 travelLocation;  // Only used if taskType is Travel
     public bool showWaypoint = false;  // Only used if taskType is Travel
+    [Scene]
     public string sceneName;  // Only used if taskType is SwitchScene
     public List<MissionAction> onTaskComplete;
 }

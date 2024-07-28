@@ -23,7 +23,7 @@ title: 6
 ---
 Anggi: Aya-... Maksudku, Amang!
 Amang (Ayah): Ada apa, Nggi?
-Anggi: Apakah Amang pernah lihat ulos ini? (Anggi memperlihatkan ulos)
+Anggi: Apakah Amang pernah lihat ulos ini?
 Amang (Ayah): Itu ulos dari Ompung kan, Nggi? Hmm... Tapi sepertinya ada yang kurang...
 Anggi: Apakah Amang ingat seperti apa corak aslinya?
 Amang (Ayah): Aku tidak ingat, tapi aku ingat kalau kau punya sketsanya di bukumu yang ada di Pondok, nggi. Kau suka sekali dengan ulos itu.
@@ -32,7 +32,7 @@ Anggi: Baik Amang, Terima kasih
 
 title: 6_2
 ---
-Buku: Dalihan Na Tolu: Tiga pendoman dalam keluarga yang harus kita pegang: Manat Mardongan Tubu, Elek Marboru, dan Somba Marhula-hula.
+Buku: "Dalihan Na Tolu: Tiga pendoman dalam keluarga yang harus kita pegang: Manat Mardongan Tubu, Elek Marboru, dan Somba Marhula-hula."
 Boras: Ada tiga gambar corak di buku itu! Sama persis seperti jumlah corak yang hilang...
 Anggi: Sepertinya aku harus bertanya ke keluargaku di dunia ini tentang Dalihan Na Tolu.
 ===
@@ -41,6 +41,10 @@ title: 13
 ---
 Anggi: Halo Paman
 Paman: Paman?
+===
+
+title: 13_1
+---
 Anggi: Oh iya aku lupa, maaf Amang Uda.
 Paman: Hahaha. Biasanya kamu panggi aku 'Amang Uda' karena aku adik laki-laki dari papamu, jadi sempat kaget aku dipanggil paman, seperti di kota.
 ===

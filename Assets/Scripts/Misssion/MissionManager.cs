@@ -272,7 +272,7 @@ public class MissionManager : MonoBehaviour
     {
         if (!availableMissions.Contains(mission))
         {
-            Debug.Log("Mission not found in the list of missions. Skipping task.");
+            Debug.Log($"Mission {mission.name} not found in the list of missions. Skipping task.");
         }
 
         // Call OnTaskComplete actions

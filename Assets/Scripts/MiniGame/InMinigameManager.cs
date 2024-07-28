@@ -34,10 +34,18 @@ public class InMinigameManager : MonoBehaviour
         AudioManager.Instance.PlayBGMOverwrite("Minigame");
     }
 
+    public void WinMinigame() {
+        WinMinigame(null);
+    }
+
     public void WinMinigame(Action onZoomEndedOverride = null)
     {
         GameEnded = true;
         StartEndSequence(winningScreen, onZoomEndedOverride);
+    }
+
+    public void LoseMinigame() {
+        LoseMinigame(null);
     }
 
     public void LoseMinigame(Action onZoomEndedOverride = null)

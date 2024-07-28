@@ -46,6 +46,7 @@ public class WaypointManager : MonoBehaviour
 
     public void SetDestination(Vector2 dest)
     {
+        if (arrow == null) return;
         arrow.gameObject.SetActive(true);
         destination = dest;
         waypointOn = true;
@@ -53,6 +54,7 @@ public class WaypointManager : MonoBehaviour
 
     public void FinishDestination()
     {
+        if (arrow == null) return;
         arrow.gameObject.SetActive(false);
         waypointOn = false;
     }
