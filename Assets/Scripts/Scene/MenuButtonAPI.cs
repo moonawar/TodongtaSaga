@@ -30,6 +30,7 @@ public class MenuButtonAPI : MonoBehaviour
 
     public void SkipMission() {
         if (MissionManager.Instance != null) {
+            AudioManager.Instance.StopBGMCrossfade();
             MissionManager.Instance.SkipCurrentMission();
         }
     }

@@ -28,7 +28,10 @@ public class SaveManager : MonoBehaviour {
         gameSave.SceneObjects = SceneData.Instance.sceneObjects;
         gameSave.AllMissions = MissionManager.Instance.allMissions;
         gameSave.AvailableMissions = MissionManager.Instance.availableMissions;
-        gameSave.npcsData = NPCManager.Instance.GetNPCBookDatas();
+        gameSave.NPCsData = NPCManager.Instance.GetNPCBookDatas();
+        gameSave.Achievements = AchievementManager.Instance.achievements;
+        gameSave.UlosProgress = UlosManager.Instance.Progress;
+        gameSave.UlosInitialized = UlosManager.Instance.UlosInitialized;
 
         string json = JsonUtility.ToJson(gameSave);
         File.WriteAllText(SAVE_FOLDER + "/save.json", json);
@@ -55,7 +58,10 @@ public class SaveManager : MonoBehaviour {
                 MissionManager.Instance.allMissions = gameSave.AllMissions;
                 MissionManager.Instance.availableMissions = gameSave.AvailableMissions;
                 MissionManager.Instance.IsMissionLoaded = true;
-                NPCManager.Instance.LoadNPCBookDatas(gameSave.npcsData);
+                NPCManager.Instance.LoadNPCBookDatas(gameSave.NPCsData);
+                AchievementManager.Instance.achievements = gameSave.Achievements;
+                UlosManager.Instance.Progress = gameSave.UlosProgress;
+                UlosManager.Instance.UlosInitialized = gameSave.UlosInitialized;
             });
             Debug.Log("Game Loaded");
         } else {

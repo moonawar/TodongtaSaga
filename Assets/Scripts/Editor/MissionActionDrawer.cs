@@ -27,6 +27,12 @@ public class MissionActionDrawer : PropertyDrawer
             case MissionAction.Type.SetDissapearNPC:
                 totalHeight += (baseHeight + spacing) * 2;
                 break;
+            case MissionAction.Type.GetAchievement:
+                totalHeight += (baseHeight + spacing) * 2;
+                break;
+            case MissionAction.Type.UlosAction:
+                totalHeight += (baseHeight + spacing) * 2;
+                break;
         }
 
         return totalHeight;
@@ -45,10 +51,12 @@ public class MissionActionDrawer : PropertyDrawer
 
         SerializedProperty typeProperty = property.FindPropertyRelative("type");
         SerializedProperty npcNameProperty = property.FindPropertyRelative("npcName");
+        SerializedProperty achievementIdProperty = property.FindPropertyRelative("achievementId");
         SerializedProperty assignNextTaskProperty = property.FindPropertyRelative("assignNextTask");
         SerializedProperty positionProperty = property.FindPropertyRelative("position");
         SerializedProperty dissapearProperty = property.FindPropertyRelative("dissapearImmediately");
         SerializedProperty orientationProperty = property.FindPropertyRelative("orientation");
+        SerializedProperty ulosActionProperty = property.FindPropertyRelative("ulosAction");
 
         // Calculate rects
         Rect typeRect = new Rect(contentPosition.x, contentPosition.y, contentPosition.width, EditorGUIUtility.singleLineHeight);
@@ -85,6 +93,12 @@ public class MissionActionDrawer : PropertyDrawer
                 EditorGUI.PropertyField(positionRect, npcNameProperty);
                 positionRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
                 EditorGUI.PropertyField(positionRect, dissapearProperty);
+                break;
+            case MissionAction.Type.GetAchievement:
+                EditorGUI.PropertyField(positionRect, achievementIdProperty);
+                break;
+            case MissionAction.Type.UlosAction:
+                EditorGUI.PropertyField(positionRect, ulosActionProperty);
                 break;
         }
 

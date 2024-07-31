@@ -57,22 +57,51 @@ MonoBehaviour:
     onTaskComplete:
     - type: 1
       npcName: 
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 0
       position: {x: -29.16, y: -30.48}
       dissapearImmediately: 0
       orientation: 0
     - type: 5
       npcName: 
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 0
       position: {x: -29.16, y: -30.48}
       dissapearImmediately: 0
       orientation: 1
     - type: 3
       npcName: Amang Uda
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 1
       position: {x: -29.16, y: -29.22}
       dissapearImmediately: 0
       orientation: 1
+    - type: 6
+      npcName: Amang Uda
+      achievementId: DonganTubu
+      ulosAction: 0
+      assignNextTask: 1
+      position: {x: -29.16, y: -29.22}
+      dissapearImmediately: 0
+      orientation: 1
+    - type: 7
+      npcName: Amang Uda
+      achievementId: DonganTubu
+      ulosAction: 1
+      assignNextTask: 1
+      position: {x: -29.16, y: -29.22}
+      dissapearImmediately: 0
+      orientation: 1
+  - type: 2
+    yarnTitle: 15
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: Gameplay
+    onTaskComplete: []
   - type: 0
     yarnTitle: 15
     cutscene: {fileID: 0}
@@ -82,6 +111,8 @@ MonoBehaviour:
     onTaskComplete:
     - type: 4
       npcName: Amang Uda
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 0
       position: {x: 0, y: 0}
       dissapearImmediately: 0
@@ -90,6 +121,6 @@ MonoBehaviour:
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: 65e4fa89dc85e714b958301815a755bf, type: 2}
-  isKeyMission: 1
-  keyMissionFor: 'Selamatkan Boras dari '
+  isKeyMission: 0
+  keyMissionFor: Amang Uda
   bookMissionDescription: 

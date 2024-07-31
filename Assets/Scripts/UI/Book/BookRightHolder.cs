@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,5 +28,9 @@ public class BookRightHolder : MonoBehaviour
                 leftHolder.Set(data);
             }
         }
+    }
+
+    private void OnDisable() {
+        
     }
 }

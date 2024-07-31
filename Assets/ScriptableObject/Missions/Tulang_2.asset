@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Bantu Tulang membuat hidangan
   announce: 1
   hidden: 0
-  isCompleted: 0
+  isCompleted: 1
   trigger:
     type: 0
     npcName: Tulang
@@ -57,12 +57,16 @@ MonoBehaviour:
     onTaskComplete:
     - type: 1
       npcName: 
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 0
       position: {x: 91.37, y: -73.8}
       dissapearImmediately: 0
       orientation: 0
     - type: 3
       npcName: Tulang
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 0
       position: {x: 91.45, y: -72}
       dissapearImmediately: 0
@@ -74,27 +78,33 @@ MonoBehaviour:
     showWaypoint: 0
     sceneName: Gameplay
     onTaskComplete:
-    - type: 1
+    - type: 6
       npcName: 
+      achievementId: HulaHula
+      ulosAction: 0
       assignNextTask: 0
-      position: {x: 91.37, y: -73.8}
+      position: {x: 0, y: 0}
       dissapearImmediately: 0
       orientation: 0
-    - type: 3
-      npcName: Tulang
+    - type: 7
+      npcName: 
+      achievementId: HulaHula
+      ulosAction: 2
       assignNextTask: 0
-      position: {x: 91.45, y: -71.49}
+      position: {x: 0, y: 0}
       dissapearImmediately: 0
       orientation: 0
   onMissionComplete:
   - type: 4
     npcName: Tulang
+    achievementId: 
+    ulosAction: 0
     assignNextTask: 0
     position: {x: 0, y: 0}
     dissapearImmediately: 0
     orientation: 0
   relationshipImpacts: []
   followUpMissions: []
-  isKeyMission: 0
-  keyMissionFor: 
-  bookMissionDescription: 
+  isKeyMission: 1
+  keyMissionFor: Tulang
+  bookMissionDescription: Dengarkan Perintah Tulang

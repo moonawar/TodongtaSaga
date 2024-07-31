@@ -6,6 +6,7 @@ using System;
 using DG.Tweening;
 using System.Collections;
 using NaughtyAttributes;
+using Yarn.Unity;
 
 [RequireComponent(typeof(CutsceneManager))]
 [RequireComponent(typeof(DialogueManager))]
@@ -89,6 +90,7 @@ public class MissionManager : MonoBehaviour
 
         mission.OnMissionCompleteAction?.Invoke();
         mission.OnMissionCompleteAction = null;
+        mission.isCompleted = true;
 
         foreach (MissionRelationshipImpact impact in mission.relationshipImpacts)
         {
@@ -116,6 +118,21 @@ public class MissionManager : MonoBehaviour
         {
             MissionAnnouncer.Instance.AnnounceMission("Demo Berakhir", "Selamat, kamu telah menyelesaikan demo ini. Terima kasih telah bermain!");
         }
+    }
+
+    [YarnCommand("failMission")]
+    public void FailMission() {
+        if (currentMission == null) return;
+        Debug.Log("Mission Failed: " + currentMission.missionName);
+
+        GameStateManager.Instance.ToGameplay();
+
+        currentMission = null;
+        IsMissionInProgress = false;
+        currentTaskIndex = 0;
+
+        dialogueManager.CleanDialogue();
+        cutsceneManager.CleanCutscene();
     }
 
     public void HandleNewMission(Mission mission) {
@@ -255,6 +272,12 @@ public class MissionManager : MonoBehaviour
                     break;
                 case MissionAction.Type.ToExplore:
                     GameStateManager.Instance.ToGameplay();
+                    break;
+                case MissionAction.Type.GetAchievement:
+                    AchievementManager.Instance.UnlockAchievement(action.achievementId);
+                    break;
+                case MissionAction.Type.UlosAction:
+                    UlosManager.Instance.ExecuteUlosAction(action.ulosAction);
                     break;
             }
         }

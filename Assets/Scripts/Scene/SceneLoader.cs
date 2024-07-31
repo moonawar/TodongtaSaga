@@ -42,9 +42,9 @@ public class SceneLoader : MonoBehaviour {
     }
 
     public void DeleteCore() {
-        GameObject core = GameObject.FindGameObjectWithTag("Core");
-        if (core != null) {
-            Destroy(core);
+        GameObject[] core = GameObject.FindGameObjectsWithTag("Core");
+        foreach (GameObject c in core) {
+            Destroy(c);
         }
     }
 

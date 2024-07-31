@@ -36,12 +36,16 @@ MonoBehaviour:
     onTaskComplete:
     - type: 3
       npcName: Boras
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 0
       position: {x: 75.44, y: 65.78}
       dissapearImmediately: 0
       orientation: 0
     - type: 1
       npcName: Boras
+      achievementId: 
+      ulosAction: 0
       assignNextTask: 0
       position: {x: 72.19, y: 65.78}
       dissapearImmediately: 0
@@ -53,12 +57,37 @@ MonoBehaviour:
     showWaypoint: 0
     sceneName: 
     onTaskComplete:
-    - type: 4
+    - type: 7
       npcName: Boras
+      achievementId: 
+      ulosAction: 3
       assignNextTask: 0
       position: {x: 0, y: 0}
       dissapearImmediately: 0
       orientation: 0
+  - type: 2
+    yarnTitle: 5_2
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: 
+    onTaskComplete: []
+  - type: 0
+    yarnTitle: 5_2
+    cutscene: {fileID: 0}
+    travelLocation: {x: 0, y: 0}
+    showWaypoint: 0
+    sceneName: 
+    onTaskComplete:
+    - type: 4
+      npcName: Boras
+      achievementId: 
+      ulosAction: 0
+      assignNextTask: 0
+      position: {x: 0, y: 0}
+      dissapearImmediately: 0
+      orientation: 0
+  onMissionComplete: []
   relationshipImpacts: []
   followUpMissions:
   - {fileID: 11400000, guid: bcdc3062871ab1b4c9d9d292fa7cfe41, type: 2}

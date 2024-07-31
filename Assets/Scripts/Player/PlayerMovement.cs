@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D playerCollider;
     private Animator animator;
     private Vector2 lastSlide;
-    private bool isWalking = false;
+    // private bool isWalking = false;
 
     private float scaler = 1f;
 

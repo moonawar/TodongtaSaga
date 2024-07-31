@@ -10,10 +10,16 @@ Cicak: Makasih ya udah kau bantu aku. Kalau nggak ada kau, aku pasti sudah jadi 
 Anggi: Sama-sama. Aku Anggi. Tapi, kok kamu bisa ngomong?
 Cicak: Anggi, kamu tidak mengenaliku? 
 Anggi: Aku tadi di rumah, terus pakai ulos, trus ketiduran. Eh, tahu-tahu sudah di sini. Rumahku di kota, aku ingin pulang. Kamu bisa bantu aku nggak?
-Cicak: Bah? Yang aku tahu kau dan keluargamu sudah selalu tinggal di sini, tapi kau bilang kau tinggal di kota? Sepertinya ada yang aneh. Tidak mungkin hidupmu berubah sesaat... 
-Boras (cicak): Sepertinya aku tahu, kamu dari dunia lain, Anggi. Kamu pasti bingung ya? Aku Boras, dulu kau dan aku sering kali main bersama. Kau tampaknya tersesat di sini.
+Cicak: Bah? Yang aku tahu kau dan keluargamu sudah selalu tinggal di sini, tapi kau bilang kau tinggal di kota?
+Cicak: Sepertinya ada yang aneh. Tidak mungkin hidupmu berubah sesaat... 
+Cicak: Sepertinya aku tahu, kamu dari dunia lain, Anggi.
+Cicak: Kamu pasti bingung ya? Aku Boras, dulu kau dan aku sering kali main bersama. Kau tampaknya tersesat di sini.
 Boras (cicak): Mungkin saja, semua bermulai dari ulos yang kamu pakai, apakah kamu masih memilikinya?
 Anggi: Masih! 
+===
+
+title: 5_2
+---
 Anggi: Loh? Kemarin ada tiga corak di bagian ini. Kemana perginya itu?
 Boras (cicak): Sepertinya itu petunjuk selanjutnya. Kamu perlu mencari corak itu. Kita harus bertanya kepada anggota keluargamu di desa ini. Mereka pasti tahu sesuatu.
 Anggi: Baiklah, Boras. Aku akan mencoba bertanya kepada keluargaku. Terima kasih atas bantuannya.
@@ -88,4 +94,32 @@ Tulang: Dengarkan aku jika ingin membuat hidangan terbaik.
 title: 18_2
 ---
 Tulang: Wah, pintar kali ponakan saya. Kau membuktikan bahwa kau dengarkan aku dengan baik. Terima kasih banyak, Anggi.
+===
+
+title: AU_1
+---
+Amang uda: Anggi, apakah Anggi tertarik bermain musik?
+    -> Aku tertarik sekali, sepertinya seru
+        Amang uda: Tetap saja, kau sekali-sekali coba. Rasanya lega, bisa melampiaskan emosi. 
+    -> Bermain musik bukan jalanku, tapi aku sangat menikmatinya, Amang uda.
+        Amang uda: Tetap saja, kau sekali-sekali coba. Rasanya lega, bisa melampiaskan emosi. 
+    -> Menurutku bisa bermain musik tidak terlalu penting. → percakapan selesai dan tidak dapat poin
+        <<failMission MissionManager>>
+        <<stop>>
+===
+title: AU_2
+---
+Amang uda:
+"Anggi, suara alat musik apa yang paling kau suka?" 
+    -> Gondang, karena aku suka alat musik ritmik yang membuat ingin menari. 
+    -> Sulim, karena aku suka alat musik tiup yang merdu seperti tiupan angin. 
+    -> Hasapi, karena mirip gitar dua-senar dan unik. 
+Amang uda: Bagus sekali seleramu. Datanglah kapan saja ke rumahku, nggi. Kau boleh mainkan alat musik apapun sesukamu.
+Anggi: Wah, terima kasih Amang uda!
+Amang uda: Alat Musik kesukaanku sama dengan Amangmu, yaitu sarune. Walaupun bunyinya kasar, suaranya sangat otentik dan misterius.
+-> Sarune bunyinya sedikit aneh ya?
+    <<failMission MissionManager>>
+    <<stop>>
+-> Aku belum pernah mendengar suara sarune. Sepertinya menarik. 
+Amang uda: Nanti di acara tardidimu akan kumainkan, jadi tunggu saja ya.
 ===
