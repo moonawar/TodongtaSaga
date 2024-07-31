@@ -33,7 +33,7 @@ public class BookLeftHolder : MonoBehaviour
 
     public void Set(NPCData data) {
         profilePic.sprite = data.hiImage;
-        nameText.text = data.name;
+        nameText.text = data.npcName;
         descriptionText.text = data.description;
 
         NPCTungku tungku = data.tungku;
@@ -49,7 +49,7 @@ public class BookLeftHolder : MonoBehaviour
                 break;
         }
 
-        List<Mission> missions = MissionManager.Instance.FindMissionForNPC(data.name);
+        List<Mission> missions = MissionManager.Instance.FindMissionForNPC(data.npcName);
 
         foreach (Transform child in missionContainers) {
             child.gameObject.SetActive(false);

@@ -49,6 +49,10 @@ public class RecipePickupPoint : Interactable {
 
     public override void Interact()
     {
-        if (interactable) onInteraction?.Invoke();
+        if (interactable) 
+        {
+            onInteraction?.Invoke();
+            AudioManager.Instance.PlaySFX("Click");
+        }
     }
 }

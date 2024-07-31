@@ -16,7 +16,7 @@ public class CharacterCard : MonoBehaviour {
 
     public void Set(NPCData data) {
         profilePic.sprite = data.loImage;
-        nameText.text = data.name;
+        nameText.text = data.npcName;
     }
 
     public void BorderOn() {

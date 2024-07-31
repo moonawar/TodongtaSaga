@@ -126,7 +126,77 @@ MonoBehaviour:
   - Name: Minigame
     Clip: {fileID: 8300000, guid: 88743892f1066c24daaab0095524ecd3, type: 3}
     Type: 0
+    Volume: 0.75
+    Pitch: 1
+    Loop: 1
+    Source: {fileID: 0}
+  - Name: GameOver
+    Clip: {fileID: 8300000, guid: 92601dfad7543ee4f9f2db64bc1976c7, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Hmm1
+    Clip: {fileID: 8300000, guid: 0a797bcecdfa5de41a415a791da292c3, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Hmm2
+    Clip: {fileID: 8300000, guid: 4713c717311aed74ba2afe764fff5ab5, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: JalanRumput
+    Clip: {fileID: 8300000, guid: f757b057f2c022f4d9e1a41e8818470a, type: 3}
+    Type: 1
     Volume: 1
     Pitch: 1
     Loop: 1
+    Source: {fileID: 0}
+  - Name: JalanIndoor
+    Clip: {fileID: 8300000, guid: f757b057f2c022f4d9e1a41e8818470a, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Bush
+    Clip: {fileID: 8300000, guid: 85bf218dfcd4a7645bf1153ca5d3e371, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Gain
+    Clip: {fileID: 8300000, guid: 0be7e8fe9cb8ac048ac46987f1b11943, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Woosh
+    Clip: {fileID: 8300000, guid: 5ab77c242362eea46b3d4572d9aa32c4, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Click
+    Clip: {fileID: 8300000, guid: 2764ce9c72a05604b99982a284e4113d, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Meleset
+    Clip: {fileID: 8300000, guid: dbc5b6f417919ea499b8755c694b097d, type: 3}
+    Type: 1
+    Volume: 1
+    Pitch: 1
+    Loop: 0
     Source: {fileID: 0}

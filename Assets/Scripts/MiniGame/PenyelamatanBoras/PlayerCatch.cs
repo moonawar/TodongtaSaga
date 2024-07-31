@@ -18,6 +18,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
         [SerializeField] private float collisionDelay = 5f;
         private PlayerMovement movement;
         private BoxCollider2D boxCollider;
+        private Animator animator;
 
         private void Awake() {
             movement = GetComponent<PlayerMovement>();
@@ -26,6 +27,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
             }
 
             boxCollider = GetComponent<BoxCollider2D>();
+            animator = GetComponent<Animator>();
         }
 
         private void Update()
@@ -43,6 +45,11 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
         }
 
         public void Catch() {
+            AudioManager.Instance.PlaySFX("Woosh");
+            animator.SetTrigger("Catch");
+        }
+
+        public void OnCatchAnimEnd() {
             CheckForCatchables();
         }
 
@@ -92,6 +99,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
                 catchStatusSpawner.SpawnStatusText("Kena!");
             } else {
                 catchStatusSpawner.SpawnStatusText("Meleset");
+                AudioManager.Instance.PlaySFX("Meleset");
             }
         }
 

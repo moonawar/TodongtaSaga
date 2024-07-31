@@ -26,6 +26,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
 
         private Image blackOverlay;
         private CanvasGroup cutsceneCanvasGroup;
+        private readonly string[] angerSounds = { "Hmm1", "Hmm2" };
 
         public int TikusHealth { get; private set; } = 3;
         public int AngerMeter { get; private set; } = 0;
@@ -50,6 +51,9 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
             if (InMinigameManager.Instance.GameEnded) return;
             if (AngerMeter >= 3) return;
 
+            string sound = angerSounds[UnityEngine.Random.Range(0, angerSounds.Length)];
+            AudioManager.Instance.PlaySFX(sound);
+            
             AngerMeter++;
             angerMeterUI.UpdateMeter(AngerMeter);
             if (AngerMeter >= 3)
@@ -65,6 +69,7 @@ namespace TodongtoaSaga.Minigames.PenyelamatanBoras
                         CutsceneManager.Instance.StartCutscene(losingCutscene, () => {
                             GameStateManager.Instance.ToOpenUI();
                             losingScreen.gameObject.SetActive(true);
+                            AudioManager.Instance.PlaySFX("GameOver");
                             FadeFromBlack();
                         });
                     });

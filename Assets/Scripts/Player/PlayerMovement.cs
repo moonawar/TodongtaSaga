@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D playerCollider;
     private Animator animator;
     private Vector2 lastSlide;
+    private bool isWalking = false;
 
     private float scaler = 1f;
 
@@ -155,6 +156,16 @@ public class PlayerMovement : MonoBehaviour
             // Only update direction if the player is moving
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
+
+            // if (!isWalking) {
+            //     AudioManager.Instance.PlaySFX("JalanRumput");
+            //     isWalking = true;
+            // }
+        } else {
+            // if (isWalking) {
+            //     AudioManager.Instance.StopSFX("JalanRumput");
+            //     isWalking = false;
+            // }
         }
     }
 

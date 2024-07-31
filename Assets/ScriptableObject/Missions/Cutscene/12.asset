@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnTitle: 12
   images:
-  - {fileID: 21300000, guid: 7af9e2a6d7ecaa74e94396f30e55ebcd, type: 3}
+  - {fileID: 21300000, guid: 1cf78a033b0272b48a3d1710148c7f2e, type: 3}
+  - {fileID: 21300000, guid: 87ce29af962febe4b885e68c516691aa, type: 3}
+  - {fileID: 21300000, guid: 1e04b21d9a572ec409fe0a66a21885aa, type: 3}
+  - {fileID: 21300000, guid: 964338fe43a9e9f40a337f1d218aa491, type: 3}

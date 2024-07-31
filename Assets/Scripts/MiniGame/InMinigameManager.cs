@@ -69,6 +69,10 @@ public class InMinigameManager : MonoBehaviour
                 // After zoom and slow-mo, fade in the end screen and end the game
                 FadeInScreen(endScreen);
                 AudioManager.Instance.StopBGMCrossfade();
+                if (endScreen == losingScreen)
+                {
+                    AudioManager.Instance.PlaySFX("GameOver");
+                }
                 GameStateManager.Instance.ToOpenUIOverride(); // Tell GameStateManager to open UI on top
                 // Reset time scale
                 Time.timeScale = 1f;

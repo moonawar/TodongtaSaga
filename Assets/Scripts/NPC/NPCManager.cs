@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class NPCManager : MonoBehaviour
 {
@@ -18,17 +19,17 @@ public class NPCManager : MonoBehaviour
         }
     }
 
-    public NPC FindNPCWithName(string name)
+    public NPC FindNPCWithName(string npcName)
     {
         foreach (var npc in npcs)
         {
-            if (npc.Data.name == name)
+            if (npc.Data.npcName == npcName)
             {
                 return npc;
             }
         }
 
-        Debug.LogError("NPC with name " + name + " not found.");
+        Debug.LogError("NPC with name " + npcName + " not found.");
         return null;
     }
 
@@ -98,7 +99,7 @@ public class NPCManager : MonoBehaviour
     {
         foreach (var npc in npcs)
         {
-            if (npc.Data.name == npcName)
+            if (npc.Data.npcName == npcName)
             {
                 if (!npc.Data.ignoreFromBook) return npc.Data;
             }
@@ -108,9 +109,12 @@ public class NPCManager : MonoBehaviour
     }
 
     public void LoadNPCBookDatas(List<NPCData> datas) {
-        foreach (var data in datas)
+        string dataStr = string.Join(", ", datas);
+        Debug.Log($"Loading NPC Book Datas: [{dataStr}]");
+        foreach (NPCData data in datas)
         {
-            NPC npc = FindNPCWithName(data.name);
+            Debug.Log(data ? data : "Data is null");
+            NPC npc = FindNPCWithName(data.npcName);
             npc.Data.relationshipLevel = data.relationshipLevel;
         }
     }

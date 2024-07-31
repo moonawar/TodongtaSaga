@@ -1,33 +1,60 @@
 
 title: 1
 ---
+// <<prepareImageNoText MissionManager>>
+<<waitUntilContinue MissionManager>>
+<<nextImage MissionManager>>
 Anggi: Aduh, bosan sekali. Semua orang sibuk, nggak ada yang main sama aku.
-Ibu Anggi: Anggi, bantu Mama ambilin kain ulos di kamar ya!
-<<prepareImage MissionManager>> // The image will be changed after the next line
+<<nextImage MissionManager>>
+Mama Anggi: Anggi, bantu Mama ambilin kain ulos di kamar ya!
+<<nextImage MissionManager>>
 Anggi: Iya, Ma.
-Anggi: Ulosnya cantik banget. Hmm, hangat banget. Kok jadi ngantuk ya...
-<<prepareImage MissionManager>>
+<<nextImage MissionManager>>
+Anggi: Ulosnya cantik banget. 
+<<nextImage MissionManager>>
+Anggi: Hmm, hangat banget. 
+<<nextImage MissionManager>>
+Anggi: Kok jadi ngantuk ya...
+<<nextImage MissionManager>>
+Anggi: Zzz...
+<<nextImage MissionManager>>
+<<waitUntilContinue MissionManager>>
+<<nextImage MissionManager>>
+<<waitUntilContinue MissionManager>>
+<<nextImage MissionManager>>
 Anggi: Eh, aku di mana? Ini bukan rumahku...
-<<prepareImage MissionManager>>
-Ayah: Horas Anggi.
-Anggi: Ayah? Ibu?
-Ayah: Bah, tumben kau pake Bahasa Indonesia itu? Panggil aku Amang saja, nggi. 
-Ibu: Aku juga, kau biasa panggil Inang.
-<<prepareImage MissionManager>>
+<<nextImage MissionManager>>
+Papa Anggi: Horas Anggi.
+<<nextImage MissionManager>>
+Anggi: Mama? Papa?
+<<nextImage MissionManager>>
+Papa Anggi: Bah, tumben kau pake Bahasa Indonesia itu? Panggil aku Amang saja, nggi. 
+Mama Anggi: Aku juga, kau biasa panggil Inang.
+<<nextImage MissionManager>>
 Anggi: Bukankah selama ini aku menggunakan panggilan Mama-Papa?
 Anggi: Kita lagi di mana?
-Anggi's Mother: Anggi lucu deh. Kita di rumah, sayang.  Hari ini kan acara Tardidimu, siap-siap lah nak.
+<<nextImage MissionManager>>
+Mama Anggi: Anggi lucu deh. Kita di rumah, sayang.  Hari ini kan acara Tardidimu, siap-siap lah nak.
+<<nextImage MissionManager>>
 Anggi: Iya, Ma...
 ===
 
 title: 4
 ---
 Cicak: Tolongg!!
+<<nextImage MissionManager>>
+<<waitUntilContinue MissionManager>>
 ===
 
 title: 12
 ---
-Boras: Tolongg
+<<waitUntilContinue MissionManager>>
+<<nextImage MissionManager>>
+<<waitUntilContinue MissionManager>>
+<<nextImage MissionManager>>
+<<waitUntilContinue MissionManager>>
+<<nextImage MissionManager>>
+Anggi: Gawat! Boras diculik tikus!
 ===
 
 title: amangUdaWin

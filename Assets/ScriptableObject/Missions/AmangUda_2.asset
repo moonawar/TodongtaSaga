@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AmangUda_2
   m_EditorClassIdentifier: 
   missionName: Panggilan Paman?
-  description: Bertemu dengan Paman
+  description: Kejar Boras ke Rumah Paman
   announce: 1
   hidden: 0
   isCompleted: 0

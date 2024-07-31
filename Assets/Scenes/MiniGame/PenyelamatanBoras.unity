@@ -2882,6 +2882,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7646966874650116555}
+        m_TargetAssemblyTypeName: CoreAudioAPI, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5214813191998481163}
         m_TargetAssemblyTypeName: InMinigameManager, Assembly-CSharp
         m_MethodName: LoseAndBackToMap
@@ -4902,6 +4914,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7646966874650116555}
+        m_TargetAssemblyTypeName: CoreAudioAPI, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5214813191998481163}
         m_TargetAssemblyTypeName: InMinigameManager, Assembly-CSharp
         m_MethodName: Restart
@@ -5417,6 +5441,63 @@ MonoBehaviour:
   totalBlinkDuration: 1.2
   blinkPeriod: 0.3
   blinkColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!1001 &2114288190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267551948322699180, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754120069664961483, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
+      propertyPath: m_Name
+      value: Scene
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a9febe605fafbf4bbc36ae71fc0c405, type: 3}
 --- !u!224 &84185793122462502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6089,6 +6170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7056319814316982670}
   - component: {fileID: 7646966874650116554}
+  - component: {fileID: 7646966874650116555}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7720,10 +7802,6 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1058802053968203151}
-    - target: {fileID: 1721000659393098029, guid: 71d23611946a94146a59e3f9f4978be0, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 3ed32d15fc79cb1418a1483187403827, type: 2}
     - target: {fileID: 6384467487743281366, guid: 71d23611946a94146a59e3f9f4978be0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7906,6 +7984,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7646966874650116555}
+        m_TargetAssemblyTypeName: CoreAudioAPI, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 6713959619009405405}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -7922,6 +8012,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2117856819350240821}
+        m_TargetAssemblyTypeName: CountdownText, Assembly-CSharp
+        m_MethodName: StartCountdown
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8178,6 +8280,18 @@ MonoBehaviour:
   losingScreen: {fileID: 4640859743683947813}
   winningCutscene: {fileID: 11400000, guid: a57af39fb3e685347aaaec46ee11bcee, type: 2}
   losingCutscene: {fileID: 11400000, guid: 933e412361ff3eb4c909a2b73c15245e, type: 2}
+--- !u!114 &7646966874650116555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715930088960544059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f80d1448a0c85146bf427aedc5298e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &7786603838541385573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8609,6 +8723,7 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2114288190}
   - {fileID: 789443321}
   - {fileID: 1990720894}
   - {fileID: 3963265953944371312}

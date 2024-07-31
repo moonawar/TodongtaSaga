@@ -343,11 +343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1056933790755078208, guid: 290914532813a084298378df0a28f78a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.15
+      value: 8.77
       objectReference: {fileID: 0}
     - target: {fileID: 1056933790755078208, guid: 290914532813a084298378df0a28f78a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.85
+      value: -4.42
       objectReference: {fileID: 0}
     - target: {fileID: 1056933790755078208, guid: 290914532813a084298378df0a28f78a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player [AmangUda]
       objectReference: {fileID: 0}
+    - target: {fileID: 5469883993112820420, guid: 290914532813a084298378df0a28f78a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96f5d95f15dfcb34db2b122952c54976, type: 2}
     - target: {fileID: 7962042266260088348, guid: 290914532813a084298378df0a28f78a, type: 3}
       propertyPath: m_SortingOrder
       value: 0

@@ -119,6 +119,10 @@ namespace TodongtoaSaga.Minigames.NamaPaman
                 {
                     AudioManager.Instance.StopBGMCrossfade();
                     GameStateManager.Instance.ToOpenUIOverride(); // Tell GameStateManager to open UI on top
+                    if (endScreen == losingScreen)
+                    {
+                        AudioManager.Instance.PlaySFX("GameOver");
+                    }
                     FadeInScreen(endScreen);
                 });
             });

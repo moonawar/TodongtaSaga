@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
 using DG.Tweening;
+using System.Collections;
 public class CutsceneManager : MonoBehaviour
 {
     public static CutsceneManager Instance { get; private set; }
@@ -19,6 +20,7 @@ public class CutsceneManager : MonoBehaviour
     private int currentImageIndex = 0;
     private Cutscene currentCutscene;
     private Tween currentFadeTween;
+    private bool continueDialogue = true;
 
     private void Awake()
     {
@@ -61,24 +63,33 @@ public class CutsceneManager : MonoBehaviour
         FadeFromBlack();
     }
 
-    [YarnCommand("prepareImage")]
-    public void PrepareImage()
-    {
-        continueBtn.onClick = new Button.ButtonClickedEvent();
-        continueBtn.onClick.AddListener(NextImage);
+    [YarnCommand("waitUntilContinue")]
+    public IEnumerator WaitUntilContinue() { 
+        continueDialogue = false;
+        
+        continueBtn.gameObject.SetActive(true);
+        continueBtn.onClick.AddListener(() => { continueDialogue = true; });
+
+        yield return new WaitUntil(() => continueDialogue);
+        continueBtn.onClick.RemoveAllListeners();
     }
 
-    private void NextImage()
+    [YarnCommand("nextImage")]
+    public IEnumerator WaitUtilNextImage() {
+        NextImage();
+        yield return new WaitUntil(() => continueDialogue);
+    }
+        
+    public void NextImage()
     {
+        continueDialogue = false;
         if (currentImageIndex < currentCutscene.images.Length - 1)
         {
             currentImageIndex++;
             continueBtn.enabled = false;
             FadeToBlack(() => {
                 cutsceneImage.sprite = currentCutscene.images[currentImageIndex];
-                lineView.UserRequestedViewAdvancement();
-                continueBtn.onClick.RemoveAllListeners();
-                continueBtn.onClick.AddListener(lineView.UserRequestedViewAdvancement);
+                continueDialogue = true;
                 continueBtn.enabled = true;
                 FadeFromBlack();
             });
@@ -115,6 +126,7 @@ public class CutsceneManager : MonoBehaviour
         blackOverlay.color = new Color(0, 0, 0, 0);
 
         // Reset the continue button
+        Debug.Log("Continue Button is Default");
         continueBtn.onClick.RemoveAllListeners();
         continueBtn.onClick.AddListener(lineView.UserRequestedViewAdvancement);
         continueBtn.enabled = true;
